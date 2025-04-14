@@ -1,0 +1,129 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=netstandard">
+
+    <!--=====================  TrayIcon  =====================-->
+    <system:String x:Key="TrayIconShowApplication">Pokaż okno launchera</system:String>
+    <system:String x:Key="TrayIconCloseApplication">Zamknij launchera</system:String>
+
+    <!--=====================  Generic  =====================-->
+    <system:String x:Key="GenericCancel">ANULUJ</system:String>
+    <system:String x:Key="GenericClose">ZAMKNIJ</system:String>
+    <system:String x:Key="GenericInstall">INSTALUJ</system:String>
+    <system:String x:Key="GenericLoading">ŁADOWANIE</system:String>
+    <system:String x:Key="GenericPlay">GRAJ</system:String>
+    <system:String x:Key="GenericAdd">DODAJ</system:String>
+    <system:String x:Key="GenericFree">ZA DARMO</system:String>
+    <system:String x:Key="GenericConfirm">POTWIERDŹ</system:String>
+    <system:String x:Key="GenericYes">TAK</system:String>
+    <system:String x:Key="GenericNo">NIE</system:String>
+
+    <!--=====================  MainWindow  =====================-->
+    <system:String x:Key="MainWindowSingleplayerTab">TRYB DLA JEDNEGO GRACZA</system:String>
+    <system:String x:Key="MainWindowMultiplayerTab">TRYB WIELOOSOBOWY</system:String>
+    <system:String x:Key="MainWindowGuidesTab">PRZEWODNIKI</system:String>
+
+    <!--=====================  Offline  =====================-->
+    <system:String x:Key="OfflinePageNewsTab">Zmiany</system:String>
+    <system:String x:Key="OfflinePageLibraryTab">Biblioteka</system:String>
+    <system:String x:Key="OfflinePageWorkshopTab">Warsztat</system:String>
+    <system:String x:Key="OfflinePageEnabledEnhancements">Włączone ulepszenia</system:String>
+    <system:String x:Key="OfflinePageNoEnhancementsActive">Brak aktywnych ulepszeń</system:String>
+    <system:String x:Key="OfflinePageLaunchOptions">Opcje uruchamiania</system:String>
+    <system:String x:Key="OfflinePageLaunchOptionsWindowedMode">Tryb okienkowy</system:String>
+    <system:String x:Key="OfflinePageLaunchOptionsAltTabMode">Aktywuj wsparcie ALT+TAB</system:String>
+
+    <!--=====================  Offline/Library  =====================-->
+    <system:String x:Key="LibraryPageSearchPlaceholder">Szukaj w bibliotece...</system:String>
+    <system:String x:Key="LibraryPageMakeSnapshot">Zrób snapshoty</system:String>
+    <system:String x:Key="LibraryPageFilterPatchesAndMods">Łaty i modyfikacje</system:String>
+    <system:String x:Key="LibraryPageFilterEnhancements">Ulepszenia</system:String>
+    <system:String x:Key="LibraryPageFilterMapPacks">Pakiety map</system:String>
+    <system:String x:Key="LibraryPageFilterSnapshots">Snapshoty</system:String>
+    <system:String x:Key="LibraryPageFilterEverything">Wszystko</system:String>
+
+    <!--=====================  Offline/Workshop  =====================-->
+    <system:String x:Key="WorkshopPageSearchPlaceholder">Szukaj w warsztacie...</system:String>
+    <system:String x:Key="WorkshopPageFilterPatchesAndMods">Łaty i modyfikacje</system:String>
+    <system:String x:Key="WorkshopPageFilterEnhancements">Ulepszenia</system:String>
+    <system:String x:Key="WorkshopPageFilterMapPacks">Pakiety map</system:String>
+    <system:String x:Key="WorkshopPageFilterEverything">Wszystko</system:String>
+    <system:String x:Key="WorkshopPageSortByMostDownloads">Najwięcej pobrań</system:String>
+    <system:String x:Key="WorkshopPageSortByMostRecent">Najnowsze</system:String>
+    <system:String x:Key="WorkshopPageSortAlphabetical">Alfabetyczne</system:String>
+
+    <!--=====================  LibraryTile  =====================-->
+    <system:String x:Key="LibraryTileSyncing">Synchonizuje się</system:String>
+    <system:String x:Key="LibraryTileActive">Aktywny</system:String>
+    <system:String x:Key="LibraryTilePatchType">Łata</system:String>
+    <system:String x:Key="LibraryTileModType">Mod</system:String>
+    <system:String x:Key="LibraryTileEnhancementType">Ulepszenie</system:String>
+    <system:String x:Key="LibraryTileMapPackType">Pakiet map</system:String>
+    <system:String x:Key="LibraryTileSnapshotType">Snapshot</system:String>
+
+    <!--=====================  LibraryTileHorizontal  =====================-->
+    <system:String x:Key="LibraryTileHorizontalNoPatchSelected">Brak wybranej łaty</system:String>
+    <system:String x:Key="LibraryTileHorizontalSyncAgain">Synchroniczuj ponownie</system:String>
+    <system:String x:Key="LibraryTileHorizontalUpdate">Aktualizuj</system:String>
+
+    <!--=====================  LibraryTileEmpty  =====================-->
+    <system:String x:Key="LibraryTileEmptyInstallMore">Zainstaluj więcej</system:String>
+    <system:String x:Key="LibraryTileEmptyDiscoverMore">Odkryj nowe treści w warsztacie!</system:String>
+
+    <!--=====================  Settings  =====================-->
+    <system:String x:Key="SettingsPageLauncherSectionHeader">Ustawienia Launchera</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneral">Ogólne</system:String>
+    <system:String x:Key="SettingsPageBFME1SectionHeader">The Battle for Middle-earth™</system:String>
+    <system:String x:Key="SettingsPageBFME2SectionHeader">The Battle for Middle-earth™ II</system:String>
+    <system:String x:Key="SettingsPageRotWKSectionHeader">Rise of the Witchking™</system:String>
+    <system:String x:Key="SettingsPageBFMESectionGeneral">Ogólne</system:String>
+
+    <!--=====================  Settings/Launcher Settings/General  =====================-->
+    <system:String x:Key="SettingsPageLauncherSectionGeneralLanguage">Język Launchera</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralCloseToTray">Zamknij launchera do obszaru powiadomień</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralCreateDesktopIcon">Stwórz skrót na pulpicie dla launchera</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralLibraryHeader">Ustawienia biblioteki</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralAddLibraryLocation">Dodaj lokalizację biblioteki</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralDriveDefaultNameText">Dysk lokalny</system:String>
+
+    <!--=====================  Settings/BFME Settings/Video & Resolution  =====================-->
+    <system:String x:Key="SettingsPageBFMESectionVideoResolution">Rozdzielczość gry</system:String>
+    <system:String x:Key="SettingsPageBFMESectionVideoGraphicsApi">API graficzne</system:String>
+
+    <!--=====================  Settings/BFME Settings/Language & Sound  =====================-->
+    <system:String x:Key="SettingsPageBFMESectionLanguageLanguage">Język gry</system:String>
+
+    <!--=====================  LauncherUpdatePopup  =====================-->
+    <system:String x:Key="LauncherUpdatePopupTitle">AKTUALIZACJA</system:String>
+    <system:String x:Key="LauncherUpdatePopupDescription">Pobieranie plików launchera</system:String>
+
+    <!--=====================  InstallGamePopup  =====================-->
+    <system:String x:Key="InstallGamePopupTitle">INSTALUJ GRĘ</system:String>
+    <system:String x:Key="InstallGamePopupLanguage">Język</system:String>
+    <system:String x:Key="InstallGamePopupLocation">Lokalizacja</system:String>
+
+    <!--=====================  PackagePagePopup  =====================-->
+    <system:String x:Key="PackagePagePopupAddToLibrary">DODAJ DO BIBLIOTEKI</system:String>
+    <system:String x:Key="PackagePagePopupInYourLibrary">W TWOJEJ BIBLIOTECE</system:String>
+    <system:String x:Key="PackagePagePopupDownloads">Pobrania</system:String>
+    <system:String x:Key="PackagePagePopupGame">Gra</system:String>
+    <system:String x:Key="PackagePagePopupType">Typ</system:String>
+    <system:String x:Key="PackagePagePopupLanguage">Język</system:String>
+    <system:String x:Key="PackagePagePopupSize">Rozmiar</system:String>
+    <system:String x:Key="PackagePagePopupScreenshots">Zrzuty ekranu</system:String>
+    <system:String x:Key="PackagePagePopupDescription">Opis</system:String>
+    <system:String x:Key="PackagePagePopupWhatsNew">Co nowego</system:String>
+
+    <!--=====================  ScriptedPackagePopup  =====================-->
+    <system:String x:Key="ScriptedPackagePopupRequirements">Wymagania:</system:String>
+
+    <!--=====================  ScriptedPackagePopup/RequirementItem  =====================-->
+    <system:String x:Key="ScriptedPackageRequirementComplete">Zakończone</system:String>
+    <system:String x:Key="ScriptedPackageRequirementActionRequired">Wymagana akcja</system:String>
+    <system:String x:Key="ScriptedPackageRequirementCompletePrevious">Zakończ wcześniej</system:String>
+
+    <!--=====================  ErrorPopup  =====================-->
+    <system:String x:Key="ErrorPopupTitle">BŁĄD</system:String>
+    <system:String x:Key="ErrorPopupCopyError">Kopiuj tekst</system:String>
+    <system:String x:Key="ErrorPopupErrorCopied">Skopiowano!</system:String>
+</ResourceDictionary>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BfmeFoundationProject.OnlineKit</id>
+    <version>1.9.7</version>
+    <title>BfmeOnlineKit</title>
+    <authors>Bfme Foundation Team</authors>
+    <icon>onlinekiticon.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/MarcellVokk/bfme-online-kit</projectUrl>
+    <description>Easily embed Online Battle Arena into your BFME related projects.</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0-windows7.0">
+        <dependency id="BfmeFoundationProject.HttpInstruments" version="1.2.6" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_OnlineKit\bin\x64\Debug\net8.0-windows7.0\BfmeFoundationProject.OnlineKit.dll" target="lib\net8.0-windows7.0\BfmeFoundationProject.OnlineKit.dll" />
+    <file src="F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_OnlineKit\onlinekiticon.png" target="\onlinekiticon.png" />
+    <file src="F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_OnlineKit\README.md" target="\README.md" />
+  </files>
+</package>

@@ -1,0 +1,14 @@
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\bin\Release\net8.0\BfmeFoundationProject.WorkshopKit.deps.json
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\bin\Release\net8.0\BfmeFoundationProject.WorkshopKit.dll
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\bin\Release\net8.0\BfmeFoundationProject.BfmeKit.dll
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\bin\Release\net8.0\BfmeFoundationProject.DirectXRuntime.dll
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\bin\Release\net8.0\BfmeFoundationProject.HttpInstruments.dll
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\obj\Release\net8.0\BfmeFoundationProject_WorkshopKit.csproj.AssemblyReference.cache
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\obj\Release\net8.0\BfmeFoundationProject_WorkshopKit.GeneratedMSBuildEditorConfig.editorconfig
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\obj\Release\net8.0\BfmeFoundationProject_WorkshopKit.AssemblyInfoInputs.cache
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\obj\Release\net8.0\BfmeFoundationProject_WorkshopKit.AssemblyInfo.cs
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\obj\Release\net8.0\BfmeFoundationProject_WorkshopKit.csproj.CoreCompileInputs.cache
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\obj\Release\net8.0\BfmeFoun.66139107.Up2Date
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\obj\Release\net8.0\BfmeFoundationProject.WorkshopKit.dll
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\obj\Release\net8.0\refint\BfmeFoundationProject.WorkshopKit.dll
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_WorkshopKit\obj\Release\net8.0\ref\BfmeFoundationProject.WorkshopKit.dll

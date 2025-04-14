@@ -1,0 +1,131 @@
+﻿<generic:PopupBody x:Class="BfmeFoundationProject.AllInOneLauncher.Popups.PackagePagePopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Popups"
+             xmlns:elements="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements"
+             xmlns:generic="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements.Generic"
+             mc:Ignorable="d" 
+             Width="1300" MinHeight="1300" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,50,0,50">
+    <Grid Margin="-20" ClipToBounds="True">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#00000000"/>
+                <GradientStop Color="#66000000" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Height="400" VerticalAlignment="Top">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF151515"/>
+                    <GradientStop Color="#00292929" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.Effect>
+                <BlurEffect Radius="120"/>
+            </Grid.Effect>
+            <Image x:Name="background_image" Source="{Binding ElementName=icon, Path=Source}" Height="700" Stretch="Fill" VerticalAlignment="Center" Opacity="0.8"/>
+        </Grid>
+        <StackPanel Margin="200,150,200,100" VerticalAlignment="Top">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" CornerRadius="7" Background="#1EFFFFFF" Width="158" Height="182" VerticalAlignment="Top">
+                    <Border.OpacityMask>
+                        <VisualBrush>
+                            <VisualBrush.Visual>
+                                <Border SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}" Background="Black"/>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Border.OpacityMask>
+                    <Image x:Name="icon" Source="https://workshop-files.bfmeladder.com/bdc6bc60-73f9-4833-9069-3076aff26418/official-0-artwork.png" VerticalAlignment="Center" Stretch="UniformToFill"/>
+                </Border>
+                <StackPanel Grid.Column="1" Margin="20,20,0,0">
+                    <TextBlock x:Name="title" Text="Patch 2.22" FontSize="28" FontWeight="Black" Foreground="White" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="author" Text="The 2.22 Team" FontSize="16" FontWeight="Medium" Foreground="#99FFFFFF" HorizontalAlignment="Left" Margin="0,5,0,0"/>
+                    <StackPanel Margin="0,35,0,0" Orientation="Horizontal">
+                        <StackPanel Width="65">
+                            <TextBlock Text="{DynamicResource PackagePagePopupDownloads}" FontSize="12" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#59FFFFFF"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="32">
+                                <Path Fill="#99FFFFFF" Stroke="#99FFFFFF" StrokeThickness="0.3" Stretch="UniformToFill" Height="18" VerticalAlignment="Center" Data="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                            </StackPanel>
+                            <TextBlock x:Name="downloads" Text="96.4K" FontSize="11" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#59FFFFFF"/>
+                        </StackPanel>
+                        <Border Margin="20,10,20,10" Width="1" BorderBrush="#33FFFFFF" BorderThickness="1" UseLayoutRounding="True"/>
+                        <StackPanel Width="65">
+                            <TextBlock Text="{DynamicResource PackagePagePopupGame}" FontSize="12" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#59FFFFFF"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="32">
+                                <Path x:Name="icon_bfme1" Fill="#99FFFFFF" Stretch="Uniform" Height="18" VerticalAlignment="Center" Data="M12 2c5.523 0 10 4.477 10 10s-4.477 10 -10 10s-10 -4.477 -10 -10s4.477 -10 10 -10zm.994 5.886c-.083 -.777 -1.008 -1.16 -1.617 -.67l-.084 .077l-2 2l-.083 .094a1 1 0 0 0 0 1.226l.083 .094l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l.293 -.293v5.586l.007 .117a1 1 0 0 0 1.986 0l.007 -.117v-8l-.006 -.114z"/>
+                                <Path x:Name="icon_bfme2" Fill="#99FFFFFF" Stretch="Uniform" Height="18" VerticalAlignment="Center" Data="M12 2c5.523 0 10 4.477 10 10s-4.477 10 -10 10s-10 -4.477 -10 -10s4.477 -10 10 -10zm1 5h-3l-.117 .007a1 1 0 0 0 0 1.986l.117 .007h3v2h-2l-.15 .005a2 2 0 0 0 -1.844 1.838l-.006 .157v2l.005 .15a2 2 0 0 0 1.838 1.844l.157 .006h3l.117 -.007a1 1 0 0 0 0 -1.986l-.117 -.007h-3v-2h2l.15 -.005a2 2 0 0 0 1.844 -1.838l.006 -.157v-2l-.005 -.15a2 2 0 0 0 -1.838 -1.844l-.157 -.006z"/>
+                                <Path x:Name="icon_rotwk" Fill="#99FFFFFF" Stretch="Uniform" Height="18" VerticalAlignment="Center" Data="M12 2c5.523 0 10 4.477 10 10s-4.477 10 -10 10s-10 -4.477 -10 -10s4.477 -10 10 -10zm1 5h-2l-.15 .005a2 2 0 0 0 -1.85 1.995a1 1 0 0 0 1.974 .23l.02 -.113l.006 -.117h2v2h-2l-.133 .007c-1.111 .12 -1.154 1.73 -.128 1.965l.128 .021l.133 .007h2v2h-2l-.007 -.117a1 1 0 0 0 -1.993 .117a2 2 0 0 0 1.85 1.995l.15 .005h2l.15 -.005a2 2 0 0 0 1.844 -1.838l.006 -.157v-2l-.005 -.15a1.988 1.988 0 0 0 -.17 -.667l-.075 -.152l-.019 -.032l.02 -.03a2.01 2.01 0 0 0 .242 -.795l.007 -.174v-2l-.005 -.15a2 2 0 0 0 -1.838 -1.844l-.157 -.006z"/>
+                            </StackPanel>
+                            <TextBlock x:Name="game" Text="Bfme1" FontSize="11" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#59FFFFFF"/>
+                        </StackPanel>
+                        <Border Margin="20,10,20,10" Width="1" BorderBrush="#33FFFFFF" BorderThickness="1" UseLayoutRounding="True"/>
+                        <StackPanel Width="65">
+                            <TextBlock Text="{DynamicResource PackagePagePopupType}" FontSize="12" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#59FFFFFF"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="32">
+                                <Path x:Name="icon_patch" Fill="#99FFFFFF" Stretch="Uniform" Height="18" VerticalAlignment="Center" Data="M20.207 3.793a5.95 5.95 0 0 1 .179 8.228l-.179 .186l-8 8a5.95 5.95 0 0 1 -8.593 -8.228l.179 -.186l8 -8a5.95 5.95 0 0 1 8.414 0zm-8.207 9.207a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm2 -2a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm-4 0a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm2 -2a1 1 0 0 0 -1 1l.007 .127a1 1 0 0 0 1.993 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883z"/>
+                                <Path x:Name="icon_mod" Fill="#99FFFFFF" Stretch="Uniform" Height="18" VerticalAlignment="Center" Data="M10 2a3 3 0 0 1 2.995 2.824l.005 .176v1h3a2 2 0 0 1 1.995 1.85l.005 .15v3h1a3 3 0 0 1 .176 5.995l-.176 .005h-1v3a2 2 0 0 1 -1.85 1.995l-.15 .005h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-1a1 1 0 0 0 -1.993 -.117l-.007 .117v1a2 2 0 0 1 -1.85 1.995l-.15 .005h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 1.85 -1.995l.15 -.005h1a1 1 0 0 0 .117 -1.993l-.117 -.007h-1a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 1.85 -1.995l.15 -.005h3v-1a3 3 0 0 1 3 -3z"/>
+                                <Path x:Name="icon_enhancement" Stroke="#99FFFFFF" StrokeThickness="3" StrokeLineJoin="Round" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stretch="UniformToFill" Height="18" VerticalAlignment="Center" Data="M7 11l5 -5l5 5 M7 17l5 -5l5 5"/>
+                                <Path x:Name="icon_mappack" Fill="#99FFFFFF" Stretch="Uniform" Height="18" VerticalAlignment="Center" Data="M15 19v1a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2v-1zm-10 -1c-.89 0 -1.337 -1.077 -.707 -1.707l2.855 -2.857l-1.464 -.487a1 1 0 0 1 -.472 -1.565l.08 -.091l3.019 -3.02l-.758 -.379a1 1 0 0 1 -.343 -1.507l.083 -.094l4 -4a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 -.26 1.601l-.759 .379l3.02 3.02a1 1 0 0 1 -.279 1.61l-.113 .046l-1.465 .487l2.856 2.857c.603 .602 .22 1.614 -.593 1.701l-.114 .006z"/>
+                            </StackPanel>
+                            <TextBlock x:Name="type" Text="Mod" FontSize="11" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#59FFFFFF"/>
+                        </StackPanel>
+                        <Border Margin="20,10,20,10" Width="1" BorderBrush="#33FFFFFF" BorderThickness="1" UseLayoutRounding="True"/>
+                        <StackPanel Width="65">
+                            <TextBlock Text="{DynamicResource PackagePagePopupLanguage}" FontSize="12" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#59FFFFFF"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="32">
+                                <TextBlock x:Name="language_code" Text="EN" FontSize="18" FontWeight="Medium" VerticalAlignment="Center" Foreground="#59FFFFFF"/>
+                            </StackPanel>
+                            <TextBlock x:Name="language_full" Text="English" FontSize="11" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#59FFFFFF"/>
+                        </StackPanel>
+                        <Border Margin="20,10,20,10" Width="1" BorderBrush="#33FFFFFF" BorderThickness="1" UseLayoutRounding="True"/>
+                        <StackPanel Width="65">
+                            <TextBlock Text="{DynamicResource PackagePagePopupSize}" FontSize="12" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#59FFFFFF"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="32">
+                                <TextBlock x:Name="size_number" Text="223,4" FontSize="18" FontWeight="Medium" VerticalAlignment="Center" Foreground="#59FFFFFF"/>
+                            </StackPanel>
+                            <TextBlock x:Name="size_unit" Text="MB" FontSize="11" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#59FFFFFF"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+                <Button Grid.Column="2" x:Name="mainButton" Style="{StaticResource HiglightButton}" FontSize="15" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,10" Padding="22,12,22,12" Click="OnMainButtonClicked">
+                    <Grid>
+                        <Grid x:Name="mainButtonText" Visibility="Visible">
+                            <TextBlock x:Name="mainButtonAddToLibraryText" Text="{DynamicResource PackagePagePopupAddToLibrary}" HorizontalAlignment="Center" Visibility="Visible"/>
+                            <TextBlock x:Name="mainButtonAlreadyInLibraryText" Text="{DynamicResource PackagePagePopupInYourLibrary}" Opacity="0.5" HorizontalAlignment="Center" Visibility="Hidden"/>
+                        </Grid>
+                        <generic:MiniSpinner x:Name="mainButtonLoadingSpinner" HorizontalAlignment="Center" VerticalAlignment="Center" IsLoading="False" d:IsLoading="True"/>
+                    </Grid>
+                </Button>
+            </Grid>
+            <StackPanel Margin="0,50,0,0">
+                <TextBlock Text="{DynamicResource PackagePagePopupScreenshots}" FontSize="20" FontWeight="Black" Foreground="White" HorizontalAlignment="Left"/>
+                <elements:PackagePageScreenshotLibrary x:Name="screenshots" Margin="0,15,0,0"/>
+            </StackPanel>
+            <StackPanel Margin="0,40,0,0">
+                <TextBlock Text="{DynamicResource PackagePagePopupDescription}" FontSize="20" FontWeight="Black" Foreground="White" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="description" Text="" FontSize="15" FontWeight="Regular" Foreground="#E5FFFFFF" TextWrapping="Wrap" Margin="0,10,0,0"/>
+            </StackPanel>
+            <StackPanel Margin="0,40,0,0">
+                <TextBlock Text="{DynamicResource PackagePagePopupWhatsNew}" FontSize="20" FontWeight="Black" Foreground="White" HorizontalAlignment="Left"/>
+                <StackPanel x:Name="changelog" Margin="0,15,0,0"/>
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="button_close" Style="{StaticResource FlatButton}" HorizontalAlignment="Right" VerticalAlignment="Top" Padding="15" Margin="20" Click="OnDismissClicked">
+            <Button.OpacityMask>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Border SnapsToDevicePixels="True" CornerRadius="30" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Button}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Button}}" Background="Black"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Button.OpacityMask>
+            <Path Stroke="#99FFFFFF" StrokeThickness="3" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stretch="Uniform" Height="18" VerticalAlignment="Center" Data="M18 6l-12 12 M6 6l12 12"/>
+        </Button>
+    </Grid>
+</generic:PopupBody>

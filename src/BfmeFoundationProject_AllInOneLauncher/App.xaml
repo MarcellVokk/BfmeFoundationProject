@@ -1,0 +1,41 @@
+﻿<Application x:Class="BfmeFoundationProject.AllInOneLauncher.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BfmeFoundationProject.AllInOneLauncher">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Dictionary/LanguageResources.en.xaml"/>
+
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Buttons/AcrylicRoundButtonStyle.xaml"/>
+
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Buttons/DefaultButtonStyle.xaml"/>
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Buttons/HiglightButtonStyle.xaml"/>
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Buttons/RoundButtonStyle.xaml"/>
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Buttons/FlatButtonStyle.xaml"/>
+                
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Buttons/LaunchButtonStyle.xaml"/>
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Buttons/SettingsButtonStyle.xaml"/>
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Buttons/ContextMenuButtonStyle.xaml"/>
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Buttons/DestructiveButtonStyle.xaml"/>
+                
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Other/ScrollViewerStyle.xaml"/>
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Other/TextBlockHoverStyle.xaml"/>
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Other/ComboBoxStyle.xaml"/>
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Other/TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="/AllInOneLauncher;component/Resources/Styles/Other/CheckBoxStyle.xaml"/>
+                <ResourceDictionary>
+                    <Style x:Key="FocusVisual">
+                        <Setter Property="Control.Template">
+                            <Setter.Value>
+                                <ControlTemplate>
+                                    <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

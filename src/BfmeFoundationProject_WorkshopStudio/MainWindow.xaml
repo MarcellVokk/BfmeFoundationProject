@@ -1,0 +1,26 @@
+﻿<Window x:Class="BfmeFoundationProject.WorkshopStudio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BfmeFoundationProject.WorkshopStudio"
+        xmlns:pages="clr-namespace:BfmeFoundationProject.WorkshopStudio.Pages"
+        xmlns:sharedUi="clr-namespace:BfmeFoundationProject.SharedUi.Elements;assembly=BfmeFoundationProject.SharedUi"
+        mc:Ignorable="d"
+        Title="Bfme Foundation Project - Workshop Studio" Height="1000" Width="1500" FontFamily="{DynamicResource Segoe UI}" RenderOptions.BitmapScalingMode="HighQuality" SizeChanged="OnSizeChanged" PreviewKeyDown="OnKeyDown">
+    <Grid x:Name="windowGrid" Background="Black">
+        <Grid.LayoutTransform>
+            <ScaleTransform ScaleX="1" ScaleY="1"></ScaleTransform>
+        </Grid.LayoutTransform>
+        <Image Source="https://bfmeladder.com/resources/background.png" Stretch="UniformToFill" Opacity="0.4" Margin="-10">
+            <Image.Effect>
+                <BlurEffect KernelType="Gaussian" Radius="10"/>
+            </Image.Effect>
+        </Image>
+        <Border x:Name="content">
+            <pages:AuthenticatePage/>
+        </Border>
+        <sharedUi:PopupVisualizer d:Visibility="Collapsed"/>
+        <TextBlock x:Name="console" HorizontalAlignment="Left" VerticalAlignment="Top" Text="" Foreground="Lime" IsHitTestVisible="False"/>
+    </Grid>
+</Window>

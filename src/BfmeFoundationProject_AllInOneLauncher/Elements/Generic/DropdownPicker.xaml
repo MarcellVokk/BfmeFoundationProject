@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="BfmeFoundationProject.AllInOneLauncher.Elements.DropdownPicker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements"
+             xmlns:generic="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements.Generic"
+             mc:Ignorable="d" d:Height="40">
+    <Grid>
+        <Border x:Name="border_background" CornerRadius="20" Background="Transparent">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="8" ShadowDepth="3" Opacity="0.3" Direction="270" Color="#FF373737"/>
+            </Border.Effect>
+            <Border.OpacityMask>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Border Background="Black" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.OpacityMask>
+            <Grid>
+                <generic:Acrylic x:Name="acrylicStyle"/>
+                <Grid x:Name="navyStyle" Background="#3A3F4C" Visibility="Collapsed"/>
+                <Grid x:Name="regularStyle" Visibility="Collapsed">
+                    <generic:Acrylic/>
+                    <Grid Background="White" Opacity="0.1"/>
+                </Grid>
+            </Grid>
+        </Border>
+        <Grid>
+            <Grid.OpacityMask>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Border Background="Black" SnapsToDevicePixels="True" CornerRadius="{Binding ElementName=border_background, Path=CornerRadius}" Width="{Binding ElementName=border_background, Path=ActualWidth}" Height="{Binding ElementName=border_background, Path=ActualHeight}"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Grid.OpacityMask>
+            <Button x:Name="button" Style="{StaticResource FlatButton}" Background="Transparent" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="OnDropdownClicked">
+                <Grid>
+                    <TextBlock x:Name="title" Text="DropdownPicker" FontSize="14" FontWeight="Medium" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White"/>
+                    <Path Stretch="Uniform" Width="13" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,0,0" Fill="White" Data="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                </Grid>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

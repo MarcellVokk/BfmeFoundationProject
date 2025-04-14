@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="BfmeFoundationProject.AllInOneLauncher.Elements.Offline.EnabledEnhancementTile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:elements="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements"
+             mc:Ignorable="d" 
+             d:DesignHeight="79" d:DesignWidth="360">
+    <Border Grid.Row="2" CornerRadius="9" Background="#0CFFFFFF">
+        <Grid>
+            <Grid Margin="7" x:Name="activeEntry" SnapsToDevicePixels="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="9"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" CornerRadius="8" Background="#1EFFFFFF" HorizontalAlignment="Left" VerticalAlignment="Top" Width="56.5" Height="65">
+                    <Border.OpacityMask>
+                        <VisualBrush>
+                            <VisualBrush.Visual>
+                                <Border SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}" Background="Black"/>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Border.OpacityMask>
+                    <Image x:Name="activeEntryIcon" VerticalAlignment="Center" Stretch="UniformToFill" Source="https://bfmeladder.com/resources/workshop-files/222-artwork.png"/>
+                </Border>
+                <Grid Grid.Column="2" VerticalAlignment="Top">
+                    <StackPanel Margin="2" x:Name="availableTitleArea" ClipToBounds="True">
+                        <StackPanel x:Name="titleStack" Orientation="Horizontal" HorizontalAlignment="Left">
+                            <TextBlock x:Name="activeEntryTitle" Text="2.22" FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Foreground="White"/>
+                            <TextBlock x:Name="activeEntryVersion" Text="1.0.0" FontSize="15" FontWeight="Regular" Foreground="#59FFFFFF" VerticalAlignment="Center" Margin="7,0,0,0"/>
+                        </StackPanel>
+                        <StackPanel x:Name="tags" Orientation="Horizontal" Margin="0,10,0,0">
+                            <Border Margin="0,0,6,0" Background="#1EFFFFFF" CornerRadius="14">
+                                <TextBlock x:Name="entryType" Text="Type" FontSize="10" FontWeight="Bold" Margin="12,6,12,6" Foreground="White"/>
+                            </Border>
+                            <Border Margin="0,0,6,0" Background="#1EFFFFFF" CornerRadius="14">
+                                <TextBlock x:Name="activeEntryAuthor" Text="Author" FontSize="10" FontWeight="Bold" Margin="12,6,12,6" Foreground="White" MaxWidth="88" TextTrimming="CharacterEllipsis"/>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+                    <Border x:Name="activeEntryActive" Background="#016FB3" CornerRadius="14" HorizontalAlignment="Left" VerticalAlignment="Bottom" Visibility="Hidden">
+                        <StackPanel Margin="10,6,12,6" Orientation="Horizontal">
+                            <Path HorizontalAlignment="Right" VerticalAlignment="Center" Fill="White" Stroke="White" StrokeThickness="0.3" Stretch="Uniform" Height="8" Data="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                            <TextBlock Text="{DynamicResource LibraryTileButtonActive}" FontSize="12" FontWeight="Bold" Margin="7,0,0,0" VerticalAlignment="Center" Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+                <Grid Grid.Column="3">
+                    <Button Style="{StaticResource DestructiveButton}" VerticalAlignment="Center" HorizontalAlignment="Right" Click="OnDisableClicked" Margin="0,0,5,0"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

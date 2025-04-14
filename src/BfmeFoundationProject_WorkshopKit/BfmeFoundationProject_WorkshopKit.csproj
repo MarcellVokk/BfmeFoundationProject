@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <RootNamespace>BfmeFoundationProject.WorkshopKit</RootNamespace>
+	  <AssemblyName>BfmeFoundationProject.WorkshopKit</AssemblyName>
+	  <TargetFramework>net8.0</TargetFramework>
+	  <Authors>Bfme Foundation Team</Authors>
+	  <Company>Bfme Foundation Team</Company>
+
+	  <UseWPF>False</UseWPF>
+	  <UseWindowsForms>False</UseWindowsForms>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+
+	  <Platforms>AnyCPU;x86;x64</Platforms>
+	  <PlatformTarget>AnyCPU</PlatformTarget>
+
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Title>BfmeWorkshopKit</Title>
+	  <PackageIcon>workshopkiticon.png</PackageIcon>
+	  <PackageProjectUrl>https://github.com/MarcellVokk/bfme-workshop-kit</PackageProjectUrl>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <Description>Easily access, upload and download from the BFME Workshop, as well as sync to packages and more.</Description>
+	  <Version>2.5.0</Version>
+	  <AssemblyVersion>2.5.0</AssemblyVersion>
+	  <FileVersion>2.5.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.7.403.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BfmeFoundationProject_BfmeKit\BfmeFoundationProject_BfmeKit.csproj" />
+    <ProjectReference Include="..\BfmeFoundationProject_DirectXRuntime\BfmeFoundationProject_DirectXRuntime.csproj" />
+    <ProjectReference Include="..\BfmeFoundationProject_HttpInstruments\BfmeFoundationProject_HttpInstruments.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="workshopkiticon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+	<None Update="README.md">
+		<Pack>True</Pack>
+		<PackagePath>\</PackagePath>
+	</None>
+  </ItemGroup>
+
+</Project>

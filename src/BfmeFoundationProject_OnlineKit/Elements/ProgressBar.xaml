@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="BfmeFoundationProject.OnlineKit.Elements.ProgressBar"
+             x:ClassModifier="internal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BfmeFoundationProject.OnlineKit.Elements"
+             mc:Ignorable="d" 
+             Width="400" d:DesignHeight="40">
+    <Grid>
+        <Border x:Name="background" CornerRadius="0" Background="#19FFFFFF"/>
+        <Border x:Name="progress" SizeChanged="progress_SizeChanged" Background="#19FFFFFF"/>
+        <TextBlock x:Name="textblock_status" Text="···" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+    </Grid>
+</UserControl>

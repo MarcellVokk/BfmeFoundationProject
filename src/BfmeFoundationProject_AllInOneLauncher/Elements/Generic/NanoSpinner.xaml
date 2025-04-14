@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="BfmeFoundationProject.AllInOneLauncher.Elements.Generic.NanoSpinner"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements"
+             mc:Ignorable="d" Loaded="UserControl_Loaded" Width="10" Height="10">
+
+    <Grid x:Name="image_loading" RenderTransformOrigin="0.5,0.5" Width="10" Height="10" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <Grid.Resources>
+            <Storyboard x:Key="rotateAnim">
+                <DoubleAnimation
+                        Storyboard.TargetProperty="(Grid.RenderTransform).(RotateTransform.Angle)"
+                        Storyboard.TargetName="image_loading" To="360" Duration="0:0:1.5" RepeatBehavior="Forever" />
+            </Storyboard>
+        </Grid.Resources>
+        <Grid.RenderTransform>
+            <RotateTransform x:Name="noFreeze"/>
+        </Grid.RenderTransform>
+        <Ellipse Width="10" Height="10" Stroke="White" StrokeThickness="1.2">
+            <Ellipse.Clip>
+                <GeometryGroup>
+                    <RectangleGeometry Rect="0,0,5,5"/>
+                    <RectangleGeometry Rect="5,0,5,10"/>
+                </GeometryGroup>
+            </Ellipse.Clip>
+        </Ellipse>
+    </Grid>
+</UserControl>

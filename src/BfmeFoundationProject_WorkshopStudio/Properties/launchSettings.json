@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BfmeFoundationProject_WorkshopStudio": {
+      "commandName": "Project",
+      "commandLineArgs": "DEBUG"
+    }
+  }
+}

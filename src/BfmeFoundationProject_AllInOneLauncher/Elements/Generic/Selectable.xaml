@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="BfmeFoundationProject.AllInOneLauncher.Elements.Generic.Selectable"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements"
+             mc:Ignorable="d" d:Width="200" Height="38" Background="Transparent" MouseEnter="OnMouseEnter" MouseLeave="OnMouseLeave" MouseDown="OnMouseDown" Name="userControl" Cursor="Hand" VerticalAlignment="Top" Loaded="OnLoaded" FontSize="16">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="area">
+            <Border x:Name="border_regular" Background="#3A3F4C" CornerRadius="4" Visibility="Visible"/>
+            <Border x:Name="border_selected" Background="#028BDB" CornerRadius="4" Visibility="Collapsed"/>
+            <Border x:Name="content" VerticalAlignment="Center" Margin="15,0,15,0">
+                <ContentPresenter Content="{Binding Title, ElementName=userControl}"/>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

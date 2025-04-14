@@ -1,0 +1,10 @@
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\bin\x64\Debug\net8.0\BfmeFoundationProject.BfmeKit.deps.json
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\bin\x64\Debug\net8.0\BfmeFoundationProject.BfmeKit.dll
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\obj\x64\Debug\net8.0\BfmeFoundationProject_BfmeKit.csproj.AssemblyReference.cache
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\obj\x64\Debug\net8.0\BfmeFoundationProject_BfmeKit.GeneratedMSBuildEditorConfig.editorconfig
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\obj\x64\Debug\net8.0\BfmeFoundationProject_BfmeKit.AssemblyInfoInputs.cache
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\obj\x64\Debug\net8.0\BfmeFoundationProject_BfmeKit.AssemblyInfo.cs
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\obj\x64\Debug\net8.0\BfmeFoundationProject_BfmeKit.csproj.CoreCompileInputs.cache
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\obj\x64\Debug\net8.0\BfmeFoundationProject.BfmeKit.dll
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\obj\x64\Debug\net8.0\refint\BfmeFoundationProject.BfmeKit.dll
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\obj\x64\Debug\net8.0\ref\BfmeFoundationProject.BfmeKit.dll

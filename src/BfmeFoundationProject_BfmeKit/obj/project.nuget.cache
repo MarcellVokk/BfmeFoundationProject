@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "dBHP3pb733o=",
+  "success": true,
+  "projectFilePath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_BfmeKit\\BfmeFoundationProject_BfmeKit.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Marcell\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\Marcell\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Marcell\\.nuget\\packages\\system.drawing.common\\8.0.10\\system.drawing.common.8.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

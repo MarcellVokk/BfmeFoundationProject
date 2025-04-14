@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="BfmeFoundationProject.WorkshopStudio.Elements.WorkshopEntryFileBrowser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BfmeFoundationProject.WorkshopStudio.Elements"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="Transparent" PreviewMouseWheel="OnMouseScroll" Loaded="OnLoad">
+    <Border Background="#19FFFFFF" BorderThickness="1" BorderBrush="#33FFFFFF" AllowDrop="True" Drop="OnFileDrop" DragOver="OnFileDragOver">
+        <Grid Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Style="{DynamicResource MiniButton}" Click="OnPathBackClicked" Width="25" Padding="0">
+                    <Path Stretch="Uniform" Width="8" Fill="#A5FFFFFF" Data="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+                </Button>
+                <TextBox Grid.Column="2" x:Name="path" Height="25" Text="" Padding="5,0,5,0" KeyDown="OnPathKeyDown"/>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Name" VerticalAlignment="Center" Opacity="0.4" Margin="5,0,5,0"/>
+                <Rectangle Grid.Column="0" HorizontalAlignment="Right" Width="1" Fill="White" Opacity="0.4"/>
+                <TextBlock Grid.Column="1" Text="Hash" VerticalAlignment="Center" Opacity="0.4" Margin="5,0,5,0"/>
+                <Rectangle Grid.Column="1" HorizontalAlignment="Right" Width="1" Fill="White" Opacity="0.4"/>
+                <TextBlock Grid.Column="2" Text="Language" VerticalAlignment="Center" Opacity="0.4" Margin="5,0,5,0"/>
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="0" x:Name="filesStackFrame">
+                <StackPanel x:Name="filesStack" Background="Transparent"/>
+            </Grid>
+            <ScrollBar Grid.Row="5" Grid.Column="1" x:Name="scrollBar" ValueChanged="OnScroll" SmallChange="1"/>
+        </Grid>
+    </Border>
+</UserControl>

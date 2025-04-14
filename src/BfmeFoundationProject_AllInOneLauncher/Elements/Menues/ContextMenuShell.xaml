@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="BfmeFoundationProject.AllInOneLauncher.Elements.ContextMenuShell"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements"
+             xmlns:generic="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements.Generic"
+             mc:Ignorable="d" 
+             IsHitTestVisible="False" SnapsToDevicePixels="True">
+    <Grid x:Name="mainGrid" RenderTransformOrigin="0,1" Opacity="1">
+        <Border x:Name="border_background" CornerRadius="5" BorderThickness="0">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="8" ShadowDepth="3" Opacity="0.3" Direction="270" Color="#FF373737"/>
+            </Border.Effect>
+            <Border.OpacityMask>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Border Background="Black" SnapsToDevicePixels="True" CornerRadius="{Binding ElementName=border_background, Path=CornerRadius}" Width="{Binding ElementName=border_background, Path=ActualWidth}" Height="{Binding ElementName=border_background, Path=ActualHeight}"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Border.OpacityMask>
+            <Grid>
+                <generic:Acrylic x:Name="acrylicStyle"/>
+                <Grid x:Name="navyStyle" Background="#3A3F4C" Visibility="Collapsed"/>
+                <Grid x:Name="regularStyle" Visibility="Collapsed">
+                    <generic:Acrylic/>
+                    <Grid Background="White" Opacity="0.1"/>
+                </Grid>
+                <Grid x:Name="tint" Background="#33000000" Visibility="Collapsed"/>
+            </Grid>
+        </Border>
+        <Grid>
+            <Grid.OpacityMask>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Border Background="Black" SnapsToDevicePixels="True" CornerRadius="{Binding ElementName=border_background, Path=CornerRadius}" Width="{Binding ElementName=border_background, Path=ActualWidth}" Height="{Binding ElementName=border_background, Path=ActualHeight}"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Grid.OpacityMask>
+            <Grid>
+                <TextBlock x:Name="label_text" Foreground="White" Padding="0" Margin="12,5,12,8" TextAlignment="Center" FontSize="13" Text="Hi!"></TextBlock>
+                <Frame x:Name="frame_mainContent" Focusable="False" IsTabStop="False" Visibility="Collapsed" d:Visibility="Visible"></Frame>
+                <generic:SmoothScrollViewer x:Name="stack_mainContent_scrollview" Visibility="Collapsed" d:Visibility="Visible">
+                    <StackPanel x:Name="stack_mainContent" Focusable="False" Margin="0"></StackPanel>
+                </generic:SmoothScrollViewer>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

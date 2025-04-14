@@ -1,0 +1,133 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:generic="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements.Generic"
+             x:Class="BfmeFoundationProject.AllInOneLauncher.Pages.Primary.Guides"
+             mc:Ignorable="d" 
+             d:DesignHeight="1000" d:DesignWidth="1500">
+    <generic:SmoothScrollViewer>
+        <StackPanel HorizontalAlignment="Left">
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Text="Battle for Middle Earth I" Foreground="White" FontSize="18" FontWeight="Bold" Opacity="0.8" Margin="5,0,0,0"/>
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <StackPanel Width="336" Margin="0,0,30,0" Background="Transparent" Cursor="Hand" MouseDown="OnVideoClicked" Tag="https://www.youtube.com/watch?v=Q8T0U_6kHDk">
+                    <Border CornerRadius="16">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="6" Opacity="0.3" Color="Black" ShadowDepth="2" Direction="270"/>
+                        </Border.Effect>
+                        <Border.OpacityMask>
+                            <VisualBrush>
+                                <VisualBrush.Visual>
+                                    <Border Background="Black" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}"/>
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Border.OpacityMask>
+                        <Grid Height="196">
+                            <generic:Acrylic/>
+                            <Border CornerRadius="8" Margin="8" Height="180">
+                                <Border.OpacityMask>
+                                    <VisualBrush>
+                                        <VisualBrush.Visual>
+                                            <Border SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}" Background="Black"/>
+                                        </VisualBrush.Visual>
+                                    </VisualBrush>
+                                </Border.OpacityMask>
+                                <Image Source="https://img.youtube.com/vi/Q8T0U_6kHDk/mqdefault.jpg" VerticalAlignment="Center" Stretch="Uniform"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <TextBlock Text="Ten tips to become a great player in Battle for Middle Earth!" Foreground="White" FontSize="16" FontWeight="Bold" TextWrapping="Wrap" Margin="5,10,0,0"/>
+                    <TextBlock Text="BeyondStandards · 2 years ago" Foreground="White" FontSize="14" FontWeight="Regular" Margin="5,8,0,0" Opacity="0.6"/>
+                </StackPanel>
+                <StackPanel Width="336" Margin="0,0,30,0" Background="Transparent" Cursor="Hand" MouseUp="OnVideoClicked" Tag="https://www.youtube.com/watch?v=xcBmxdajaas">
+                    <Border CornerRadius="16">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="6" Opacity="0.3" Color="Black" ShadowDepth="2" Direction="270"/>
+                        </Border.Effect>
+                        <Border.OpacityMask>
+                            <VisualBrush>
+                                <VisualBrush.Visual>
+                                    <Border Background="Black" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}"/>
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Border.OpacityMask>
+                        <Grid Height="196">
+                            <generic:Acrylic/>
+                            <Border CornerRadius="8" Margin="8" Height="180">
+                                <Border.OpacityMask>
+                                    <VisualBrush>
+                                        <VisualBrush.Visual>
+                                            <Border SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}" Background="Black"/>
+                                        </VisualBrush.Visual>
+                                    </VisualBrush>
+                                </Border.OpacityMask>
+                                <Image Source="https://img.youtube.com/vi/xcBmxdajaas/mqdefault.jpg" VerticalAlignment="Center" Stretch="Uniform"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <TextBlock Text="The ONLY Rohan guide you will ever need! | Battle for Middle Earth Patch 2.22" Foreground="White" FontSize="16" FontWeight="Bold" TextWrapping="Wrap" Margin="5,10,0,0"/>
+                    <TextBlock Text="BeyondStandards · 1 year ago" Foreground="White" FontSize="14" FontWeight="Regular" Margin="5,8,0,0" Opacity="0.6"/>
+                </StackPanel>
+                <StackPanel Width="336" Margin="0,0,30,0" Background="Transparent" Cursor="Hand" MouseUp="OnVideoClicked" Tag="https://www.youtube.com/watch?v=UYAOqKIvCmg">
+                    <Border CornerRadius="16">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="6" Opacity="0.3" Color="Black" ShadowDepth="2" Direction="270"/>
+                        </Border.Effect>
+                        <Border.OpacityMask>
+                            <VisualBrush>
+                                <VisualBrush.Visual>
+                                    <Border Background="Black" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}"/>
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Border.OpacityMask>
+                        <Grid Height="196">
+                            <generic:Acrylic/>
+                            <Border CornerRadius="8" Margin="8" Height="180">
+                                <Border.OpacityMask>
+                                    <VisualBrush>
+                                        <VisualBrush.Visual>
+                                            <Border SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}" Background="Black"/>
+                                        </VisualBrush.Visual>
+                                    </VisualBrush>
+                                </Border.OpacityMask>
+                                <Image Source="https://img.youtube.com/vi/UYAOqKIvCmg/mqdefault.jpg" VerticalAlignment="Center" Stretch="Uniform"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <TextBlock Text="The ULTIMATE Gondor guide! Build order vs all factions! | Battle for Middle Earth 2.22" Foreground="White" FontSize="16" FontWeight="Bold" TextWrapping="Wrap" Margin="5,10,0,0"/>
+                    <TextBlock Text="BeyondStandards · 1 year ago" Foreground="White" FontSize="14" FontWeight="Regular" Margin="5,8,0,0" Opacity="0.6"/>
+                </StackPanel>
+                <StackPanel Width="336" Margin="0,0,30,0" Background="Transparent" Cursor="Hand" MouseUp="OnVideoClicked" Tag="https://www.youtube.com/watch?v=zycGolOg5WM">
+                    <Border CornerRadius="16">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="6" Opacity="0.3" Color="Black" ShadowDepth="2" Direction="270"/>
+                        </Border.Effect>
+                        <Border.OpacityMask>
+                            <VisualBrush>
+                                <VisualBrush.Visual>
+                                    <Border Background="Black" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}"/>
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Border.OpacityMask>
+                        <Grid Height="196">
+                            <generic:Acrylic/>
+                            <Border CornerRadius="8" Margin="8" Height="180">
+                                <Border.OpacityMask>
+                                    <VisualBrush>
+                                        <VisualBrush.Visual>
+                                            <Border SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}" Background="Black"/>
+                                        </VisualBrush.Visual>
+                                    </VisualBrush>
+                                </Border.OpacityMask>
+                                <Image Source="https://img.youtube.com/vi/zycGolOg5WM/mqdefault.jpg" VerticalAlignment="Center" Stretch="Uniform"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <TextBlock Text="Helm's Deep BUT the difficulty is INSANE! | Remastered Campaign BFME1" Foreground="White" FontSize="16" FontWeight="Bold" TextWrapping="Wrap" Margin="5,10,0,0"/>
+                    <TextBlock Text="BeyondStandards · 1 day ago" Foreground="White" FontSize="14" FontWeight="Regular" Margin="5,8,0,0" Opacity="0.6"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </generic:SmoothScrollViewer>
+</UserControl>

@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="BfmeFoundationProject.WorkshopStudio.Elements.WorkshopEntryScreenshotLibrary"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BfmeFoundationProject.WorkshopStudio.Elements"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="Transparent" AllowDrop="True" Drop="OnFileDrop" DragOver="OnFileDragOver">
+    <ScrollViewer x:Name="scrollViewer">
+        <WrapPanel x:Name="images" Orientation="Horizontal">
+            <Grid x:Name="placeholder" VerticalAlignment="Top">
+                <Border Background="#0CD8D8D8" CornerRadius="6" Width="356" Height="200"/>
+                <Rectangle Width="356" Height="200" Stroke="#23E2E2E2" StrokeThickness="4" StrokeDashArray="2" RadiusX="6" RadiusY="6"/>
+                <Grid>
+                    <Border Background="#0CFFFFFF" CornerRadius="300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0">
+                        <Path Stroke="#B2FFFFFF" StrokeThickness="2" Stretch="Uniform" Width="30" Height="30" Margin="30" StrokeEndLineCap="Round" StrokeStartLineCap="Round" StrokeLineJoin="Round" Data="M14 3v4a1 1 0 0 0 1 1h4 M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4 M20 15h-1a2 2 0 0 0 -2 2v2a2 2 0 0 0 2 2h1v-3 M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6 M11 21v-6l3 6v-6"/>
+                    </Border>
+                    <TextBlock Text="Drag &amp; drop image to add" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="11" FontWeight="Medium" Foreground="#59FFFFFF" Margin="0,0,0,30"/>
+                    <TextBlock HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" FontSize="12" Text="576 x 324 px" Foreground="#66FFFFFF"/>
+                </Grid>
+            </Grid>
+        </WrapPanel>
+    </ScrollViewer>
+</UserControl>

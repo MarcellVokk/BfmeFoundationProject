@@ -1,0 +1,29 @@
+﻿<generic:PopupBody x:Class="BfmeFoundationProject.AllInOneLauncher.Popups.ConfirmPopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Popups"
+             xmlns:elements="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements"
+             xmlns:generic="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements.Generic"
+             mc:Ignorable="d" 
+             Width="500" Height="300" MinHeight="340" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="title" Grid.Row="0" Text="MESSAGE TITLE" Foreground="White" FontSize="20" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <Rectangle Grid.Row="1" Fill="White" Opacity="0.2" Margin="0,10,0,0" VerticalAlignment="Top" Height="1"/>
+        <Border Grid.Row="2" CornerRadius="5" BorderThickness="0">
+            <TextBlock Name="message" Text="Message body" Foreground="White" FontSize="15" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap"></TextBlock>
+        </Border>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Grid.Column="0" Grid.Row="2" x:Name="ButtonAccept" Style="{StaticResource HiglightButton}" VerticalAlignment="Center" Click="OnConfirmClicked" Width="150" Margin="0,0,10,0" Content="{DynamicResource GenericConfirm}"/>
+            <Button Grid.Column="1" Grid.Row="2" x:Name="ButtonCancel" Content="{DynamicResource GenericCancel}" VerticalAlignment="Center" Click="OnCancelClicked" Width="150"/>
+        </StackPanel>
+    </Grid>
+</generic:PopupBody>

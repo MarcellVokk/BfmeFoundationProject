@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <RootNamespace>BfmeFoundationProject.BfmeKit</RootNamespace>
+	  <AssemblyName>BfmeFoundationProject.BfmeKit</AssemblyName>
+	  <TargetFramework>net8.0</TargetFramework>
+	  <Authors>Bfme Foundation Team</Authors>
+	  <Company>Bfme Foundation Team</Company>
+
+	  <UseWPF>False</UseWPF>
+	  <UseWindowsForms>False</UseWindowsForms>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+
+	  <Platforms>AnyCPU;x86;x64</Platforms>
+	  <PlatformTarget>AnyCPU</PlatformTarget>
+
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Title>BfmeKit</Title>
+	  <PackageIcon>bfmekiticon.png</PackageIcon>
+	  <PackageProjectUrl>https://github.com/MarcellVokk/bfme-kit</PackageProjectUrl>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <Description>Easily modify or create BFME related registry values, and list colors as well as generate map previews.</Description>
+	  <Version>2.0.0</Version>
+	  <AssemblyVersion>2.0.0</AssemblyVersion>
+	  <FileVersion>2.0.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\0-mapframe.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\1-mapframe.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\2-mapframe.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\scrollshroud.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="bfmekiticon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+	<None Update="README.md">
+		<Pack>True</Pack>
+		<PackagePath>\</PackagePath>
+	</None>
+  </ItemGroup>
+
+</Project>

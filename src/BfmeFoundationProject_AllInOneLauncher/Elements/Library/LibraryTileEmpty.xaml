@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="BfmeFoundationProject.AllInOneLauncher.Elements.Library.LibraryTileEmpty"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:elements="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements"
+             xmlns:generic="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements.Generic"
+             mc:Ignorable="d" 
+             Height="370" Width="250">
+    <Border CornerRadius="15" Cursor="Hand" MouseEnter="OnEnter" MouseLeave="OnLeave">
+        <Border.OpacityMask>
+            <VisualBrush>
+                <VisualBrush.Visual>
+                    <Border Background="Black" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Border.OpacityMask>
+        <Grid>
+            <generic:Acrylic/>
+            <Grid Margin="12" x:Name="content">
+                <Border x:Name="plusCircle" Background="#1EFFFFFF" CornerRadius="300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,100,0,0">
+                    <Path Fill="#B2FFFFFF" Stretch="Uniform" Width="40" Margin="30" Data="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </Border>
+                <TextBlock Text="{DynamicResource LibraryTileEmptyInstallMore}" FontSize="16" FontWeight="Black" TextWrapping="Wrap" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,120,0,0"/>
+                <TextBlock Text="{DynamicResource LibraryTileEmptyDiscoverMore}" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="11" FontWeight="Medium" Foreground="#59FFFFFF" Margin="0,0,0,15"/>
+            </Grid>
+            <Border x:Name="hoverEffect" Background="#0CFFFFFF" Opacity="0"/>
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,540 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopStudio\\BfmeFoundationProject_WorkshopStudio.csproj": {}
+  },
+  "projects": {
+    "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_BfmeKit\\BfmeFoundationProject_BfmeKit.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_BfmeKit\\BfmeFoundationProject_BfmeKit.csproj",
+        "projectName": "BfmeFoundationProject.BfmeKit",
+        "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_BfmeKit\\BfmeFoundationProject_BfmeKit.csproj",
+        "packagesPath": "C:\\Users\\Marcell\\.nuget\\packages\\",
+        "outputPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_BfmeKit\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "F:\\Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Marcell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_DirectXRuntime\\BfmeFoundationProject_DirectXRuntime.csproj": {
+      "version": "1.1.0",
+      "restore": {
+        "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_DirectXRuntime\\BfmeFoundationProject_DirectXRuntime.csproj",
+        "projectName": "BfmeFoundationProject.DirectXRuntime",
+        "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_DirectXRuntime\\BfmeFoundationProject_DirectXRuntime.csproj",
+        "packagesPath": "C:\\Users\\Marcell\\.nuget\\packages\\",
+        "outputPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_DirectXRuntime\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "F:\\Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Marcell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_HttpInstruments\\BfmeFoundationProject_HttpInstruments.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_HttpInstruments\\BfmeFoundationProject_HttpInstruments.csproj",
+        "projectName": "BfmeFoundationProject.HttpInstruments",
+        "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_HttpInstruments\\BfmeFoundationProject_HttpInstruments.csproj",
+        "packagesPath": "C:\\Users\\Marcell\\.nuget\\packages\\",
+        "outputPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_HttpInstruments\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "F:\\Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Marcell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_SharedUi\\BfmeFoundationProject_SharedUi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_SharedUi\\BfmeFoundationProject_SharedUi.csproj",
+        "projectName": "BfmeFoundationProject.SharedUi",
+        "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_SharedUi\\BfmeFoundationProject_SharedUi.csproj",
+        "packagesPath": "C:\\Users\\Marcell\\.nuget\\packages\\",
+        "outputPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_SharedUi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "F:\\Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Marcell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows7.0",
+            "projectReferences": {
+              "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_Shared\\BfmeFoundationProject_Shared.csproj": {
+                "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_Shared\\BfmeFoundationProject_Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows7.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Ookii.Dialogs.Wpf": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_Shared\\BfmeFoundationProject_Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_Shared\\BfmeFoundationProject_Shared.csproj",
+        "projectName": "BfmeFoundationProject.Shared",
+        "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_Shared\\BfmeFoundationProject_Shared.csproj",
+        "packagesPath": "C:\\Users\\Marcell\\.nuget\\packages\\",
+        "outputPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "F:\\Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Marcell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.7.402.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopKit\\BfmeFoundationProject_WorkshopKit.csproj": {
+      "version": "2.0.3",
+      "restore": {
+        "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopKit\\BfmeFoundationProject_WorkshopKit.csproj",
+        "projectName": "BfmeFoundationProject.WorkshopKit",
+        "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopKit\\BfmeFoundationProject_WorkshopKit.csproj",
+        "packagesPath": "C:\\Users\\Marcell\\.nuget\\packages\\",
+        "outputPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopKit\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "F:\\Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Marcell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_BfmeKit\\BfmeFoundationProject_BfmeKit.csproj": {
+                "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_BfmeKit\\BfmeFoundationProject_BfmeKit.csproj"
+              },
+              "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_DirectXRuntime\\BfmeFoundationProject_DirectXRuntime.csproj": {
+                "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_DirectXRuntime\\BfmeFoundationProject_DirectXRuntime.csproj"
+              },
+              "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_HttpInstruments\\BfmeFoundationProject_HttpInstruments.csproj": {
+                "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_HttpInstruments\\BfmeFoundationProject_HttpInstruments.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.7.403.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopStudio\\BfmeFoundationProject_WorkshopStudio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopStudio\\BfmeFoundationProject_WorkshopStudio.csproj",
+        "projectName": "BfmeFoundationProject_WorkshopStudio",
+        "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopStudio\\BfmeFoundationProject_WorkshopStudio.csproj",
+        "packagesPath": "C:\\Users\\Marcell\\.nuget\\packages\\",
+        "outputPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopStudio\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "F:\\Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Marcell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows7.0",
+            "projectReferences": {
+              "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_SharedUi\\BfmeFoundationProject_SharedUi.csproj": {
+                "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_SharedUi\\BfmeFoundationProject_SharedUi.csproj"
+              },
+              "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_Shared\\BfmeFoundationProject_Shared.csproj": {
+                "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_Shared\\BfmeFoundationProject_Shared.csproj"
+              },
+              "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopKit\\BfmeFoundationProject_WorkshopKit.csproj": {
+                "projectPath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopKit\\BfmeFoundationProject_WorkshopKit.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

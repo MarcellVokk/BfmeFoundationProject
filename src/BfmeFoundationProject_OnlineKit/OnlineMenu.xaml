@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="BfmeFoundationProject.OnlineKit.OnlineMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BfmeFoundationProject.OnlineKit"
+             xmlns:elements="clr-namespace:BfmeFoundationProject.OnlineKit.Elements"
+             mc:Ignorable="d" 
+             d:Height="1000" d:Width="1500" x:Name="userControl" Loaded="UserControl_Loaded" ClipToBounds="True">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/BfmeFoundationProject.OnlineKit;component/Styles/NormalButtonStyle.xaml"/>
+                <ResourceDictionary>
+                    <FontFamily x:Key="Segoe UI">/BfmeFoundationProject.OnlineKit;component/Fonts/#Segoe UI Variable Display</FontFamily>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="windowGrid" Background="Black">
+        <Grid.OpacityMask>
+            <VisualBrush>
+                <VisualBrush.Visual>
+                    <Rectangle x:Name="mask" RadiusX="0" RadiusY="0" Fill="White" StrokeThickness="20" Stroke="Transparent" Width="{Binding ElementName=userControl, Path=ActualWidth}" Height="{Binding ElementName=userControl, Path=ActualHeight}"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Grid.OpacityMask>
+        <Image x:Name="background" Stretch="UniformToFill" Opacity="0.4" Margin="-10">
+            <Image.Effect>
+                <BlurEffect KernelType="Gaussian" Radius="10"/>
+            </Image.Effect>
+        </Image>
+        <Grid x:Name="content">
+            <Grid x:Name="grid_status">
+                <Grid x:Name="status" Visibility="Visible">
+                    <TextBlock x:Name="textblock_status" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Segoe UI}" FontSize="30" FontWeight="Thin" Text="DESIGN MODE" Foreground="White"/>
+                </Grid>
+                <Grid x:Name="loading" Visibility="Collapsed">
+                    <TextBlock x:Name="loading_mode" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Segoe UI}" FontSize="30" FontWeight="Thin" Text="LOADING" Foreground="White"/>
+
+                    <elements:LoadingSpinner IsLoading="False" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,80" x:Name="status_loading"/>
+                </Grid>
+                <Grid x:Name="download" Visibility="Collapsed">
+                    <TextBlock x:Name="download_mode" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Segoe UI}" FontSize="30" FontWeight="Thin" Text="UPDATING" Foreground="White"/>
+                    <elements:ProgressBar x:Name="download_progressBar" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,100" Height="35"/>
+                </Grid>
+                <StackPanel Margin="0,0,0,100" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                    <Button Style="{DynamicResource NormalButton}" x:Name="reload_button" Content="LOAD" Click="OnReloadClicked" Visibility="Collapsed"/>
+                    <Button Style="{DynamicResource NormalButton}" x:Name="repair_button" Content="REPAIR" Click="OnRepairClicked" Margin="0,20,0,0" Visibility="Collapsed"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <elements:PopupVisualizer d:Visibility="Collapsed"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BfmeFoundationProject.BfmeKit</id>
+    <version>2.0.0</version>
+    <title>BfmeKit</title>
+    <authors>Bfme Foundation Team</authors>
+    <icon>bfmekiticon.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/MarcellVokk/bfme-kit</projectUrl>
+    <description>Easily modify or create BFME related registry values, and list colors as well as generate map previews.</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />
+        <dependency id="System.Drawing.Common" version="8.0.10" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\bin\Release\net8.0\BfmeFoundationProject.BfmeKit.dll" target="lib\net8.0\BfmeFoundationProject.BfmeKit.dll" />
+    <file src="F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\bfmekiticon.png" target="\bfmekiticon.png" />
+    <file src="F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_BfmeKit\README.md" target="\README.md" />
+  </files>
+</package>

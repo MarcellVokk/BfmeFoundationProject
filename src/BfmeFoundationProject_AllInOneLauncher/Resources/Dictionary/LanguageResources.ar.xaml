@@ -1,0 +1,129 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=netstandard">
+
+    <!--=====================  TrayIcon  =====================-->
+    <system:String x:Key="TrayIconShowApplication">عرض نافذة التشغيل</system:String>
+    <system:String x:Key="TrayIconCloseApplication">إغلاق النافذة</system:String>
+
+    <!--=====================  Generic  =====================-->
+    <system:String x:Key="GenericCancel">إلغاء</system:String>
+    <system:String x:Key="GenericClose">إغلاق</system:String>
+    <system:String x:Key="GenericInstall">تثبيت</system:String>
+    <system:String x:Key="GenericLoading">تحميل</system:String>
+    <system:String x:Key="GenericPlay">تشغيل</system:String>
+    <system:String x:Key="GenericAdd">إضافة</system:String>
+    <system:String x:Key="GenericFree">مجاني</system:String>
+    <system:String x:Key="GenericConfirm">تأكيد</system:String>
+    <system:String x:Key="GenericYes">نعم</system:String>
+    <system:String x:Key="GenericNo">لا</system:String>
+
+    <!--=====================  MainWindow  =====================-->
+    <system:String x:Key="MainWindowSingleplayerTab">لعب منفرد</system:String>
+    <system:String x:Key="MainWindowMultiplayerTab">لعب جماعي</system:String>
+    <system:String x:Key="MainWindowGuidesTab">إرشادات</system:String>
+
+    <!--=====================  Offline  =====================-->
+    <system:String x:Key="OfflinePageNewsTab">التحديثات</system:String>
+    <system:String x:Key="OfflinePageLibraryTab">المكتبة</system:String>
+    <system:String x:Key="OfflinePageWorkshopTab">ورشة العمل</system:String>
+    <system:String x:Key="OfflinePageEnabledEnhancements">التحسينات المفعلة</system:String>
+    <system:String x:Key="OfflinePageNoEnhancementsActive">لا توجد تحسينات مفعلة</system:String>
+    <system:String x:Key="OfflinePageLaunchOptions">خيارات التشغيل</system:String>
+    <system:String x:Key="OfflinePageLaunchOptionsWindowedMode">وضع العرض</system:String>
+    <system:String x:Key="OfflinePageLaunchOptionsAltTabMode">تفعيل ALT+TAB</system:String>
+
+    <!--=====================  Offline/Library  =====================-->
+    <system:String x:Key="LibraryPageSearchPlaceholder">ابحث في المكتبة...</system:String>
+    <system:String x:Key="LibraryPageMakeSnapshot">التقاط لقطة</system:String>
+    <system:String x:Key="LibraryPageFilterPatchesAndMods">التصحيحات والتعديلات</system:String>
+    <system:String x:Key="LibraryPageFilterEnhancements">التحسينات</system:String>
+    <system:String x:Key="LibraryPageFilterMapPacks">حزم الخرائط</system:String>
+    <system:String x:Key="LibraryPageFilterSnapshots">اللقطات</system:String>
+    <system:String x:Key="LibraryPageFilterEverything">كل شيء</system:String>
+
+    <!--=====================  Offline/Workshop  =====================-->
+    <system:String x:Key="WorkshopPageSearchPlaceholder">ابحث في ورشة العمل...</system:String>
+    <system:String x:Key="WorkshopPageFilterPatchesAndMods">التصحيحات والتعديلات</system:String>
+    <system:String x:Key="WorkshopPageFilterEnhancements">التحسينات</system:String>
+    <system:String x:Key="WorkshopPageFilterMapPacks">حزم الخرائط</system:String>
+    <system:String x:Key="WorkshopPageFilterEverything">كل شيء</system:String>
+    <system:String x:Key="WorkshopPageSortByMostDownloads">الأكثر تحميلًا</system:String>
+    <system:String x:Key="WorkshopPageSortByMostRecent">الأحدث</system:String>
+    <system:String x:Key="WorkshopPageSortAlphabetical">أبجدي</system:String>
+
+    <!--=====================  LibraryTile  =====================-->
+    <system:String x:Key="LibraryTileSyncing">جارِ المزامنة</system:String>
+    <system:String x:Key="LibraryTileActive">مفعّل</system:String>
+    <system:String x:Key="LibraryTilePatchType">تصحيح</system:String>
+    <system:String x:Key="LibraryTileModType">تعديل</system:String>
+    <system:String x:Key="LibraryTileEnhancementType">تحسين</system:String>
+    <system:String x:Key="LibraryTileMapPackType">حزمة خرائط</system:String>
+    <system:String x:Key="LibraryTileSnapshotType">لقطة</system:String>
+
+    <!--=====================  LibraryTileHorizontal  =====================-->
+    <system:String x:Key="LibraryTileHorizontalNoPatchSelected">لا توجد تصحيحات مفعلة</system:String>
+    <system:String x:Key="LibraryTileHorizontalSyncAgain">مزامنة مرة أخرى</system:String>
+    <system:String x:Key="LibraryTileHorizontalUpdate">تحديث</system:String>
+
+    <!--=====================  LibraryTileEmpty  =====================-->
+    <system:String x:Key="LibraryTileEmptyInstallMore">تثبيت المزيد</system:String>
+    <system:String x:Key="LibraryTileEmptyDiscoverMore">اكتشف محتوى جديد على ورشة العمل!</system:String>
+
+    <!--=====================  Settings  =====================-->
+    <system:String x:Key="SettingsPageLauncherSectionHeader">إعدادات التشغيل</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneral">عام</system:String>
+    <system:String x:Key="SettingsPageBFME1SectionHeader">معركة من أجل الأرض™ الأولى</system:String>
+    <system:String x:Key="SettingsPageBFME2SectionHeader">معركة من أجل الأرض™ الثانية</system:String>
+    <system:String x:Key="SettingsPageRotWKSectionHeader">عصر الساحر™</system:String>
+    <system:String x:Key="SettingsPageBFMESectionGeneral">عام</system:String>
+
+    <!--=====================  Settings/Launcher Settings/General  =====================-->
+    <system:String x:Key="SettingsPageLauncherSectionGeneralLanguage">لغة التشغيل</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralCloseToTray">إغلاق النافذة إلى علبة النظام</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralCreateDesktopIcon">إنشاء اختصار على سطح المكتب</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralLibraryHeader">إعدادات المكتبة</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralAddLibraryLocation">إضافة موقع مكتبة</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralDriveDefaultNameText">القرص المحلي</system:String>
+
+    <!--=====================  Settings/BFME Settings/Video & Resolution  =====================-->
+    <system:String x:Key="SettingsPageBFMESectionVideoResolution">دقة اللعبة</system:String>
+    <system:String x:Key="SettingsPageBFMESectionVideoGraphicsApi">واجهة برمجة التطبيقات للرسوميات</system:String>
+
+    <!--=====================  Settings/BFME Settings/Language & Sound  =====================-->
+    <system:String x:Key="SettingsPageBFMESectionLanguageLanguage">لغة اللعبة</system:String>
+
+    <!--=====================  LauncherUpdatePopup  =====================-->
+    <system:String x:Key="LauncherUpdatePopupTitle">تحديث</system:String>
+    <system:String x:Key="LauncherUpdatePopupDescription">تحميل ملفات النافذة</system:String>
+
+    <!--=====================  InstallGamePopup  =====================-->
+    <system:String x:Key="InstallGamePopupTitle">تثبيت اللعبة</system:String>
+    <system:String x:Key="InstallGamePopupLanguage">اللغة</system:String>
+    <system:String x:Key="InstallGamePopupLocation">الموقع</system:String>
+
+    <!--=====================  PackagePagePopup  =====================-->
+    <system:String x:Key="PackagePagePopupAddToLibrary">إضافة إلى المكتبة</system:String>
+    <system:String x:Key="PackagePagePopupInYourLibrary">في مكتبتك</system:String>
+    <system:String x:Key="PackagePagePopupDownloads">تنزيلات</system:String>
+    <system:String x:Key="PackagePagePopupGame">لعبة</system:String>
+    <system:String x:Key="PackagePagePopupType">نوع</system:String>
+    <system:String x:Key="PackagePagePopupLanguage">اللغة</system:String>
+    <system:String x:Key="PackagePagePopupSize">الحجم</system:String>
+    <system:String x:Key="PackagePagePopupScreenshots">لقطات الشاشة</system:String>
+    <system:String x:Key="PackagePagePopupDescription">الوصف</system:String>
+    <system:String x:Key="PackagePagePopupWhatsNew">ما الجديد</system:String>
+
+    <!--=====================  ScriptedPackagePopup  =====================-->
+    <system:String x:Key="ScriptedPackagePopupRequirements">المتطلبات:</system:String>
+
+    <!--=====================  ScriptedPackagePopup/RequirementItem  =====================-->
+    <system:String x:Key="ScriptedPackageRequirementComplete">مكتمل</system:String>
+    <system:String x:Key="ScriptedPackageRequirementActionRequired">تفعيل مطلوب</system:String>
+    <system:String x:Key="ScriptedPackageRequirementCompletePrevious">مكتمل سابق</system:String>
+
+    <!--=====================  ErrorPopup  =====================-->
+    <system:String x:Key="ErrorPopupTitle">خطأ</system:String>
+    <system:String x:Key="ErrorPopupCopyError">نسخ النص</system:String>
+    <system:String x:Key="ErrorPopupErrorCopied">تم النسخ!</system:String>
+</ResourceDictionary>

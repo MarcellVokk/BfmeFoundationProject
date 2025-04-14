@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <RootNamespace>BfmeFoundationProject.HttpInstruments</RootNamespace>
+	  <AssemblyName>BfmeFoundationProject.HttpInstruments</AssemblyName>
+	  <TargetFramework>net8.0</TargetFramework>
+	  <Authors>Bfme Foundation Team</Authors>
+	  <Company>Bfme Foundation Team</Company>
+
+	  <UseWPF>False</UseWPF>
+	  <UseWindowsForms>False</UseWindowsForms>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+
+	  <Platforms>AnyCPU;x86;x64</Platforms>
+	  <PlatformTarget>AnyCPU</PlatformTarget>
+
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Title>HttpInstruments</Title>
+	  <PackageIcon>instrumentsicon.png</PackageIcon>
+	  <Description>A dependency package that implements a stable and well tested custom http file downloader.</Description>
+	  <Version>2.0.0</Version>
+	  <AssemblyVersion>2.0.0</AssemblyVersion>
+	  <FileVersion>2.0.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="instrumentsicon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

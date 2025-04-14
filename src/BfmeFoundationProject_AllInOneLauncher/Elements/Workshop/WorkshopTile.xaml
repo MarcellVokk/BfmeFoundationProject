@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="BfmeFoundationProject.AllInOneLauncher.Elements.Workshop.WorkshopTile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:elements="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements"
+             xmlns:generic="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements.Generic"
+             mc:Ignorable="d" 
+             Height="370" Width="250">
+    <Border CornerRadius="15" Cursor="Hand" MouseEnter="OnEnter" MouseLeave="OnLeave" MouseUp="OnClicked">
+        <Border.OpacityMask>
+            <VisualBrush>
+                <VisualBrush.Visual>
+                    <Border Background="Black" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}"/>
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Border.OpacityMask>
+        <Grid>
+            <generic:Acrylic/>
+            <Grid Margin="12" x:Name="content">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="260"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" CornerRadius="8" Background="#1EFFFFFF">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="4" Opacity="0.5" Color="#FF424242" ShadowDepth="2" Direction="270"/>
+                    </Border.Effect>
+                    <Border.OpacityMask>
+                        <VisualBrush>
+                            <VisualBrush.Visual>
+                                <Border SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}" Background="Black"/>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Border.OpacityMask>
+                    <Image x:Name="icon" VerticalAlignment="Center" Stretch="UniformToFill"/>
+                </Border>
+                <Grid Grid.Row="2" UseLayoutRounding="True" SnapsToDevicePixels="True">
+                    <StackPanel Margin="5,0,5,0">
+                        <TextBlock x:Name="title" Text="Title" FontSize="18" FontWeight="Black" TextWrapping="Wrap" Foreground="White"/>
+                        <StackPanel Margin="0,5,0,0" Orientation="Horizontal">
+                            <TextBlock x:Name="version" Text="version" FontSize="11" FontWeight="Medium" Foreground="#59FFFFFF"/>
+                            <TextBlock Text="|" FontSize="11" FontWeight="Medium" Foreground="#59FFFFFF" Margin="7,-1,7,0"/>
+                            <Path Fill="#FF72DA56" Stroke="#FF72DA56" StrokeThickness="0.3" Stretch="Uniform" Height="8" VerticalAlignment="Center" Data="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
+                            <TextBlock x:Name="downloads" Text="0" FontSize="11" FontWeight="Medium" Foreground="#59FFFFFF" Margin="3,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <Grid VerticalAlignment="Bottom" Height="23" Margin="0,0,5,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" x:Name="tags" Orientation="Horizontal">
+                            <Border Margin="0,0,6,0" Background="#1EFFFFFF" CornerRadius="12">
+                                <TextBlock x:Name="entryType" Text="Type" FontSize="10" FontWeight="Bold" Margin="10,5,10,5" Foreground="White"/>
+                            </Border>
+                            <Border Margin="0,0,6,0" Background="#1EFFFFFF" CornerRadius="12">
+                                <TextBlock x:Name="author" Text="Author" FontSize="10" FontWeight="Bold" Margin="10,5,10,5" Foreground="White" MaxWidth="88" TextTrimming="CharacterEllipsis"/>
+                            </Border>
+                        </StackPanel>
+                        <Path Grid.Column="2" x:Name="inLibraryIcon" Visibility="Hidden" HorizontalAlignment="Right" VerticalAlignment="Center" Fill="#028BDB" Stroke="#028BDB" StrokeThickness="0.3" Stretch="Uniform" Width="15" Data="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Border x:Name="hoverEffect" Background="#0CFFFFFF" Opacity="0"/>
+        </Grid>
+    </Border>
+</UserControl>

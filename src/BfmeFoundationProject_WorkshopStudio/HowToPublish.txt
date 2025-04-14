@@ -1,0 +1,1 @@
+dotnet publish -r win-x64 -o "..\..\bin\BfmeFoundationProject_WorkshopStudio" /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true /p:IncludeAllContentForSelfExtract=true /p:DebugType=None /p:DebugSymbols=false --self-contained true

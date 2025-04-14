@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="BfmeFoundationProject.WorkshopStudio.Elements.WorkshopEntryFileListItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BfmeFoundationProject.WorkshopStudio.Elements"
+             xmlns:sharedUi="clr-namespace:BfmeFoundationProject.SharedUi.Elements;assembly=BfmeFoundationProject.SharedUi"
+             mc:Ignorable="d" Margin="0,0,0,1"
+             d:DesignWidth="800" Height="25" Focusable="True" Background="Transparent" Loaded="OnLoad" Unloaded="OnUnload" PreviewMouseDown="OnClicked" MouseEnter="OnEnter" MouseLeave="OnLeave">
+    <Grid>
+        <Border x:Name="hoverBackground" Background="#19FFFFFF" CornerRadius="4" Visibility="Hidden" d:Visibility="Visible"/>
+        <Border x:Name="selectedBackground" Background="#26FFFFFF" Visibility="Hidden" d:Visibility="Visible"/>
+        <Border x:Name="selectedBorder" BorderBrush="#33FFFFFF" BorderThickness="1" Visibility="Hidden" d:Visibility="Visible"/>
+        <Grid Margin="3,0,3,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Path x:Name="folderIcon" Stretch="Uniform" Width="12" Fill="#FFD45E" Data="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z" Visibility="Hidden"/>
+            <Path x:Name="fileIcon" Stretch="Uniform" Width="10" Fill="#FFCECECE" Data="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3z"/>
+            <TextBox Grid.Column="1" x:Name="nameEdit" Text="Name" HorizontalAlignment="Left" MinWidth="200" Margin="0,0,5,0" Padding="2,0,2,0" Height="20" Background="#FF151515" BorderBrush="#C3C3C3" Visibility="Hidden" KeyDown="OnNameEditKeyDown"/>
+            <TextBlock Grid.Column="1" x:Name="name" Text="Name" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,5,0" Background="Transparent" MouseDown="OnNameMouseDown"/>
+            <TextBlock Grid.Column="2" x:Name="hash" Text="Hash" VerticalAlignment="Center" Margin="5,0,5,0" Foreground="#66FFFFFF"/>
+            <TextBox Grid.Column="3" x:Name="languageEdit" Text="EN" HorizontalAlignment="Stretch" Margin="0,0,5,0" Padding="2,0,2,0" Height="20" Visibility="Hidden" KeyDown="OnLanguageEditKeyDown"/>
+            <TextBlock Grid.Column="3" x:Name="language" Text="EN" VerticalAlignment="Center" Margin="5,0,5,0" Background="Transparent" MouseDown="OnLanguageMouseDown" Foreground="#66FFFFFF"/>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,76 @@
+﻿<generic:PopupBody x:Class="BfmeFoundationProject.AllInOneLauncher.Popups.InstallGamePopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Popups"
+             xmlns:elements="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             xmlns:generic="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements.Generic"
+             mc:Ignorable="d" 
+             Width="700" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="TextTitleInstall" Grid.Row="0" Text="{DynamicResource InstallGamePopupTitle}" Foreground="White" FontSize="20" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+        <Rectangle Grid.Row="1" Fill="White" Opacity="0.2" Margin="0,10,0,0" VerticalAlignment="Top" Height="1"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Source="/Resources/Images/BFME1LanguageSupport.png" Stretch="None" Width="450" Height="270">
+                    <Image.OpacityMask>
+                        <VisualBrush>
+                            <VisualBrush.Visual>
+                                <Border Background="Black" SnapsToDevicePixels="True" CornerRadius="{Binding CornerRadius, RelativeSource={RelativeSource AncestorType=Border}}" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType=Border}}" Height="{Binding ActualHeight, RelativeSource={RelativeSource AncestorType=Border}}"/>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Image.OpacityMask>
+                </Image>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" FontSize="14" FontWeight="SemiBold" Text="{DynamicResource InstallGamePopupLanguage}" Foreground="white"/>
+                    <elements:DropdownPicker Grid.Row="2" x:Name="LanguageDropdown" VerticalAlignment="Center" FontSize="20" Height="40" ColorStyle="Navy" Corners="4">
+                        <elements:DropdownPicker.Options>
+                            <system:String>English</system:String>
+                            <system:String>French</system:String>
+                            <system:String>German</system:String>
+                            <system:String>Italian</system:String>
+                            <system:String>Spanish</system:String>
+                            <system:String>Swedish</system:String>
+                            <system:String>Dutch</system:String>
+                            <system:String>Polish</system:String>
+                            <system:String>Norwegian</system:String>
+                        </elements:DropdownPicker.Options>
+                    </elements:DropdownPicker>
+                    <TextBlock Grid.Row="4" FontSize="14" FontWeight="SemiBold" Text="{DynamicResource InstallGamePopupLocation}" Foreground="white"/>
+                    <generic:SmoothScrollViewer Grid.Row="6">
+                        <StackPanel x:Name="locations"/>
+                    </generic:SmoothScrollViewer>
+                </Grid>
+            </Grid>
+        </Grid>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Grid.Column="0" Grid.Row="2" x:Name="ButtonAccept" Style="{StaticResource HiglightButton}" VerticalAlignment="Center" Click="OnInstallClicked" Width="150" Margin="0,0,10,0" Content="{DynamicResource GenericInstall}"/>
+            <Button Grid.Column="1" Grid.Row="2" x:Name="ButtonCancel" Content="{DynamicResource GenericCancel}" VerticalAlignment="Center" Click="OnCancelClicked" Width="150"/>
+        </StackPanel>
+    </Grid>
+</generic:PopupBody>

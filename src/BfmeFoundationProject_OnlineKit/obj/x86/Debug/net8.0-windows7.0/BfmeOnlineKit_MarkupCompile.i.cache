@@ -1,0 +1,20 @@
+﻿BfmeOnlineKit
+1.7.0
+
+library
+C#
+.cs
+F:\Visual Studio\repos\BfmeFoundationProject\src\BfmeFoundationProject_OnlineMenu\BfmeFoundationProject_OnlineKit\obj\x86\Debug\net8.0-windows7.0\
+BfmeFoundationProject.OnlineKit
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+
+91041661224
+
+201545599992
+1981451641563
+Elements\CornerAccentFrame.xaml;Elements\LoadingSpinner.xaml;Elements\Popups\FirewallAntivirusExceptionsPopup.xaml;Elements\Popups\MessagePopup.xaml;Elements\PopupVisualizer.xaml;Elements\ProgressBar.xaml;OnlineMenu.xaml;Styles\MiniButtonStyle.xaml;Styles\NormalButtonStyle.xaml;
+
+False
+
