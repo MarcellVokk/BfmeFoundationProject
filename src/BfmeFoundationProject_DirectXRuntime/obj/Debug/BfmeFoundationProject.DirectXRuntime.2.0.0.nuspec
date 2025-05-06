@@ -7,7 +7,7 @@
     <authors>Bfme Foundation Team</authors>
     <icon>dependencyicon.png</icon>
     <description>A dependency package containing the necesary DirectX 9 runtime installer for BFME games.</description>
-    <repository type="git" />
+    <repository type="git" commit="60616c27c3e7152a7c91f053c3091ac2439f542a" />
     <dependencies>
       <group targetFramework="net8.0" />
     </dependencies>

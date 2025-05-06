@@ -22,6 +22,7 @@
     <system:String x:Key="MainWindowSingleplayerTab">EGYJÁTÉKOS</system:String>
     <system:String x:Key="MainWindowMultiplayerTab">TÖBBJÁTÉKOS</system:String>
     <system:String x:Key="MainWindowGuidesTab">ÚTMUTATÓK</system:String>
+    <system:String x:Key="MainWindowAboutTab">INFÓ</system:String>
 
     <!--=====================  Offline  =====================-->
     <system:String x:Key="OfflinePageNewsTab">Változásnapló</system:String>
@@ -94,8 +95,13 @@
     <system:String x:Key="SettingsPageBFMESectionLanguageLanguage">Játék nyelve</system:String>
 
     <!--=====================  LauncherUpdatePopup  =====================-->
+    <system:String x:Key="LauncherInstallPopupTitle">TELEPÍTÉS</system:String>
     <system:String x:Key="LauncherUpdatePopupTitle">FRISSÍTÉS</system:String>
     <system:String x:Key="LauncherUpdatePopupDescription">Letöltés az indító fájljai</system:String>
+
+    <!--=====================  ApplyLanguageChangePopup  =====================-->
+    <system:String x:Key="ApplyLanguageChangePopupTitle">SWITCHING LANGUAGE</system:String>
+    <system:String x:Key="ApplyLanguageChangePopupDescription">Downloading language files for</system:String>
 
     <!--=====================  InstallGamePopup  =====================-->
     <system:String x:Key="InstallGamePopupTitle">JÁTÉK TELEPÍTÉSE</system:String>

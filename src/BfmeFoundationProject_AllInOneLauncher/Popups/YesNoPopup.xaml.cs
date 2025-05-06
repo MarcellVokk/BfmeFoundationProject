@@ -11,16 +11,8 @@ public partial class YesNoPopup : PopupBody
     public YesNoPopup(string title, string message, bool noSubmits = false)
     {
         InitializeComponent();
-        this.title.Text = string.Join("",
-            title.Split("{").Select(x =>
-                !x.Contains("}")
-                    ? x
-                    : ((Application.Current.FindResource(x.Split("}")[0]).ToString() ?? "") + x.Split("}")[1])));
-        this.message.Text = string.Join("",
-            message.Split("{").Select(x =>
-                !x.Contains("}")
-                    ? x
-                    : ((Application.Current.FindResource(x.Split("}")[0]).ToString() ?? "") + x.Split("}")[1])));
+        this.title.Text = string.Join("", title.Split("{").Select(x => !x.Contains("}") ? x : ((Application.Current.FindResource(x.Split("}")[0]).ToString() ?? "") + x.Split("}")[1])));
+        this.message.Text = string.Join("", message.Split("{").Select(x => !x.Contains("}") ? x : ((Application.Current.FindResource(x.Split("}")[0]).ToString() ?? "") + x.Split("}")[1])));
 
         NoSubmits = noSubmits;
     }

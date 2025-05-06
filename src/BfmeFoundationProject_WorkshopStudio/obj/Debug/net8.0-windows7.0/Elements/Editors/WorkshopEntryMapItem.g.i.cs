@@ -78,8 +78,8 @@ namespace BfmeFoundationProject.WorkshopStudio.Elements {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BfmeFoundationProject_WorkshopStudio;component/elements/editors/workshopentrymap" +
-                    "item.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BfmeFoundationProject_WorkshopStudio;V1.0.0.0;component/elements/editors/worksho" +
+                    "pentrymapitem.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Elements\Editors\WorkshopEntryMapItem.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

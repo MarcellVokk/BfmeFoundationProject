@@ -10,15 +10,15 @@ namespace BfmeFoundationProject.BfmeKit.Logic
         [SupportedOSPlatform("windows")]
         public static List<BfmeColor> ImportColors(object game)
         {
-            List<BfmeColor> results = new List<BfmeColor>();
+            var results = new List<BfmeColor>();
 
             if (!BfmeRegistryManager.IsInstalled(game))
                 return results;
 
-            string gameInstallDirectory = BfmeRegistryManager.GetKeyValue(game, BfmeRegistryKey.InstallPath);
-            string activeModPath = WorkshopUtils.GetActiveModPath(Convert.ToInt32(game));
+            var gameInstallDirectory = BfmeRegistryManager.GetKeyValue(game, BfmeRegistryKey.InstallPath);
+            var activeModPath = WorkshopUtils.GetActiveModPath(Convert.ToInt32(game));
 
-            string multiplayerini = "";
+            var multiplayerini = "";
 
             if (File.Exists(Path.Combine(activeModPath, "data", "ini", "multiplayer.ini")))
                 multiplayerini += File.ReadAllText(Path.Combine(activeModPath, "data", "ini", "multiplayer.ini"));
@@ -27,12 +27,12 @@ namespace BfmeFoundationProject.BfmeKit.Logic
             else
                 return results;
 
-            bool inBlock = false;
-            string blockName = "";
-            int blockId = 0;
-            string blockContent = "";
+            var inBlock = false;
+            var blockName = "";
+            var blockId = 0;
+            var blockContent = "";
 
-            foreach (string line in multiplayerini.Split("\n").Select(x => x.Trim('\n').Trim('\r').Trim(' ').Trim('\t').Trim(' ').Trim('\t')))
+            foreach (var line in multiplayerini.Split("\n").Select(x => x.Trim('\n').Trim('\r').Trim(' ').Trim('\t').Trim(' ').Trim('\t')))
             {
                 if (string.IsNullOrWhiteSpace(line) || line.StartsWith("//") || line.StartsWith(";"))
                     continue;
@@ -44,7 +44,7 @@ namespace BfmeFoundationProject.BfmeKit.Logic
                 }
                 else if (inBlock)
                 {
-                    string safeLine = line.Replace("\t", "  ");
+                    var safeLine = line.Replace("\t", "  ");
                     while (safeLine.Contains("  "))
                         safeLine = safeLine.Replace("  ", " ");
                     safeLine = safeLine.Trim(' ');
@@ -54,7 +54,7 @@ namespace BfmeFoundationProject.BfmeKit.Logic
 
                     if (safeLine.ToLower().StartsWith("end"))
                     {
-                        string[] blockContentParts = blockContent.Split([' ', ';']);
+                        var blockContentParts = blockContent.Split([' ', ';']);
                         try { results.Add(new BfmeColor(blockName.StartsWith("Color") ? blockName.Remove(0, "Color".Length) : blockName, blockId, Color.FromArgb(int.Parse(blockContentParts[0].Replace("r:", "")), int.Parse(blockContentParts[1].Replace("g:", "")), int.Parse(blockContentParts[2].Replace("b:", ""))))); } catch { }
 
                         inBlock = false;

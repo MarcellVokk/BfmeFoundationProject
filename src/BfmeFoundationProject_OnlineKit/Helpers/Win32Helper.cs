@@ -18,15 +18,6 @@ namespace BfmeFoundationProject.OnlineKit
         public static extern bool MoveWindow(IntPtr hWnd, int X, int Y, int Width, int Height, bool Repaint);
 
         [DllImport("user32.dll")]
-        private static extern bool EnumWindows(EnumWindowsProc enumProc, IntPtr lParam);
-
-        [DllImport("user32.dll")]
-        private static extern int GetWindowThreadProcessId(IntPtr hWnd, out int lpdwProcessId);
-
-        [DllImport("user32.dll")]
-        private static extern bool IsWindowVisible(IntPtr hWnd);
-
-        [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
 
         private delegate bool EnumWindowsProc(IntPtr hWnd, IntPtr lParam);
@@ -44,30 +35,6 @@ namespace BfmeFoundationProject.OnlineKit
             SetWindowLong(hChild, GWL_STYLE, (uint)(style));
 
             SetParent(hChild, hParent);
-        }
-
-        public static List<IntPtr> GetWindowsForProcess(Process process)
-        {
-            try
-            {
-                List<IntPtr> windows = new List<IntPtr>();
-
-                EnumWindows(delegate (IntPtr hWnd, IntPtr lParam)
-                {
-                    GetWindowThreadProcessId(hWnd, out int windowProcessId);
-                    if (windowProcessId == process.Id && IsWindowVisible(hWnd))
-                    {
-                        windows.Add(hWnd);
-                    }
-                    return true;
-                }, IntPtr.Zero);
-
-                return windows;
-            }
-            catch
-            {
-                return new List<IntPtr>();
-            }
         }
     }
 }

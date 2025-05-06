@@ -29,11 +29,11 @@ namespace BfmeFoundationProject.WorkshopStudio.Logic
             }
             else
             {
-                if (!Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME Competetive Arena", "Data")))
-                    Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME Competetive Arena", "Data"));
+                if (!Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME Competetive Arena", "Settings")))
+                    Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME Competetive Arena", "Settings"));
 
                 CurentUser = authResponse.Item2.Value;
-                File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME Competetive Arena", "Data", "credentials.json"), JsonConvert.SerializeObject(new string[] { email, password }));
+                File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME Competetive Arena", "Settings", "arena_loginCredentials.json"), JsonConvert.SerializeObject(new string[] { email, password }));
                 IsAuthenticated = true;
 
                 OnStatusUpdate.Invoke("LOADING WORKSHOP");

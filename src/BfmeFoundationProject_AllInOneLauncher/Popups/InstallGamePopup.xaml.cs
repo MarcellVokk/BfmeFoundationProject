@@ -10,8 +10,7 @@ namespace BfmeFoundationProject.AllInOneLauncher.Popups;
 
 public partial class InstallGamePopup : PopupBody
 {
-    private static readonly Dictionary<string, DriveInfo> Drives =
-        DriveInfo.GetDrives().ToDictionary(x => x.RootDirectory.FullName);
+    private static readonly Dictionary<string, DriveInfo> Drives = DriveInfo.GetDrives().ToDictionary(x => x.RootDirectory.FullName);
 
     public InstallGamePopup()
     {
@@ -30,8 +29,7 @@ public partial class InstallGamePopup : PopupBody
                     Title = new LibraryDriveHeader()
                     {
                         LibraryDriveName = string.Concat(drive.VolumeLabel, " (", drive.Name.Replace(@"\", ""), ")"),
-                        LibraryDriveSize =
-                        $"{Math.Floor(drive.AvailableFreeSpace / Math.Pow(1024, 3)):N0} GB {App.Current.FindResource("GenericFree")}",
+                        LibraryDriveSize = $"{Math.Floor(drive.AvailableFreeSpace / Math.Pow(1024, 3)):N0} GB {App.Current.FindResource("GenericFree")}",
                         Mini = true
                     },
                     Tag = drive.RootDirectory.FullName,

@@ -23,9 +23,9 @@ namespace BfmeFoundationProject.WorkshopStudio.Pages
             {
                 TryAutoLogin = false;
 
-                if (File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME Competetive Arena", "Data", "credentials.json")))
+                if (File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME Competetive Arena", "Settings", "arena_loginCredentials.json")))
                 {
-                    string[] credentials = JsonConvert.DeserializeObject<string[]>(File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME Competetive Arena", "Data", "credentials.json"))) ?? new string[] { "", "" };
+                    string[] credentials = JsonConvert.DeserializeObject<string[]>(File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME Competetive Arena", "Settings", "arena_loginCredentials.json"))) ?? new string[] { "", "" };
                     textbox_email.Text = credentials[0];
                     textbox_password.Password = credentials[1];
                     Authenticate();

@@ -13,17 +13,17 @@ namespace BfmeFoundationProject.BfmeKit.Logic
         [SupportedOSPlatform("windows")]
         public static List<BfmeMap> ImportMaps(object game)
         {
-            List<BfmeMap> results = new List<BfmeMap>();
+            var results = new List<BfmeMap>();
 
             if (!BfmeRegistryManager.IsInstalled(game))
                 return results;
 
-            string gameInstallDirectory = BfmeRegistryManager.GetKeyValue(game, BfmeRegistryKey.InstallPath);
-            string activeModPath = WorkshopUtils.GetActiveModPath(Convert.ToInt32(game));
-            List<string> available_maps = new List<string>();
-            List<string> src_strings = new List<string>();
-            Dictionary<string, string> parsed_strings = new Dictionary<string, string>();
-            string mapcache = "";
+            var gameInstallDirectory = BfmeRegistryManager.GetKeyValue(game, BfmeRegistryKey.InstallPath);
+            var activeModPath = WorkshopUtils.GetActiveModPath(Convert.ToInt32(game));
+            var available_maps = new List<string>();
+            var src_strings = new List<string>();
+            var parsed_strings = new Dictionary<string, string>();
+            var mapcache = "";
 
             if (File.Exists(Path.Combine(activeModPath, "maps", "mapcache.ini")))
                 mapcache += File.ReadAllText(Path.Combine(activeModPath, "maps", "mapcache.ini"));
@@ -55,11 +55,11 @@ namespace BfmeFoundationProject.BfmeKit.Logic
             foreach (var archive in FilenameUtils.OrderFiles(Directory.GetFiles(Path.Combine(gameInstallDirectory, "lang"), "*.big"), game).Select(x => BigArchiveReader.Unpack(x)))
                 src_strings.AddRange(archive.Values.Where(x => Path.GetExtension(x.Name) == ".csf").Select(x => CsfConverter.ConvertToStr(x.GetData())));
 
-            bool inBlock = false;
-            bool blockValid = true;
-            string blockName = "";
-            string blockId = "";
-            string blockContent = "";
+            var inBlock = false;
+            var blockValid = true;
+            var blockName = "";
+            var blockId = "";
+            var blockContent = "";
 
             foreach (var str in src_strings)
             {
@@ -107,7 +107,7 @@ namespace BfmeFoundationProject.BfmeKit.Logic
                 }
                 else if (inBlock)
                 {
-                    string safeLine = line.Replace("\t", "  ");
+                    var safeLine = line.Replace("\t", "  ");
                     while (safeLine.Contains("  "))
                         safeLine = safeLine.Replace("  ", " ");
                     safeLine = safeLine.Trim(' ');
@@ -149,41 +149,41 @@ namespace BfmeFoundationProject.BfmeKit.Logic
         [SupportedOSPlatform("windows")]
         public static Bitmap? GenerateMapPreview(BfmeMap map)
         {
-            using Bitmap scrollshroud = new Bitmap(Assembly.GetExecutingAssembly().GetManifestResourceStream($"BfmeFoundationProject.BfmeKit.Resources.scrollshroud.png")!);
-            using Bitmap mapframe = new Bitmap(Assembly.GetExecutingAssembly().GetManifestResourceStream($"BfmeFoundationProject.BfmeKit.Resources.{map.Game}-mapframe.png")!);
+            using var scrollshroud = new Bitmap(Assembly.GetExecutingAssembly().GetManifestResourceStream($"BfmeFoundationProject.BfmeKit.Resources.scrollshroud.png")!);
+            using var mapframe = new Bitmap(Assembly.GetExecutingAssembly().GetManifestResourceStream($"BfmeFoundationProject.BfmeKit.Resources.{map.Game}-mapframe.png")!);
             Bitmap? mapimage = null;
 
             scrollshroud.SetResolution(1, 1);
             mapframe.SetResolution(1, 1);
 
-            string decodedMapId = BigArchiveReader.DecodeString(map.Id).ToLower();
+            var decodedMapId = BigArchiveReader.DecodeString(map.Id).ToLower();
             if (decodedMapId.EndsWith(".map"))
                 decodedMapId = decodedMapId.Remove(decodedMapId.Length - 4, 4);
 
             try
             {
-                Bitmap mapStack = new Bitmap(mapframe.Width, mapframe.Height);
+                var mapStack = new Bitmap(mapframe.Width, mapframe.Height);
                 mapStack.SetResolution(1, 1);
 
-                string activeModPath = WorkshopUtils.GetActiveModPath(Convert.ToInt32(map.Game));
+                var activeModPath = WorkshopUtils.GetActiveModPath(Convert.ToInt32(map.Game));
 
                 if (File.Exists(Path.Combine(activeModPath, $"{decodedMapId}_art.tga")))
                 {
-                    byte[] mapPreviewData = File.ReadAllBytes(Path.Combine(activeModPath, $"{decodedMapId}_art.tga"));
+                    var mapPreviewData = File.ReadAllBytes(Path.Combine(activeModPath, $"{decodedMapId}_art.tga"));
                     mapimage = TgaDecoder.Decode(mapPreviewData);
                     mapimage.SetResolution(1, 1);
                     mapimage.RotateFlip(RotateFlipType.RotateNoneFlipY);
                 }
                 else if (BfmeRegistryManager.IsInstalled(map.Game) && FilenameUtils.OrderFiles(Directory.GetFiles(BfmeRegistryManager.GetKeyValue(map.Game, BfmeRegistryKey.InstallPath), "*.big"), map.Game).Select(x => BigArchiveReader.Unpack(x)).Any(x => x.ContainsKey($"{decodedMapId}_art.tga")))
                 {
-                    byte[] mapPreviewData = FilenameUtils.OrderFiles(Directory.GetFiles(BfmeRegistryManager.GetKeyValue(map.Game, BfmeRegistryKey.InstallPath), "*.big"), map.Game).Select(x => BigArchiveReader.Unpack(x)).First(x => x.ContainsKey($"{decodedMapId}_art.tga"))[$"{decodedMapId}_art.tga"].GetData();
+                    var mapPreviewData = FilenameUtils.OrderFiles(Directory.GetFiles(BfmeRegistryManager.GetKeyValue(map.Game, BfmeRegistryKey.InstallPath), "*.big"), map.Game).Select(x => BigArchiveReader.Unpack(x)).First(x => x.ContainsKey($"{decodedMapId}_art.tga"))[$"{decodedMapId}_art.tga"].GetData();
                     mapimage = TgaDecoder.Decode(mapPreviewData);
                     mapimage.SetResolution(1, 1);
                     mapimage.RotateFlip(RotateFlipType.RotateNoneFlipY);
                 }
                 else if (map.Game == 2 && BfmeRegistryManager.IsInstalled(1) && FilenameUtils.OrderFiles(Directory.GetFiles(BfmeRegistryManager.GetKeyValue(1, BfmeRegistryKey.InstallPath), "*.big"), 1).Select(x => BigArchiveReader.Unpack(x)).Any(x => x.ContainsKey($"{decodedMapId}_art.tga")))
                 {
-                    byte[] mapPreviewData = FilenameUtils.OrderFiles(Directory.GetFiles(BfmeRegistryManager.GetKeyValue(1, BfmeRegistryKey.InstallPath), "*.big"), 1).Select(x => BigArchiveReader.Unpack(x)).First(x => x.ContainsKey($"{decodedMapId}_art.tga"))[$"{decodedMapId}_art.tga"].GetData();
+                    var mapPreviewData = FilenameUtils.OrderFiles(Directory.GetFiles(BfmeRegistryManager.GetKeyValue(1, BfmeRegistryKey.InstallPath), "*.big"), 1).Select(x => BigArchiveReader.Unpack(x)).First(x => x.ContainsKey($"{decodedMapId}_art.tga"))[$"{decodedMapId}_art.tga"].GetData();
                     mapimage = TgaDecoder.Decode(mapPreviewData);
                     mapimage.SetResolution(1, 1);
                     mapimage.RotateFlip(RotateFlipType.RotateNoneFlipY);
@@ -193,10 +193,10 @@ namespace BfmeFoundationProject.BfmeKit.Logic
                     return mapStack;
                 }
 
-                SizeF scaledMapSize = RectUtils.ResizeToFit(new SizeF((float)map.Width, (float)map.Height), new SizeF(mapStack.Width - 20, mapStack.Height - 20));
-                Rectangle mapContentRect = new Rectangle((int)(mapStack.Width / 2 - scaledMapSize.Width / 2), (int)(mapStack.Height / 2 - scaledMapSize.Height / 2), (int)scaledMapSize.Width, (int)scaledMapSize.Height);
+                var scaledMapSize = RectUtils.ResizeToFit(new SizeF((float)map.Width, (float)map.Height), new SizeF(mapStack.Width - 20, mapStack.Height - 20));
+                var mapContentRect = new Rectangle((int)(mapStack.Width / 2 - scaledMapSize.Width / 2), (int)(mapStack.Height / 2 - scaledMapSize.Height / 2), (int)scaledMapSize.Width, (int)scaledMapSize.Height);
 
-                using (Graphics g = Graphics.FromImage(mapStack))
+                using (var g = Graphics.FromImage(mapStack))
                 {
                     g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
 
@@ -206,8 +206,8 @@ namespace BfmeFoundationProject.BfmeKit.Logic
 
                     g.DrawImage(mapframe, new Point(0, 0));
 
-                    Pen p = new Pen(Color.FromArgb(150, 110, 0), 4);
-                    Pen s = new Pen(Color.Black, 2);
+                    var p = new Pen(Color.FromArgb(150, 110, 0), 4);
+                    var s = new Pen(Color.Black, 2);
 
                     foreach (BfmeSpot spot in map.Spots)
                     {
@@ -234,7 +234,7 @@ namespace BfmeFoundationProject.BfmeKit.Logic
 
         private static SizeF GetMapSize(string mapConfigObject)
         {
-            Dictionary<string, string> mapConfig = ParseMapConfigObject(mapConfigObject);
+            var mapConfig = ParseMapConfigObject(mapConfigObject);
             if (!mapConfig.ContainsKey("extentMax"))
                 return SizeF.Empty;
 
@@ -243,25 +243,25 @@ namespace BfmeFoundationProject.BfmeKit.Logic
 
         private static List<BfmeSpot>? GetMapSpots(string mapConfigObject)
         {
-            Dictionary<string, string> mapConfig = ParseMapConfigObject(mapConfigObject);
+            var mapConfig = ParseMapConfigObject(mapConfigObject);
             if (!mapConfig.ContainsKey("extentMax"))
                 return null;
 
-            SizeF originalMapSize = new SizeF(float.Parse(mapConfig["extentMax"].Split(' ')[0].Replace("X:", ""), NumberStyles.Any, CultureInfo.InvariantCulture), float.Parse(mapConfig["extentMax"].Split(' ')[1].Replace("Y:", ""), NumberStyles.Any, CultureInfo.InvariantCulture));
-            SizeF scaledMapSize = RectUtils.ResizeToFit(originalMapSize, new SizeF(3470f, 2600f));
+            var originalMapSize = new SizeF(float.Parse(mapConfig["extentMax"].Split(' ')[0].Replace("X:", ""), NumberStyles.Any, CultureInfo.InvariantCulture), float.Parse(mapConfig["extentMax"].Split(' ')[1].Replace("Y:", ""), NumberStyles.Any, CultureInfo.InvariantCulture));
+            var scaledMapSize = RectUtils.ResizeToFit(originalMapSize, new SizeF(3470f, 2600f));
 
-            int spotCount = 1;
+            var spotCount = 1;
             while (mapConfig.ContainsKey($"Player_{spotCount}_Start"))
                 spotCount++;
 
-            List<BfmeSpot> spots = new List<BfmeSpot>();
-            for (int i = 1; i <= 8; i++)
+            var spots = new List<BfmeSpot>();
+            for (var i = 1; i <= 8; i++)
             {
                 if (!mapConfig.ContainsKey($"Player_{i}_Start"))
                     break;
 
-                float x = float.Parse(mapConfig[$"Player_{i}_Start"].Split(' ')[0].Replace("X:", ""), NumberStyles.Any, CultureInfo.InvariantCulture) / originalMapSize.Width;
-                float y = float.Parse(mapConfig[$"Player_{i}_Start"].Split(' ')[1].Replace("Y:", ""), NumberStyles.Any, CultureInfo.InvariantCulture) / originalMapSize.Height;
+                var x = float.Parse(mapConfig[$"Player_{i}_Start"].Split(' ')[0].Replace("X:", ""), NumberStyles.Any, CultureInfo.InvariantCulture) / originalMapSize.Width;
+                var y = float.Parse(mapConfig[$"Player_{i}_Start"].Split(' ')[1].Replace("Y:", ""), NumberStyles.Any, CultureInfo.InvariantCulture) / originalMapSize.Height;
 
                 if (y > 0.5)
                     y = 0.5f - (y - 0.5f);
@@ -276,8 +276,8 @@ namespace BfmeFoundationProject.BfmeKit.Logic
 
         private static Dictionary<string, string> ParseMapConfigObject(string configObject)
         {
-            Dictionary<string, string> fields = new Dictionary<string, string>();
-            foreach (string line in configObject.Split('\n'))
+            var fields = new Dictionary<string, string>();
+            foreach (var line in configObject.Split('\n'))
             {
                 if (line.Contains(" = ") && !fields.ContainsKey(line.Split(" = ")[0]))
                     fields.Add(line.Split(" = ")[0], line.Split(" = ")[1].Replace("\n", "").Replace("\r", ""));

@@ -18,7 +18,7 @@ namespace BfmeFoundationProject.OnlineKit.Helpers
         private static string ArenaPipeName = "";
         private static CancellationTokenSource? CancellationTokenSource;
 
-        public static async Task Load(OnlineMenu owner, BfmeGame selectedGame, Action OnProcessExited, Action Assert)
+        public static async Task Load(OnlineMenu owner, Action OnProcessExited, Action Assert)
         {
             CancellationTokenSource?.Cancel();
             CancellationTokenSource = new CancellationTokenSource();
@@ -34,17 +34,6 @@ namespace BfmeFoundationProject.OnlineKit.Helpers
 
             if (File.Exists(Path.Combine(ArenaDataHelper.GlobalInstallPath, "BFMECompetetiveArena_OnlineMenu.exe")))
                 try { File.Delete(Path.Combine(ArenaDataHelper.GlobalInstallPath, "BFMECompetetiveArena_OnlineMenu.exe")); } catch { }
-
-            try
-            {
-                if (selectedGame == BfmeGame.BFME1)
-                    File.WriteAllText(Path.Combine(ArenaDataHelper.GlobalDataPath, "last_chosen_category.json"), "baa44837-0c18-4dc2-87cb-26e74cd997f4");
-                else if (selectedGame == BfmeGame.BFME2)
-                    File.WriteAllText(Path.Combine(ArenaDataHelper.GlobalDataPath, "last_chosen_category.json"), "f876ebcd-439e-4a42-9a5b-dfe42a5fd55a");
-                else if (selectedGame == BfmeGame.RotWK)
-                    File.WriteAllText(Path.Combine(ArenaDataHelper.GlobalDataPath, "last_chosen_category.json"), "860ac519-beb6-4dc2-accf-d589d1188140");
-            }
-            catch { }
 
             FirewallHelper.AddFirewallRule("Bfme Foundation Project - Online Menu", Path.Combine(ArenaDataHelper.GlobalInstallPath, "BfmeFoundationProject_OnlineArena.exe"));
 

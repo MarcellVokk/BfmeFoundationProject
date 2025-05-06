@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A dependency package that implements a stable and well tested custom http file do" +
     "wnloader.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.0+60616c27c3e7152a7c91f053c3091ac2439f542a")]
 [assembly: System.Reflection.AssemblyProductAttribute("BfmeFoundationProject.HttpInstruments")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BfmeFoundationProject.HttpInstruments")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.0.0")]

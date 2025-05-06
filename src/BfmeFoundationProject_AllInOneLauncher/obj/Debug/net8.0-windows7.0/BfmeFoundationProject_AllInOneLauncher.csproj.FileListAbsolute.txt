@@ -95,7 +95,6 @@ F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\De
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\ErrorPopup.g.cs
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\InstallGamePopup.g.cs
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\LauncherChangelogPopup.g.cs
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\LauncherUpdatePopup.g.cs
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\MessagePopup.g.cs
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\PackagePagePopup.g.cs
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\ScriptedPackagePopup.g.cs
@@ -141,7 +140,6 @@ F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\De
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\ErrorPopup.baml
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\InstallGamePopup.baml
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\LauncherChangelogPopup.baml
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\LauncherUpdatePopup.baml
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\MessagePopup.baml
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\PackagePagePopup.baml
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\ScriptedPackagePopup.baml
@@ -158,3 +156,6 @@ F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\De
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\refint\AllInOneLauncher.dll
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\BfmeFoundationProject_AllInOneLauncher.genruntimeconfig.cache
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\ref\AllInOneLauncher.dll
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Resources\Dictionary\LanguageResources.tr.baml
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\ProgressPopup.g.cs
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Debug\net8.0-windows7.0\Popups\ProgressPopup.baml

@@ -132,7 +132,7 @@ namespace BfmeFoundationProject.BfmeKit
                 using RegistryKey? key = Registry.CurrentUser.OpenSubKey(@$"SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers", true);
 
                 if (key != null)
-                    key.SetValue(gamePath, "~ WINXPSP2");
+                    key.SetValue(gamePath, "~ WINXPSP3");
             }
             catch { }
         }
@@ -165,7 +165,8 @@ namespace BfmeFoundationProject.BfmeKit
                 { "dutch", "NL" },
                 { "polish", "PL" },
                 { "norwegian", "NO" },
-                { "russian", "RU" }
+                { "russian", "RU" },
+                { "turkish", "TR" }
             };
 
             if (languages.ContainsKey(language.ToLower()))
@@ -187,7 +188,8 @@ namespace BfmeFoundationProject.BfmeKit
                 { "nl", "Dutch" },
                 { "pl", "Polish" },
                 { "no", "Norwegian" },
-                { "ru", "Russian" }
+                { "ru", "Russian" },
+                { "tr", "Turkish" }
             };
 
             if (languages.ContainsKey(languageCode.ToLower()))

@@ -9,15 +9,15 @@ namespace BfmeFoundationProject.BfmeKit.Logic
         [SupportedOSPlatform("windows")]
         public static List<BfmeFaction> ImportFactions(object game)
         {
-            List<BfmeFaction> results = new List<BfmeFaction>();
+            var results = new List<BfmeFaction>();
 
             if (!BfmeRegistryManager.IsInstalled(game))
                 return results;
 
-            string gameInstallDirectory = BfmeRegistryManager.GetKeyValue(game, BfmeRegistryKey.InstallPath);
-            string activeModPath = WorkshopUtils.GetActiveModPath(Convert.ToInt32(game));
+            var gameInstallDirectory = BfmeRegistryManager.GetKeyValue(game, BfmeRegistryKey.InstallPath);
+            var activeModPath = WorkshopUtils.GetActiveModPath(Convert.ToInt32(game));
 
-            string playertemplateini = "";
+            var playertemplateini = "";
 
             if (File.Exists(Path.Combine(activeModPath, "data", "ini", "playertemplate.ini")))
                 playertemplateini += File.ReadAllText(Path.Combine(activeModPath, "data", "ini", "playertemplate.ini"));
@@ -26,10 +26,10 @@ namespace BfmeFoundationProject.BfmeKit.Logic
             else
                 return results;
 
-            bool inBlock = false;
-            bool blockValid = true;
-            string blockName = "";
-            int blockId = 0;
+            var inBlock = false;
+            var blockValid = true;
+            var blockName = "";
+            var blockId = 0;
 
             foreach (string line in playertemplateini.Split("\n").Select(x => x.Trim('\n').Trim('\r').Trim(' ').Trim('\t').Trim(' ').Trim('\t')))
             {
@@ -43,7 +43,7 @@ namespace BfmeFoundationProject.BfmeKit.Logic
                 }
                 else if (inBlock)
                 {
-                    string safeLine = line.Replace("\t", "  ");
+                    var safeLine = line.Replace("\t", "  ");
                     while (safeLine.Contains("  "))
                         safeLine = safeLine.Replace("  ", " ");
                     safeLine = safeLine.Trim(' ');

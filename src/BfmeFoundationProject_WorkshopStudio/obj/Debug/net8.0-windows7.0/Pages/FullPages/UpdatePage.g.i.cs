@@ -63,7 +63,8 @@ namespace BfmeFoundationProject.WorkshopStudio.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BfmeFoundationProject_WorkshopStudio;component/pages/fullpages/updatepage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BfmeFoundationProject_WorkshopStudio;V1.0.0.0;component/pages/fullpages/updatepa" +
+                    "ge.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Pages\FullPages\UpdatePage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

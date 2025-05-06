@@ -22,6 +22,7 @@
     <system:String x:Key="MainWindowSingleplayerTab">SINGLEPLAYER</system:String>
     <system:String x:Key="MainWindowMultiplayerTab">MULTIPLAYER</system:String>
     <system:String x:Key="MainWindowGuidesTab">HANDLEIDINGEN</system:String>
+    <system:String x:Key="MainWindowAboutTab">ABOUT</system:String>
 
     <!--=====================  Offline  =====================-->
     <system:String x:Key="OfflinePageNewsTab">Wijzigingslogboek</system:String>
@@ -94,8 +95,13 @@
     <system:String x:Key="SettingsPageBFMESectionLanguageLanguage">Speltaal</system:String>
 
     <!--=====================  LauncherUpdatePopup  =====================-->
+    <system:String x:Key="LauncherInstallPopupTitle">INSTALLING</system:String>
     <system:String x:Key="LauncherUpdatePopupTitle">UPDATE</system:String>
     <system:String x:Key="LauncherUpdatePopupDescription">Launcher-bestanden downloaden</system:String>
+
+    <!--=====================  ApplyLanguageChangePopup  =====================-->
+    <system:String x:Key="ApplyLanguageChangePopupTitle">SWITCHING LANGUAGE</system:String>
+    <system:String x:Key="ApplyLanguageChangePopupDescription">Downloading language files for</system:String>
 
     <!--=====================  InstallGamePopup  =====================-->
     <system:String x:Key="InstallGamePopupTitle">GAME INSTALLEREN</system:String>

@@ -14,7 +14,7 @@ namespace BfmeFoundationProject.AllInOneLauncher.Core
 {
     public static class BfmeSyncManager
     {
-        public static async Task SyncPackage(string packageGuid, bool useFastFileCompare = true, List<string>? enhancements = null)
+        public static async Task SyncPackage(string packageGuid, bool useFastFileCompare = true, List<string>? enhancements = null, Action<int, string>? OnProgressUpdate = null)
         {
             MainWindow.Instance?.OnSyncBegin();
 
@@ -33,7 +33,7 @@ namespace BfmeFoundationProject.AllInOneLauncher.Core
 
                 try
                 {
-                    await BfmeWorkshopSyncManager.Sync(package, useFastFileCompare, enhancements);
+                    await BfmeWorkshopSyncManager.Sync(package, useFastFileCompare, enhancements, OnProgressUpdate);
                 }
                 catch (BfmeWorkshopEnhancementIncompatibleException ex)
                 {

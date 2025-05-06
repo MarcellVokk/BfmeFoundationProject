@@ -12,15 +12,15 @@ namespace BfmeFoundationProject.WorkshopKit.Logic
         public static string WorkshopFilesHost = "https://workshop-files.bfmeladder.com";
 
         [SupportedOSPlatform("windows")]
-        public static async Task<BfmeWorkshopEntry?> GetActivePatch(int game) => await Task.Run(() => FileUtils.ReadJson<BfmeWorkshopEntry?>(Path.Combine(ConfigUtils.ConfigDirectory, $"active_patch_{game}.json"), null));
+        public static async Task<BfmeWorkshopEntry?> GetActivePatch(object game) => await Task.Run(() => FileUtils.ReadJson<BfmeWorkshopEntry?>(Path.Combine(ConfigUtils.ConfigDirectory, $"active_patch_{Convert.ToInt32(game)}.json"), null));
         [SupportedOSPlatform("windows")]
-        public static async Task<Dictionary<string, BfmeWorkshopEntry>> GetActiveEnhancements(int game) => await Task.Run(() => FileUtils.ReadJson(Path.Combine(ConfigUtils.ConfigDirectory, $"active_enhancements_{game}.json"), new Dictionary<string, BfmeWorkshopEntry>()));
+        public static async Task<Dictionary<string, BfmeWorkshopEntry>> GetActiveEnhancements(object game) => await Task.Run(() => FileUtils.ReadJson(Path.Combine(ConfigUtils.ConfigDirectory, $"active_enhancements_{Convert.ToInt32(game)}.json"), new Dictionary<string, BfmeWorkshopEntry>()));
         [SupportedOSPlatform("windows")]
-        public static string GetActiveModPath(int game) => FileUtils.ReadText(Path.Combine(BfmeRegistryManager.GetKeyValue(game, BfmeRegistryKey.InstallPath), "mod.txt"), "");
+        public static string GetActiveModPath(object game) => FileUtils.ReadText(Path.Combine(BfmeRegistryManager.GetKeyValue(game, BfmeRegistryKey.InstallPath), "mod.txt"), "");
 
         [SupportedOSPlatform("windows")]
-        public static bool IsPatchActive(int game, string entryGuid) => FileUtils.Contains(Path.Combine(ConfigUtils.ConfigDirectory, $"active_patch_{game}.json"), $"\"Guid\": \"{entryGuid}\"");
+        public static bool IsPatchActive(object game, string entryGuid) => FileUtils.Contains(Path.Combine(ConfigUtils.ConfigDirectory, $"active_patch_{Convert.ToInt32(game)}.json"), $"\"Guid\": \"{entryGuid}\"");
         [SupportedOSPlatform("windows")]
-        public static bool IsEnhancementActive(int game, string entryGuid) => FileUtils.Contains(Path.Combine(ConfigUtils.ConfigDirectory, $"active_enhancements_{game}.json"), $"\"Guid\": \"{entryGuid}\"");
+        public static bool IsEnhancementActive(object game, string entryGuid) => FileUtils.Contains(Path.Combine(ConfigUtils.ConfigDirectory, $"active_enhancements_{Convert.ToInt32(game)}.json"), $"\"Guid\": \"{entryGuid}\"");
     }
 }

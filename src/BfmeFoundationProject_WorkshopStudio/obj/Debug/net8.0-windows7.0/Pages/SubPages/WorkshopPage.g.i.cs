@@ -104,7 +104,8 @@ namespace BfmeFoundationProject.WorkshopStudio.Pages.SubPages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BfmeFoundationProject_WorkshopStudio;component/pages/subpages/workshoppage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BfmeFoundationProject_WorkshopStudio;V1.0.0.0;component/pages/subpages/workshopp" +
+                    "age.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Pages\SubPages\WorkshopPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

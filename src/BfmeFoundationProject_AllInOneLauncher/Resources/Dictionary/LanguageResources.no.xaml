@@ -22,6 +22,7 @@
     <system:String x:Key="MainWindowSingleplayerTab">ENSPILLER</system:String>
     <system:String x:Key="MainWindowMultiplayerTab">FLERSPILLER</system:String>
     <system:String x:Key="MainWindowGuidesTab">VEILEDNINGER</system:String>
+    <system:String x:Key="MainWindowAboutTab">ABOUT</system:String>
 
     <!--=====================  Offline  =====================-->
     <system:String x:Key="OfflinePageNewsTab">Endringslogg</system:String>
@@ -94,8 +95,13 @@
     <system:String x:Key="SettingsPageBFMESectionLanguageLanguage">Spelspråk</system:String>
 
     <!--=====================  LauncherUpdatePopup  =====================-->
+    <system:String x:Key="LauncherInstallPopupTitle">INSTALLING</system:String>
     <system:String x:Key="LauncherUpdatePopupTitle">OPPDATERING</system:String>
     <system:String x:Key="LauncherUpdatePopupDescription">Laster ned launcher-filer</system:String>
+
+    <!--=====================  ApplyLanguageChangePopup  =====================-->
+    <system:String x:Key="ApplyLanguageChangePopupTitle">SWITCHING LANGUAGE</system:String>
+    <system:String x:Key="ApplyLanguageChangePopupDescription">Downloading language files for</system:String>
 
     <!--=====================  InstallGamePopup  =====================-->
     <system:String x:Key="InstallGamePopupTitle">INSTALLER SPILL</system:String>

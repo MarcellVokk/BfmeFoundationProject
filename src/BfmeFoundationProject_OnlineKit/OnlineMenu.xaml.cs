@@ -32,7 +32,7 @@ namespace BfmeFoundationProject.OnlineKit
 
         public double Scale => TranslatePoint(new Point(0, 1), Window.GetWindow(this)).Y - TranslatePoint(new Point(0, 0), Window.GetWindow(this)).Y;
 
-        public async Task Load(BfmeGame game = BfmeGame.Last, bool repairMode = false)
+        public async Task Load(bool repairMode = false)
         {
             if (LoadingOrLoaded || Loading)
                 return;
@@ -104,7 +104,6 @@ namespace BfmeFoundationProject.OnlineKit
             {
                 await ArenaProcessHelper.Load(
                 owner: this,
-                selectedGame: game,
                 OnProcessExited: async () =>
                 {
                     await Unload();

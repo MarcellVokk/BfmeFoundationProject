@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "JoTzCUlEChw=",
+  "dgSpecHash": "Qu0W+7+Xhds=",
   "success": true,
   "projectFilePath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_DirectXRuntime\\BfmeFoundationProject_DirectXRuntime.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Marcell\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.10\\microsoft.net.illink.tasks.8.0.10.nupkg.sha512",
+    "C:\\Users\\Marcell\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.10\\microsoft.netcore.app.runtime.win-x64.8.0.10.nupkg.sha512",
+    "C:\\Users\\Marcell\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.10\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.10.nupkg.sha512",
+    "C:\\Users\\Marcell\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.10\\microsoft.aspnetcore.app.runtime.win-x64.8.0.10.nupkg.sha512"
+  ],
   "logs": []
 }

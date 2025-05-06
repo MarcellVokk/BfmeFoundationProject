@@ -13,7 +13,11 @@
     <SourceRoot Include="C:\Users\Marcell\.nuget\packages\" />
     <SourceRoot Include="F:\Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.net.illink.tasks\8.0.10\build\Microsoft.NET.ILLink.Tasks.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.illink.tasks\8.0.10\build\Microsoft.NET.ILLink.Tasks.props')" />
+  </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_NET_ILLink_Tasks Condition=" '$(PkgMicrosoft_NET_ILLink_Tasks)' == '' ">C:\Users\Marcell\.nuget\packages\microsoft.net.illink.tasks\8.0.10</PkgMicrosoft_NET_ILLink_Tasks>
     <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\Marcell\.nuget\packages\awssdk.core\3.7.400.22</PkgAWSSDK_Core>
     <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">C:\Users\Marcell\.nuget\packages\awssdk.s3\3.7.403.1</PkgAWSSDK_S3>
   </PropertyGroup>

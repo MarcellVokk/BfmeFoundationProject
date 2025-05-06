@@ -9,7 +9,7 @@
     <readme>README.md</readme>
     <projectUrl>https://github.com/MarcellVokk/bfme-kit</projectUrl>
     <description>Easily modify or create BFME related registry values, and list colors as well as generate map previews.</description>
-    <repository type="git" />
+    <repository type="git" commit="60616c27c3e7152a7c91f053c3091ac2439f542a" />
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="Newtonsoft.Json" version="13.0.3" exclude="Build,Analyzers" />

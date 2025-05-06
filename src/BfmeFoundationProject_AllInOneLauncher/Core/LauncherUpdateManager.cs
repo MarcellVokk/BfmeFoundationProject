@@ -60,14 +60,14 @@ public static class LauncherUpdateManager
                 return;
             }
 
-            LauncherUpdatePopup updatePopup = new();
-            PopupVisualizer.ShowPopup(updatePopup);
+            var updateProgressPopup = new ProgressPopup(File.Exists(Path.Combine(LauncherUpdateManager.LauncherAppDirectory, "AllInOneLauncher.exe")) ? "{LauncherUpdatePopupTitle}" : "{LauncherInstallPopupTitle}", "{LauncherUpdatePopupDescription}");
+            PopupVisualizer.ShowPopup(updateProgressPopup);
 
             await HttpMarshal.GetFile(
             url: Consts.LATEST_BUILD_SOURCE_URL,
             localPath: Path.Combine(LauncherAppDirectory, "AllInOneLauncher_new.exe"),
             headers: [],
-            OnProgressUpdate: (progress) => updatePopup.Dispatcher.Invoke(() => updatePopup.LoadProgress = progress));
+            OnProgressUpdate: (progress) => updateProgressPopup.Dispatcher.Invoke(() => updateProgressPopup.LoadProgress = progress));
 
             RestartLauncher(afterUpdate: true);
         }

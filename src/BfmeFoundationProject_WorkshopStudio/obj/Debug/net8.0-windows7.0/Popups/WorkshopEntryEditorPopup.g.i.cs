@@ -352,8 +352,8 @@ namespace BfmeFoundationProject.WorkshopStudio.Popups {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BfmeFoundationProject_WorkshopStudio;component/popups/workshopentryeditorpopup.x" +
-                    "aml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BfmeFoundationProject_WorkshopStudio;V1.0.0.0;component/popups/workshopentryedit" +
+                    "orpopup.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Popups\WorkshopEntryEditorPopup.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

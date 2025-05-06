@@ -83,11 +83,12 @@ internal static class LauncherStateManager
                 { 4, "LanguageResources.it.xaml" },
                 { 5, "LanguageResources.es.xaml" },
                 { 6, "LanguageResources.sv.xaml" },
-                { 7, "LanguageResources.nl.xaml" },
-                { 8, "LanguageResources.pl.xaml" },
-                { 9, "LanguageResources.no.xaml" },
-                { 10, "LanguageResources.ru.xaml" },
-                { 11, "LanguageResources.ar.xaml" }
+                { 7, "LanguageResources.tr.xaml" },
+                { 8, "LanguageResources.nl.xaml" },
+                { 9, "LanguageResources.pl.xaml" },
+                { 10, "LanguageResources.no.xaml" },
+                { 11, "LanguageResources.ru.xaml" },
+                { 12, "LanguageResources.ar.xaml" }
             };
 
             ResourceDictionary resourceDictionary = [];

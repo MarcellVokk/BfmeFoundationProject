@@ -162,7 +162,7 @@ public static class BuildInfo
 		<Compile Update="Popups\ScriptedPackagePopup.xaml.cs">
 		  <SubType>Code</SubType>
 		</Compile>
-		<Compile Update="Popups\LauncherUpdatePopup.xaml.cs">
+		<Compile Update="Popups\ProgressPopup.xaml.cs">
 		  <SubType>Code</SubType>
 		</Compile>
 		<Compile Update="Popups\ErrorPopup.xaml.cs">

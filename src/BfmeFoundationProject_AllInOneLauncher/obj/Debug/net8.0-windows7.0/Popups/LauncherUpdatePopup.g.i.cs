@@ -42,7 +42,7 @@ namespace BfmeFoundationProject.AllInOneLauncher.Popups {
     /// <summary>
     /// LauncherUpdatePopup
     /// </summary>
-    public partial class LauncherUpdatePopup : BfmeFoundationProject.AllInOneLauncher.Elements.Generic.PopupBody, System.Windows.Markup.IComponentConnector {
+    public partial class ProgressPopup : BfmeFoundationProject.AllInOneLauncher.Elements.Generic.PopupBody, System.Windows.Markup.IComponentConnector {
         
         
         #line 17 "..\..\..\..\Popups\LauncherUpdatePopup.xaml"
@@ -96,7 +96,7 @@ namespace BfmeFoundationProject.AllInOneLauncher.Popups {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AllInOneLauncher;V1.0.0.0;component/popups/launcherupdatepopup.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AllInOneLauncher;component/popups/launcherupdatepopup.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Popups\LauncherUpdatePopup.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

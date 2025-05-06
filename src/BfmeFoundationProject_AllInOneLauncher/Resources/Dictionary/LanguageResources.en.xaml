@@ -1,4 +1,4 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=netstandard">
 
@@ -26,6 +26,7 @@
     <system:String x:Key="MainWindowSingleplayerTab">SINGLEPLAYER</system:String>
     <system:String x:Key="MainWindowMultiplayerTab">MULTIPLAYER</system:String>
     <system:String x:Key="MainWindowGuidesTab">GUIDES</system:String>
+    <system:String x:Key="MainWindowAboutTab">ABOUT</system:String>
     
     
 
@@ -108,15 +109,20 @@
 
 
     <!--=====================  LauncherUpdatePopup  =====================-->
+    <system:String x:Key="LauncherInstallPopupTitle">INSTALLING</system:String>
     <system:String x:Key="LauncherUpdatePopupTitle">UPDATING</system:String>
     <system:String x:Key="LauncherUpdatePopupDescription">Downloading launcher files</system:String>
+    
+    <!--=====================  ApplyLanguageChangePopup  =====================-->
+    <system:String x:Key="ApplyLanguageChangePopupTitle">SWITCHING LANGUAGE</system:String>
+    <system:String x:Key="ApplyLanguageChangePopupDescription">Downloading language files for</system:String>
 
     <!--=====================  InstallGamePopup  =====================-->
     <system:String x:Key="InstallGamePopupTitle">INSTALL GAME</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Language</system:String>
     <system:String x:Key="InstallGamePopupLocation">Location</system:String>
 
-    <!--=====================  InstallGamePopup  =====================-->
+    <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">ADD TO LIBRARY</system:String>
     <system:String x:Key="PackagePagePopupInYourLibrary">IN YOUR LIBRARY</system:String>
     <system:String x:Key="PackagePagePopupDownloads">Downloads</system:String>

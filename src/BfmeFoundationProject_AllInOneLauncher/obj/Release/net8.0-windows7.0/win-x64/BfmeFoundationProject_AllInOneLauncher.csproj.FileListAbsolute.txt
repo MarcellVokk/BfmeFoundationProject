@@ -552,7 +552,6 @@ F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Re
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\ErrorPopup.g.cs
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\InstallGamePopup.g.cs
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\LauncherChangelogPopup.g.cs
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\LauncherUpdatePopup.g.cs
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\MessagePopup.g.cs
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\PackagePagePopup.g.cs
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\ScriptedPackagePopup.g.cs
@@ -598,7 +597,6 @@ F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Re
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\ErrorPopup.baml
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\InstallGamePopup.baml
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\LauncherChangelogPopup.baml
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\LauncherUpdatePopup.baml
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\MessagePopup.baml
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\PackagePagePopup.baml
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\ScriptedPackagePopup.baml
@@ -615,3 +613,6 @@ F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Re
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\refint\AllInOneLauncher.dll
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\BfmeFoundationProject_AllInOneLauncher.genruntimeconfig.cache
 F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\ref\AllInOneLauncher.dll
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Resources\Dictionary\LanguageResources.tr.baml
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\ProgressPopup.g.cs
+F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_AllInOneLauncher\obj\Release\net8.0-windows7.0\win-x64\Popups\ProgressPopup.baml

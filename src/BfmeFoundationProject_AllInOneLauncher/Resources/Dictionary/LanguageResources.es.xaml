@@ -22,6 +22,7 @@
     <system:String x:Key="MainWindowSingleplayerTab">UNPLAYER</system:String>
     <system:String x:Key="MainWindowMultiplayerTab">MULTIJUGADOR</system:String>
     <system:String x:Key="MainWindowGuidesTab">GUÍAS</system:String>
+    <system:String x:Key="MainWindowAboutTab">ABOUT</system:String>
 
     <!--=====================  Offline  =====================-->
     <system:String x:Key="OfflinePageNewsTab">Registro de cambios</system:String>
@@ -94,8 +95,13 @@
     <system:String x:Key="SettingsPageBFMESectionLanguageLanguage">Idioma del juego</system:String>
 
     <!--=====================  LauncherUpdatePopup  =====================-->
+    <system:String x:Key="LauncherInstallPopupTitle">INSTALLING</system:String>
     <system:String x:Key="LauncherUpdatePopupTitle">ACTUALIZANDO</system:String>
     <system:String x:Key="LauncherUpdatePopupDescription">Descargando archivos del lanzador</system:String>
+
+    <!--=====================  ApplyLanguageChangePopup  =====================-->
+    <system:String x:Key="ApplyLanguageChangePopupTitle">SWITCHING LANGUAGE</system:String>
+    <system:String x:Key="ApplyLanguageChangePopupDescription">Downloading language files for</system:String>
 
     <!--=====================  InstallGamePopup  =====================-->
     <system:String x:Key="InstallGamePopupTitle">INSTALAR JUEGO</system:String>

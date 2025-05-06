@@ -21,6 +21,9 @@
             Spots = spots;
         }
 
-        public void RandomizeSpots() => Spots = Spots.OrderBy(x => Random.Shared.Next()).ToList();
+        public void RandomizeSpots()
+        {
+            Spots = Spots.OrderBy(x => Random.Shared.Next()).ToList();
+        }
     }
 }

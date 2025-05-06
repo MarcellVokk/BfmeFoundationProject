@@ -9,7 +9,7 @@
     <readme>README.md</readme>
     <projectUrl>https://github.com/MarcellVokk/bfme-workshop-kit</projectUrl>
     <description>Easily access, upload and download from the BFME Workshop, as well as sync to packages and more.</description>
-    <repository type="git" />
+    <repository type="git" commit="60616c27c3e7152a7c91f053c3091ac2439f542a" />
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="BfmeFoundationProject.BfmeKit" version="2.0.0" exclude="Build,Analyzers" />

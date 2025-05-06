@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Easily access, upload and download from the BFME Workshop, as well as sync to pac" +
     "kages and more.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("2.5.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.5.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.5.0+60616c27c3e7152a7c91f053c3091ac2439f542a")]
 [assembly: System.Reflection.AssemblyProductAttribute("BfmeFoundationProject.WorkshopKit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BfmeFoundationProject.WorkshopKit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("2.5.0")]

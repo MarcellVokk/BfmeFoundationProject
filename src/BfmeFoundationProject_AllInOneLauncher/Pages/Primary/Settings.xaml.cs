@@ -12,13 +12,14 @@ namespace BfmeFoundationProject.AllInOneLauncher.Pages.Primary;
 
 public partial class Settings : UserControl
 {
-    internal static bool NeedsResync;
+    internal static bool Bfme1NeedsResync = false;
+    internal static bool Bfme2NeedsResync = false;
+    internal static bool RotwkNeedsResync = false;
 
     public Settings(string page)
     {
         InitializeComponent();
         Page = page;
-        NeedsResync = false;
 
         foreach (var child in categoryTabs.Children)
         {

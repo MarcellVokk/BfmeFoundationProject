@@ -38,14 +38,23 @@ public partial class SettingsBfmeGeneral : UserControl
 
     private void OnLanguageOptionSelected(object sender, System.EventArgs e)
     {
-        BfmeRegistryManager.SetKeyValue(Game, BfmeRegistryKey.Language, LanguageDropdown.SelectedValue);
-        if (Game == BfmeGame.ROTWK)
-            BfmeRegistryManager.SetKeyValue(BfmeGame.BFME2, BfmeRegistryKey.Language, LanguageDropdown.SelectedValue);
-        if (Game == BfmeGame.BFME2)
-            BfmeRegistryManager.SetKeyValue(BfmeGame.ROTWK, BfmeRegistryKey.Language, LanguageDropdown.SelectedValue);
+        if (BfmeRegistryManager.GetKeyValue(Game, BfmeRegistryKey.Language) != LanguageDropdown.SelectedValue)
+        {
+            if (Game == BfmeGame.BFME1)
+            {
+                BfmeRegistryManager.SetKeyValue(BfmeGame.BFME1, BfmeRegistryKey.Language, LanguageDropdown.SelectedValue);
+                Primary.Settings.Bfme1NeedsResync = true;
+            }
+            else
+            {
+                BfmeRegistryManager.SetKeyValue(BfmeGame.BFME2, BfmeRegistryKey.Language, LanguageDropdown.SelectedValue);
+                BfmeRegistryManager.SetKeyValue(BfmeGame.ROTWK, BfmeRegistryKey.Language, LanguageDropdown.SelectedValue);
+                Primary.Settings.Bfme2NeedsResync = true;
+                Primary.Settings.RotwkNeedsResync = true;
+            }
 
-        Primary.Settings.NeedsResync = true;
-        Properties.Settings.Default.Save();
+            Properties.Settings.Default.Save();
+        }
     }
 
     private void OnGameResolutionOptionSelected(object sender, System.EventArgs e)

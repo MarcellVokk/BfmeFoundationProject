@@ -105,17 +105,57 @@ public partial class MainWindow : Window
 
         Instance.background.Effect = newContent is Pages.Primary.Settings ? new BlurEffect() { Radius = 20 } : null;
 
-        if (Pages.Primary.Settings.NeedsResync)
+        if (Pages.Primary.Settings.Bfme1NeedsResync)
         {
-            Pages.Primary.Settings.NeedsResync = false;
+            Pages.Primary.Settings.Bfme1NeedsResync = false;
+            var progressPopup = new ProgressPopup("{ApplyLanguageChangePopupTitle}", "{ApplyLanguageChangePopupDescription} BFME1");
+            PopupVisualizer.ShowPopup(progressPopup);
 
-            foreach (BfmeGame game in Enum.GetValues(typeof(BfmeGame)).Cast<BfmeGame>().Where(g => g != BfmeGame.NONE))
+            try
             {
-                if (!BfmeRegistryManager.IsInstalled(game) || (game == BfmeGame.ROTWK && !BfmeRegistryManager.IsInstalled(BfmeGame.BFME2)))
-                    continue;
+                if (BfmeRegistryManager.IsInstalled(BfmeGame.BFME1) && await BfmeWorkshopManager.GetActivePatch(BfmeGame.BFME1) is BfmeWorkshopEntry activeEntry)
+                    await BfmeSyncManager.SyncPackage($"{activeEntry.Guid}:{activeEntry.Version}", OnProgressUpdate: (progress, status) => progressPopup.Dispatcher.Invoke(() => { progressPopup.LoadProgress = progress; progressPopup.Status = status; }));
+            }
+            catch { }
+            finally
+            {
+                progressPopup.Dismiss();
+            }
+        }
 
-                if (await BfmeWorkshopManager.GetActivePatch((int)game) is BfmeWorkshopEntry activeEntry)
-                    await BfmeSyncManager.SyncPackage($"{activeEntry.Guid}:{activeEntry.Version}");
+        if (Pages.Primary.Settings.Bfme2NeedsResync)
+        {
+            Pages.Primary.Settings.Bfme2NeedsResync = false;
+            var progressPopup = new ProgressPopup("{ApplyLanguageChangePopupTitle}", "{ApplyLanguageChangePopupDescription} BFME2");
+            PopupVisualizer.ShowPopup(progressPopup);
+
+            try
+            {
+                if (BfmeRegistryManager.IsInstalled(BfmeGame.BFME2) && await BfmeWorkshopManager.GetActivePatch(BfmeGame.BFME2) is BfmeWorkshopEntry activeEntry)
+                    await BfmeSyncManager.SyncPackage($"{activeEntry.Guid}:{activeEntry.Version}", OnProgressUpdate: (progress, status) => progressPopup.Dispatcher.Invoke(() => { progressPopup.LoadProgress = progress; progressPopup.Status = status; }));
+            }
+            catch { }
+            finally
+            {
+                progressPopup.Dismiss();
+            }
+        }
+
+        if (Pages.Primary.Settings.RotwkNeedsResync)
+        {
+            Pages.Primary.Settings.RotwkNeedsResync = false;
+            var progressPopup = new ProgressPopup("{ApplyLanguageChangePopupTitle}", "{ApplyLanguageChangePopupDescription} RotWK");
+            PopupVisualizer.ShowPopup(progressPopup);
+
+            try
+            {
+                if (BfmeRegistryManager.IsInstalled(BfmeGame.BFME2) && BfmeRegistryManager.IsInstalled(BfmeGame.ROTWK) && await BfmeWorkshopManager.GetActivePatch(BfmeGame.ROTWK) is BfmeWorkshopEntry activeEntry)
+                    await BfmeSyncManager.SyncPackage($"{activeEntry.Guid}:{activeEntry.Version}", OnProgressUpdate: (progress, status) => progressPopup.Dispatcher.Invoke(() => { progressPopup.LoadProgress = progress; progressPopup.Status = status; }));
+            }
+            catch { }
+            finally
+            {
+                progressPopup.Dismiss();
             }
         }
     }

@@ -1,0 +1,149 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=netstandard">
+
+    <!--=====================  TrayIcon  =====================-->
+    <system:String x:Key="TrayIconShowApplication">Başlatıcı penceresini göster</system:String>
+    <system:String x:Key="TrayIconCloseApplication">Başlatıcıyı Kapat</system:String>
+    
+    
+    
+    <!--=====================  Generic  =====================-->
+    <system:String x:Key="GenericCancel">İPTAL</system:String>
+    <system:String x:Key="GenericClose">KAPAT</system:String>
+    <system:String x:Key="GenericInstall">YÜKLE</system:String>
+    <system:String x:Key="GenericLoading">YÜKLENİYOR</system:String>
+    <system:String x:Key="GenericPlay">OYNA</system:String>
+    <system:String x:Key="GenericAdd">EKLE</system:String>
+    <system:String x:Key="GenericFree">ÜCRETSİZ</system:String>
+    <system:String x:Key="GenericConfirm">ONAYLA</system:String>
+    <system:String x:Key="GenericYes">EVET</system:String>
+    <system:String x:Key="GenericNo">HAYIR</system:String>
+
+
+
+    <!--=====================  MainWindow  =====================-->
+    <system:String x:Key="MainWindowSingleplayerTab">TEK OYUNCU</system:String>
+    <system:String x:Key="MainWindowMultiplayerTab">ÇOK OYUNCULU</system:String>
+    <system:String x:Key="MainWindowGuidesTab">REHBERLER</system:String>
+    <system:String x:Key="MainWindowAboutTab">HAKKINDA</system:String>
+    
+    
+
+    <!--=====================  Offline  =====================-->
+    <system:String x:Key="OfflinePageNewsTab">Değişiklik Günlüğü</system:String>
+    <system:String x:Key="OfflinePageLibraryTab">Kütüphane</system:String>
+    <system:String x:Key="OfflinePageWorkshopTab">Atölye</system:String>
+    <system:String x:Key="OfflinePageEnabledEnhancements">Etkinleştirilen geliştirmeler</system:String>
+    <system:String x:Key="OfflinePageNoEnhancementsActive">Etkin geliştirme yok</system:String>
+    <system:String x:Key="OfflinePageLaunchOptions">Başlatma seçenekleri</system:String>
+    <system:String x:Key="OfflinePageLaunchOptionsWindowedMode">Görüntüleme modu</system:String>
+    <system:String x:Key="OfflinePageLaunchOptionsAltTabMode">ALT+TAB desteğini etkinleştir</system:String>
+
+    <!--=====================  Offline/Library  =====================-->
+    <system:String x:Key="LibraryPageSearchPlaceholder">Kütüphanede ara...</system:String>
+    <system:String x:Key="LibraryPageMakeSnapshot">Anlık görüntüler oluştur</system:String>
+
+    <system:String x:Key="LibraryPageFilterPatchesAndMods">Yamalar ve modlar</system:String>
+    <system:String x:Key="LibraryPageFilterEnhancements">Geliştirmeler</system:String>
+    <system:String x:Key="LibraryPageFilterMapPacks">Harita paketleri</system:String>
+    <system:String x:Key="LibraryPageFilterSnapshots">Anlık Görüntüler</system:String>
+    <system:String x:Key="LibraryPageFilterEverything">Her şey</system:String>
+
+    <!--=====================  Offline/Workshop  =====================-->
+    <system:String x:Key="WorkshopPageSearchPlaceholder">Atölye'de ara...</system:String>
+    
+    <system:String x:Key="WorkshopPageFilterPatchesAndMods">Yamalar ve modlar</system:String>
+    <system:String x:Key="WorkshopPageFilterEnhancements">Geliştirmeler</system:String>
+    <system:String x:Key="WorkshopPageFilterMapPacks">Harita paketleri</system:String>
+    <system:String x:Key="WorkshopPageFilterEverything">Her şey</system:String>
+    
+    <system:String x:Key="WorkshopPageSortByMostDownloads">En çok indirilenler</system:String>
+    <system:String x:Key="WorkshopPageSortByMostRecent">En güncel</system:String>
+    <system:String x:Key="WorkshopPageSortAlphabetical">Alfabetik</system:String>
+
+    <!--=====================  LibraryTile  =====================-->
+    <system:String x:Key="LibraryTileSyncing">Senkronizasyon</system:String>
+    <system:String x:Key="LibraryTileActive">Aktif</system:String>
+    <system:String x:Key="LibraryTilePatchType">Yama</system:String>
+    <system:String x:Key="LibraryTileModType">Mod</system:String>
+    <system:String x:Key="LibraryTileEnhancementType">Geliştirme</system:String>
+    <system:String x:Key="LibraryTileMapPackType">Harita paketi</system:String>
+    <system:String x:Key="LibraryTileSnapshotType">Anlık görüntü</system:String>
+
+    <!--=====================  LibraryTileHorizontal  =====================-->
+    <system:String x:Key="LibraryTileHorizontalNoPatchSelected">Seçili yama yok</system:String>
+    <system:String x:Key="LibraryTileHorizontalSyncAgain">Tekrar senkronize</system:String>
+    <system:String x:Key="LibraryTileHorizontalUpdate">Güncelle</system:String>
+
+    <!--=====================  LibraryTileEmpty  =====================-->
+    <system:String x:Key="LibraryTileEmptyInstallMore">Daha fazlasını yükle</system:String>
+    <system:String x:Key="LibraryTileEmptyDiscoverMore">Atölyede yeni içerikleri keşfedin!</system:String>
+    
+    
+
+    <!--=====================  Settings  =====================-->
+    <system:String x:Key="SettingsPageLauncherSectionHeader">Başlatıcı Ayarları</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneral">Genel</system:String>
+
+    <system:String x:Key="SettingsPageBFME1SectionHeader">The Battle for Middle-earth™</system:String>
+    <system:String x:Key="SettingsPageBFME2SectionHeader">The Battle for Middle-earth™ II</system:String>
+    <system:String x:Key="SettingsPageRotWKSectionHeader">Rise of the Witchking™</system:String>
+    <system:String x:Key="SettingsPageBFMESectionGeneral">Genel</system:String>
+
+    <!--=====================  Settings/Launcher Settings/General  =====================-->
+    <system:String x:Key="SettingsPageLauncherSectionGeneralLanguage">Başlatıcı dili</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralCloseToTray">Başlatıcı'yı sistem çubuğuna küçült</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralCreateDesktopIcon">Başlatıcı için masaüstü kısayolu oluştur</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralLibraryHeader">Kütüphane ayarları</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralAddLibraryLocation">Kütüphane Konumunu Ekle</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionGeneralDriveDefaultNameText">Yerel Disk</system:String>
+
+    <!--=====================  Settings/BFME Settings/Video & Resolution  =====================-->
+    <system:String x:Key="SettingsPageBFMESectionVideoResolution">Oyun çözünürlüğü</system:String>
+    <system:String x:Key="SettingsPageBFMESectionVideoGraphicsApi">Grafik Arayüzleri</system:String>
+
+    <!--=====================  Settings/BFME Settings/Language & Sound  =====================-->
+    <system:String x:Key="SettingsPageBFMESectionLanguageLanguage">Oyun dili</system:String>
+
+
+
+    <!--=====================  LauncherUpdatePopup  =====================-->
+    <system:String x:Key="LauncherInstallPopupTitle">KURULUM</system:String>
+    <system:String x:Key="LauncherUpdatePopupTitle">GÜNCELLENİYOR</system:String>
+    <system:String x:Key="LauncherUpdatePopupDescription">Başlatıcı dosyaları indiriliyor</system:String>
+
+    <!--=====================  ApplyLanguageChangePopup  =====================-->
+    <system:String x:Key="ApplyLanguageChangePopupTitle">DİL DEĞİŞTİRME</system:String>
+    <system:String x:Key="ApplyLanguageChangePopupDescription">Için dil dosyaları indiriliyor</system:String>
+
+    <!--=====================  InstallGamePopup  =====================-->
+    <system:String x:Key="InstallGamePopupTitle">OYUNU YÜKLE</system:String>
+    <system:String x:Key="InstallGamePopupLanguage">Dil</system:String>
+    <system:String x:Key="InstallGamePopupLocation">Konum</system:String>
+
+    <!--=====================  PackagePagePopup  =====================-->
+    <system:String x:Key="PackagePagePopupAddToLibrary">KÜTÜPHANEYE EKLE</system:String>
+    <system:String x:Key="PackagePagePopupInYourLibrary">KÜTÜPHANENİZDE</system:String>
+    <system:String x:Key="PackagePagePopupDownloads">İndirilme</system:String>
+    <system:String x:Key="PackagePagePopupGame">Oyun</system:String>
+    <system:String x:Key="PackagePagePopupType">Tür</system:String>
+    <system:String x:Key="PackagePagePopupLanguage">Dil</system:String>
+    <system:String x:Key="PackagePagePopupSize">Boyut</system:String>
+    <system:String x:Key="PackagePagePopupScreenshots">Ekran Görüntünleri</system:String>
+    <system:String x:Key="PackagePagePopupDescription">Açıklama</system:String>
+    <system:String x:Key="PackagePagePopupWhatsNew">Yenilikler</system:String>
+
+    <!--=====================  ScriptedPackagePopup  =====================-->
+    <system:String x:Key="ScriptedPackagePopupRequirements">Gereksinimler:</system:String>
+
+    <!--=====================  ScriptedPackagePopup/RequirementItem  =====================-->
+    <system:String x:Key="ScriptedPackageRequirementComplete">Tamamla</system:String>
+    <system:String x:Key="ScriptedPackageRequirementActionRequired">Eylem gerekli.</system:String>
+    <system:String x:Key="ScriptedPackageRequirementCompletePrevious">Öncekini tamamlayın</system:String>
+
+    <!--=====================  ErrorPopup  =====================-->
+    <system:String x:Key="ErrorPopupTitle">HATA</system:String>
+    <system:String x:Key="ErrorPopupCopyError">Metni kopyala</system:String>
+    <system:String x:Key="ErrorPopupErrorCopied">Kopyalandı!</system:String>
+</ResourceDictionary>

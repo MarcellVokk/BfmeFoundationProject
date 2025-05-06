@@ -101,17 +101,17 @@ namespace BfmeFoundationProject.WorkshopKit.Logic
 
                         // Download all explicit dependencies.
                         foreach (var dependency in entry.Dependencies.Where(x => x.Split(':')[0] != entry.Guid))
-                            dependencies.Add(await BfmeWorkshopDownloadManager.Download(dependency));
+                            dependencies.Add(await GetDependency(dependency));
 
                         // Download all implicit dependencies defined by explicit dependencies.
                         while (dependencies.SelectMany(x => x.Dependencies).Any(x => x.Split(':')[0] != entry.Guid && !dependencies.Any(y => x.Split(':')[0] == y.Guid)))
                             foreach (var dependency in dependencies.SelectMany(x => x.Dependencies).Where(x => x.Split(':')[0] != entry.Guid && !dependencies.Any(y => x.Split(':')[0] == y.Guid)).ToList())
-                                dependencies.Add(await BfmeWorkshopDownloadManager.Download(dependency));
+                                dependencies.Add(await GetDependency(dependency));
 
                         // Download all explicit enhancements.
                         foreach (var enhancement in (enhancements ?? new List<string>()).Where(x => x.Split(':')[0] != entry.Guid && !dependencies.Any(y => x.Split(':')[0] == y.Guid)))
                         {
-                            var enhancementPackage = await BfmeWorkshopDownloadManager.Download(enhancement);
+                            var enhancementPackage = await GetDependency(enhancement);
 
                             if (enhancementPackage.Dependencies.Count > 0 && !enhancementPackage.Dependencies.Any(y => (y.Contains(':') ? $"{entry.Guid}:{entry.Version}" == y : entry.Guid == y) || dependencies.Any(x => y.Contains(':') ? $"{x.Guid}:{x.Version}" == y : x.Guid == y)))
                                 throw new BfmeWorkshopEnhancementIncompatibleException($"'{enhancementPackage.FullName()}' is not compatible with '{entry.FullName()}'.");
@@ -122,7 +122,7 @@ namespace BfmeFoundationProject.WorkshopKit.Logic
                         // Download all implicit dependencies defined by explicit enhancements.
                         while (dependencies.SelectMany(x => x.Dependencies).Any(x => x.Split(':')[0] != entry.Guid && !dependencies.Any(y => x.Split(':')[0] == y.Guid)))
                             foreach (var dependency in dependencies.SelectMany(x => x.Dependencies).Where(x => x.Split(':')[0] != entry.Guid && !dependencies.Any(y => x.Split(':')[0] == y.Guid)).ToList())
-                                dependencies.Add(await BfmeWorkshopDownloadManager.Download(dependency));
+                                dependencies.Add(await GetDependency(dependency));
 
                         // If the curent patch is a mod, and a patch (whose game is not the same as the curent patches) was listed as a dependency, set the active patch of that game to it
                         if (entry.Type == 1 && dependencies.Any(x => x.Type == 0 && x.Game != entry.Game)) await ConfigUtils.SaveActivePatch(dependencies.First(x => x.Type == 0 && x.Game != entry.Game));
@@ -367,6 +367,18 @@ namespace BfmeFoundationProject.WorkshopKit.Logic
             }
 
             return new BfmeWorkshopEntry() { Guid = $"snapshot-{(game == 2 ? "RotWK" : $"BFME{game + 1}")}-{Guid.NewGuid()}", Name = $"{(game == 2 ? "RotWK" : $"BFME{game + 1}")} Snapshot", Version = DateTime.Now.ToString("yyyy.MM.dd HH:mm:ss"), Description = $"This snapshot was created on {DateTime.Now.ToString("yyyy.MM.dd HH:mm:ss")}.", ArtworkUrl = $"{BfmeWorkshopManager.WorkshopFilesHost}/snapshot-artwork.png", Author = "Me", Owner = "", Game = game, Type = 4, CreationTime = new DateTimeOffset(DateTime.Now).ToUnixTimeMilliseconds(), Files = files, Dependencies = new List<string>() };
+        }
+
+        private static async Task<BfmeWorkshopEntry> GetDependency(string entryGuid)
+        {
+            try
+            {
+                return await BfmeWorkshopDownloadManager.Download(entryGuid);
+            }
+            catch
+            {
+                return await BfmeWorkshopLibraryManager.Get(entryGuid);
+            }
         }
 
         private static void AddFiles(BfmeWorkshopEntry entry, bool isBaseEntry, List<(BfmeWorkshopFile file, BfmeWorkshopEntry entry, bool isBaseFile, string destination)> files, Dictionary<int, (string gameLanguage, string gameDirectory, string dataDirectory)> virtualRegistry)

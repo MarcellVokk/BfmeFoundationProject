@@ -22,6 +22,7 @@
     <system:String x:Key="MainWindowSingleplayerTab">ОДНОПОЛЬЗОВАТЕЛЬСКАЯ</system:String>
     <system:String x:Key="MainWindowMultiplayerTab">МНОГОПОЛЬЗОВАТЕЛЬСКАЯ</system:String>
     <system:String x:Key="MainWindowGuidesTab">РУКОВОДСТВА</system:String>
+    <system:String x:Key="MainWindowAboutTab">ABOUT</system:String>
 
     <!--=====================  Offline  =====================-->
     <system:String x:Key="OfflinePageNewsTab">Изменения</system:String>
@@ -94,8 +95,13 @@
     <system:String x:Key="SettingsPageBFMESectionLanguageLanguage">Язык игры</system:String>
 
     <!--=====================  LauncherUpdatePopup  =====================-->
+    <system:String x:Key="LauncherInstallPopupTitle">INSTALLING</system:String>
     <system:String x:Key="LauncherUpdatePopupTitle">ОБНОВЛЕНИЕ</system:String>
     <system:String x:Key="LauncherUpdatePopupDescription">Загрузка файлов лаунчера</system:String>
+
+    <!--=====================  ApplyLanguageChangePopup  =====================-->
+    <system:String x:Key="ApplyLanguageChangePopupTitle">SWITCHING LANGUAGE</system:String>
+    <system:String x:Key="ApplyLanguageChangePopupDescription">Downloading language files for</system:String>
 
     <!--=====================  InstallGamePopup  =====================-->
     <system:String x:Key="InstallGamePopupTitle">УСТАНОВКА ИГРЫ</system:String>
