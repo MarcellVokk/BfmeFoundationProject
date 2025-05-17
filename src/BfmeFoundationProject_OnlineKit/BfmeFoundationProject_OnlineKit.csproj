@@ -20,10 +20,10 @@
 		<PackageIcon>onlinekiticon.png</PackageIcon>
 		<PackageProjectUrl>https://github.com/MarcellVokk/bfme-online-kit</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<Description>Easily embed Online Battle Arena into your BFME related projects.</Description>
-		<Version>2.0.0</Version>
-		<AssemblyVersion>2.0.0</AssemblyVersion>
-		<FileVersion>2.0.0</FileVersion>
+		<Description>This package provides everything you need to implement Online Battle Arena into your own project.</Description>
+		<Version>3.0.0</Version>
+		<AssemblyVersion>3.0.0</AssemblyVersion>
+		<FileVersion>3.0.0</FileVersion>
 	</PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

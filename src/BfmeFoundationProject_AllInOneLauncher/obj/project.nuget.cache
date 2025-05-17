@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s4vvR/f9IWU=",
+  "dgSpecHash": "+e9oVXwx+jk=",
   "success": true,
   "projectFilePath": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_AllInOneLauncher\\BfmeFoundationProject_AllInOneLauncher.csproj",
   "expectedPackageFiles": [
@@ -30,11 +30,6 @@
     "C:\\Users\\Marcell\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\Marcell\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Marcell\\.nuget\\packages\\windowsshortcutfactory\\1.2.0\\windowsshortcutfactory.1.2.0.nupkg.sha512",
-    "C:\\Users\\Marcell\\.nuget\\packages\\bfmefoundationproject.bfmekit\\2.0.0\\bfmefoundationproject.bfmekit.2.0.0.nupkg.sha512",
-    "C:\\Users\\Marcell\\.nuget\\packages\\bfmefoundationproject.directxruntime\\2.0.0\\bfmefoundationproject.directxruntime.2.0.0.nupkg.sha512",
-    "C:\\Users\\Marcell\\.nuget\\packages\\bfmefoundationproject.httpinstruments\\2.0.0\\bfmefoundationproject.httpinstruments.2.0.0.nupkg.sha512",
-    "C:\\Users\\Marcell\\.nuget\\packages\\bfmefoundationproject.onlinekit\\2.0.0\\bfmefoundationproject.onlinekit.2.0.0.nupkg.sha512",
-    "C:\\Users\\Marcell\\.nuget\\packages\\bfmefoundationproject.workshopkit\\2.5.0\\bfmefoundationproject.workshopkit.2.5.0.nupkg.sha512",
     "C:\\Users\\Marcell\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.10\\microsoft.netcore.app.runtime.win-x64.8.0.10.nupkg.sha512",
     "C:\\Users\\Marcell\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.10\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.10.nupkg.sha512",
     "C:\\Users\\Marcell\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.10\\microsoft.aspnetcore.app.runtime.win-x64.8.0.10.nupkg.sha512"

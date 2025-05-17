@@ -1,5 +1,5 @@
 ﻿BfmeFoundationProject.OnlineKit
-2.0.0
+3.0.0
 
 library
 C#
@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 215-528576306
 Elements\CornerAccentFrame.xaml;Elements\LoadingSpinner.xaml;Elements\Popups\MessagePopup.xaml;Elements\PopupVisualizer.xaml;Elements\ProgressBar.xaml;OnlineMenu.xaml;Styles\MiniButtonStyle.xaml;Styles\NormalButtonStyle.xaml;
 
-True
+False
 

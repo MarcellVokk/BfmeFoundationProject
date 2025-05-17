@@ -1,11 +1,10 @@
 # WorkshopKit by the Bfme Foundation Project
 #### This project is part of the Bfme Foundation Project!
-<a href="https://github.com/MarcellVokk/bfme-foundation-project">
+<a href="https://github.com/MarcellVokk/BfmeFoundationProject">
     <img src="https://img.shields.io/badge/GitHub-Foundation Project-lime"/>
 </a>
 
 ## Welcome
-Welcome to the official github repository of WorkshopKit!
 This package allows you to access the BFME Workshop, and also provides realy powerful tools for patch switching, modding and more!
 
 ## Get on NuGet
@@ -23,6 +22,6 @@ This package allows you to access the BFME Workshop, and also provides realy pow
 - `BfmeWorkshopAuthManager` is used for authentication. This is the way you can get a `BfmeWorkshopAuthInfo` to use in the methods exposed by `BfmeWorkshopAdminManager`.
 
 ## Examples
-A very simple workshop browser example made in WinForms is available in this repository.
+A very simple workshop browser example made in WinForms is available in the github repository, as well as the source code of the AIO Launcher, which also uses this package.
 
 ###### Developed by The Online Battle Arena Team, in collaboration with the Patch 2.22 Team

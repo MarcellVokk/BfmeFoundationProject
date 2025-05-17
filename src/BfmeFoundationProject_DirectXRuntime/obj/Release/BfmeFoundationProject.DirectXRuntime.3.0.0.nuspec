@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BfmeFoundationProject.DirectXRuntime</id>
+    <version>3.0.0</version>
+    <title>DirectXRuntime</title>
+    <authors>Bfme Foundation Team</authors>
+    <icon>dependencyicon.png</icon>
+    <description>A dependency package containing the necesary DirectX 9 runtime installer for BFME games.</description>
+    <repository type="git" commit="1e88aeeef02089f2e3e0cd76a96a3bc7d3d7c65a" />
+    <dependencies>
+      <group targetFramework="net8.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_DirectXRuntime\bin\Release\net8.0\BfmeFoundationProject.DirectXRuntime.dll" target="lib\net8.0\BfmeFoundationProject.DirectXRuntime.dll" />
+    <file src="F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_DirectXRuntime\dependencyicon.png" target="\dependencyicon.png" />
+  </files>
+</package>

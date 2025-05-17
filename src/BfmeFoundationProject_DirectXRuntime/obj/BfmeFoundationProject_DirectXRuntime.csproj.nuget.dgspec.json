@@ -5,7 +5,7 @@
   },
   "projects": {
     "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_DirectXRuntime\\BfmeFoundationProject_DirectXRuntime.csproj": {
-      "version": "2.0.0",
+      "version": "3.0.0",
       "restore": {
         "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_DirectXRuntime\\BfmeFoundationProject_DirectXRuntime.csproj",
         "projectName": "BfmeFoundationProject.DirectXRuntime",

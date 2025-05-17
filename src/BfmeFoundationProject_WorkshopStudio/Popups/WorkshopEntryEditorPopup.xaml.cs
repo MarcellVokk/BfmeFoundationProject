@@ -290,6 +290,9 @@ namespace BfmeFoundationProject.WorkshopStudio.Popups
                 if (int.Parse(type.FieldValue) <= 1 && !factionLibrary.IsUpToDate)
                     throw new Exception("The package must have factions configured.");
 
+                if (int.Parse(type.FieldValue) == 2 && dependencies.Children.OfType<WorkshopEntryDependencyListItem>().Count() == 0)
+                    throw new Exception("The package must have at least one indicated compatible base package, because it is an enhancement package. You can indicate which base packages this enhancement is compatible with by adding them as dependencies to this package!");
+
                 await fileBrowser.UploadFiles((status, progress) => Dispatcher.Invoke(() => { progressText.Text = status; progressBar.Progress = progress; }));
                 await screenshotLibrary.UploadImages((status, progress) => Dispatcher.Invoke(() => { progressText.Text = status; progressBar.Progress = progress; }));
                 await mapLibrary.UploadPreviews((status, progress) => Dispatcher.Invoke(() => { progressText.Text = status; progressBar.Progress = progress; }));

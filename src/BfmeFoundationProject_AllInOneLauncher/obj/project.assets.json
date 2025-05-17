@@ -455,7 +455,7 @@
           }
         }
       },
-      "BfmeFoundationProject.BfmeKit/2.0.0": {
+      "BfmeFoundationProject.BfmeKit/3.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -469,7 +469,7 @@
           "bin/placeholder/BfmeFoundationProject.BfmeKit.dll": {}
         }
       },
-      "BfmeFoundationProject.DirectXRuntime/2.0.0": {
+      "BfmeFoundationProject.DirectXRuntime/3.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
@@ -479,7 +479,7 @@
           "bin/placeholder/BfmeFoundationProject.DirectXRuntime.dll": {}
         }
       },
-      "BfmeFoundationProject.HttpInstruments/2.0.0": {
+      "BfmeFoundationProject.HttpInstruments/3.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -493,11 +493,11 @@
           "bin/placeholder/BfmeFoundationProject.HttpInstruments.dll": {}
         }
       },
-      "BfmeFoundationProject.OnlineKit/2.0.0": {
+      "BfmeFoundationProject.OnlineKit/3.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "BfmeFoundationProject.HttpInstruments": "2.0.0"
+          "BfmeFoundationProject.HttpInstruments": "3.0.0"
         },
         "compile": {
           "bin/placeholder/BfmeFoundationProject.OnlineKit.dll": {}
@@ -509,14 +509,14 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "BfmeFoundationProject.WorkshopKit/2.5.0": {
+      "BfmeFoundationProject.WorkshopKit/3.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AWSSDK.S3": "3.7.403.1",
-          "BfmeFoundationProject.BfmeKit": "2.0.0",
-          "BfmeFoundationProject.DirectXRuntime": "2.0.0",
-          "BfmeFoundationProject.HttpInstruments": "2.0.0",
+          "BfmeFoundationProject.BfmeKit": "3.0.0",
+          "BfmeFoundationProject.DirectXRuntime": "3.0.0",
+          "BfmeFoundationProject.HttpInstruments": "3.0.0",
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
@@ -975,7 +975,7 @@
           }
         }
       },
-      "BfmeFoundationProject.BfmeKit/2.0.0": {
+      "BfmeFoundationProject.BfmeKit/3.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -989,7 +989,7 @@
           "bin/placeholder/BfmeFoundationProject.BfmeKit.dll": {}
         }
       },
-      "BfmeFoundationProject.DirectXRuntime/2.0.0": {
+      "BfmeFoundationProject.DirectXRuntime/3.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
@@ -999,7 +999,7 @@
           "bin/placeholder/BfmeFoundationProject.DirectXRuntime.dll": {}
         }
       },
-      "BfmeFoundationProject.HttpInstruments/2.0.0": {
+      "BfmeFoundationProject.HttpInstruments/3.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -1013,11 +1013,11 @@
           "bin/placeholder/BfmeFoundationProject.HttpInstruments.dll": {}
         }
       },
-      "BfmeFoundationProject.OnlineKit/2.0.0": {
+      "BfmeFoundationProject.OnlineKit/3.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "BfmeFoundationProject.HttpInstruments": "2.0.0"
+          "BfmeFoundationProject.HttpInstruments": "3.0.0"
         },
         "compile": {
           "bin/placeholder/BfmeFoundationProject.OnlineKit.dll": {}
@@ -1029,14 +1029,14 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "BfmeFoundationProject.WorkshopKit/2.5.0": {
+      "BfmeFoundationProject.WorkshopKit/3.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AWSSDK.S3": "3.7.403.1",
-          "BfmeFoundationProject.BfmeKit": "2.0.0",
-          "BfmeFoundationProject.DirectXRuntime": "2.0.0",
-          "BfmeFoundationProject.HttpInstruments": "2.0.0",
+          "BfmeFoundationProject.BfmeKit": "3.0.0",
+          "BfmeFoundationProject.DirectXRuntime": "3.0.0",
+          "BfmeFoundationProject.HttpInstruments": "3.0.0",
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
@@ -1878,27 +1878,27 @@
         "windowsshortcutfactory.nuspec"
       ]
     },
-    "BfmeFoundationProject.BfmeKit/2.0.0": {
+    "BfmeFoundationProject.BfmeKit/3.0.0": {
       "type": "project",
       "path": "../BfmeFoundationProject_BfmeKit/BfmeFoundationProject_BfmeKit.csproj",
       "msbuildProject": "../BfmeFoundationProject_BfmeKit/BfmeFoundationProject_BfmeKit.csproj"
     },
-    "BfmeFoundationProject.DirectXRuntime/2.0.0": {
+    "BfmeFoundationProject.DirectXRuntime/3.0.0": {
       "type": "project",
       "path": "../BfmeFoundationProject_DirectXRuntime/BfmeFoundationProject_DirectXRuntime.csproj",
       "msbuildProject": "../BfmeFoundationProject_DirectXRuntime/BfmeFoundationProject_DirectXRuntime.csproj"
     },
-    "BfmeFoundationProject.HttpInstruments/2.0.0": {
+    "BfmeFoundationProject.HttpInstruments/3.0.0": {
       "type": "project",
       "path": "../BfmeFoundationProject_HttpInstruments/BfmeFoundationProject_HttpInstruments.csproj",
       "msbuildProject": "../BfmeFoundationProject_HttpInstruments/BfmeFoundationProject_HttpInstruments.csproj"
     },
-    "BfmeFoundationProject.OnlineKit/2.0.0": {
+    "BfmeFoundationProject.OnlineKit/3.0.0": {
       "type": "project",
       "path": "../BfmeFoundationProject_OnlineKit/BfmeFoundationProject_OnlineKit.csproj",
       "msbuildProject": "../BfmeFoundationProject_OnlineKit/BfmeFoundationProject_OnlineKit.csproj"
     },
-    "BfmeFoundationProject.WorkshopKit/2.5.0": {
+    "BfmeFoundationProject.WorkshopKit/3.0.0": {
       "type": "project",
       "path": "../BfmeFoundationProject_WorkshopKit/BfmeFoundationProject_WorkshopKit.csproj",
       "msbuildProject": "../BfmeFoundationProject_WorkshopKit/BfmeFoundationProject_WorkshopKit.csproj"
@@ -1906,10 +1906,10 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "BfmeFoundationProject.BfmeKit >= 2.0.0",
-      "BfmeFoundationProject.HttpInstruments >= 2.0.0",
-      "BfmeFoundationProject.OnlineKit >= 2.0.0",
-      "BfmeFoundationProject.WorkshopKit >= 2.5.0",
+      "BfmeFoundationProject.BfmeKit >= 3.0.0",
+      "BfmeFoundationProject.HttpInstruments >= 3.0.0",
+      "BfmeFoundationProject.OnlineKit >= 3.0.0",
+      "BfmeFoundationProject.WorkshopKit >= 3.0.0",
       "Hardcodet.NotifyIcon.Wpf >= 1.1.0",
       "Microsoft.NET.ILLink.Tasks >= 8.0.10",
       "Newtonsoft.Json >= 13.0.3",

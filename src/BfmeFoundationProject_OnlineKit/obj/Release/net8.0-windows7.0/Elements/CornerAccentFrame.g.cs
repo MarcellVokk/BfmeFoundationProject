@@ -161,7 +161,7 @@ namespace BfmeFoundationProject.OnlineKit.Elements {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/BfmeFoundationProject.OnlineKit;V2.0.0;component/elements/corneraccentframe.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/BfmeFoundationProject.OnlineKit;V3.0.0;component/elements/corneraccentframe.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Elements\CornerAccentFrame.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -113,7 +113,7 @@ namespace BfmeFoundationProject.WorkshopKit.Logic
                         {
                             var enhancementPackage = await GetDependency(enhancement);
 
-                            if (enhancementPackage.Dependencies.Count > 0 && !enhancementPackage.Dependencies.Any(y => (y.Contains(':') ? $"{entry.Guid}:{entry.Version}" == y : entry.Guid == y) || dependencies.Any(x => y.Contains(':') ? $"{x.Guid}:{x.Version}" == y : x.Guid == y)))
+                            if (!enhancementPackage.Dependencies.Any(y => (y.Contains(':') ? $"{entry.Guid}:{entry.Version}" == y : entry.Guid == y) || dependencies.Any(x => y.Contains(':') ? $"{x.Guid}:{x.Version}" == y : x.Guid == y)))
                                 throw new BfmeWorkshopEnhancementIncompatibleException($"'{enhancementPackage.FullName()}' is not compatible with '{entry.FullName()}'.");
                             else
                                 dependencies.Add(enhancementPackage);

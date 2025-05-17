@@ -1377,7 +1377,7 @@
     "F:\\Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "2.0.0",
+    "version": "3.0.0",
     "restore": {
       "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_HttpInstruments\\BfmeFoundationProject_HttpInstruments.csproj",
       "projectName": "BfmeFoundationProject.HttpInstruments",

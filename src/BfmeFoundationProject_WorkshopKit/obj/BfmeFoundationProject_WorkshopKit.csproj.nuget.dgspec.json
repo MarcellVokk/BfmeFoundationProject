@@ -5,7 +5,7 @@
   },
   "projects": {
     "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_BfmeKit\\BfmeFoundationProject_BfmeKit.csproj": {
-      "version": "2.0.0",
+      "version": "3.0.0",
       "restore": {
         "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_BfmeKit\\BfmeFoundationProject_BfmeKit.csproj",
         "projectName": "BfmeFoundationProject.BfmeKit",
@@ -106,7 +106,7 @@
       }
     },
     "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_DirectXRuntime\\BfmeFoundationProject_DirectXRuntime.csproj": {
-      "version": "2.0.0",
+      "version": "3.0.0",
       "restore": {
         "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_DirectXRuntime\\BfmeFoundationProject_DirectXRuntime.csproj",
         "projectName": "BfmeFoundationProject.DirectXRuntime",
@@ -199,7 +199,7 @@
       }
     },
     "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_HttpInstruments\\BfmeFoundationProject_HttpInstruments.csproj": {
-      "version": "2.0.0",
+      "version": "3.0.0",
       "restore": {
         "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_HttpInstruments\\BfmeFoundationProject_HttpInstruments.csproj",
         "projectName": "BfmeFoundationProject.HttpInstruments",
@@ -300,7 +300,7 @@
       }
     },
     "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopKit\\BfmeFoundationProject_WorkshopKit.csproj": {
-      "version": "2.5.0",
+      "version": "3.0.0",
       "restore": {
         "projectUniqueName": "F:\\repos\\BfmeFoundationProject\\src\\BfmeFoundationProject_WorkshopKit\\BfmeFoundationProject_WorkshopKit.csproj",
         "projectName": "BfmeFoundationProject.WorkshopKit",

@@ -13,10 +13,4 @@
     <SourceRoot Include="C:\Users\Marcell\.nuget\packages\" />
     <SourceRoot Include="F:\Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
-  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)microsoft.net.illink.tasks\8.0.10\build\Microsoft.NET.ILLink.Tasks.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.illink.tasks\8.0.10\build\Microsoft.NET.ILLink.Tasks.props')" />
-  </ImportGroup>
-  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_NET_ILLink_Tasks Condition=" '$(PkgMicrosoft_NET_ILLink_Tasks)' == '' ">C:\Users\Marcell\.nuget\packages\microsoft.net.illink.tasks\8.0.10</PkgMicrosoft_NET_ILLink_Tasks>
-  </PropertyGroup>
 </Project>

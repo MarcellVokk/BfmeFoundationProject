@@ -1,12 +1,11 @@
 # BfmeKit by Online Battle Arena Team
 #### This project is part of the Bfme Foundation Project!
-<a href="https://github.com/MarcellVokk/bfme-foundation-project">
+<a href="https://github.com/MarcellVokk/BfmeFoundationProject">
     <img src="https://img.shields.io/badge/GitHub-Foundation Project-lime"/>
 </a>
 
 ## Welcome
-Welcome to the official github repository of RegistryKit!
-This library allows you to easily modify the registry entries used by the BFME games. Additionaly, it provides a way to list and generate previews of BFME maps, as well as list available color options. It can also create installation registries from scratch.
+This library allows you to easily modify the registry entries used by the BFME games. Additionaly, it provides a way to list and generate previews of BFME maps, as well as list available color options and factions. It can also create installation registries from scratch.
 
 ## Get on NuGet
 <a href="https://www.nuget.org/packages/BfmeFoundationProject.BfmeKit">
@@ -27,5 +26,8 @@ This library allows you to easily modify the registry entries used by the BFME g
 ## BfmeMapImporter
 - `BfmeMapImporter.ImportMaps()` - Returns a list of maps available in the curently installed version of the game specified.
 - `BfmeMapImporter.GenerateMapPreview()` - Generates and returns a bitmap image preview of the map specified.
+
+## BfmeFactionImporter
+- `BfmeFactionImporter.ImportFactions()` - Returns a list of factions available in the curently installed version of the game specified.
 
 ###### Developed by The Online Battle Arena Team (Beterwel, MarcellVokk)

@@ -11,14 +11,14 @@
         "dependencies": {
           "BfmeFoundationProject.Shared": "1.0.0",
           "BfmeFoundationProject.SharedUi": "1.0.0",
-          "BfmeFoundationProject.WorkshopKit": "2.5.0",
+          "BfmeFoundationProject.WorkshopKit": "3.0.0",
           "Microsoft.NET.ILLink.Tasks": "8.0.10",
-          "BfmeFoundationProject.BfmeKit.Reference": "2.0.0.0",
-          "BfmeFoundationProject.DirectXRuntime.Reference": "2.0.0.0",
-          "BfmeFoundationProject.HttpInstruments.Reference": "2.0.0.0",
+          "BfmeFoundationProject.BfmeKit.Reference": "3.0.0.0",
+          "BfmeFoundationProject.DirectXRuntime.Reference": "3.0.0.0",
+          "BfmeFoundationProject.HttpInstruments.Reference": "3.0.0.0",
           "BfmeFoundationProject.Shared.Reference": "1.0.0.0",
           "BfmeFoundationProject.SharedUi.Reference": "1.0.0.0",
-          "BfmeFoundationProject.WorkshopKit.Reference": "2.5.0.0",
+          "BfmeFoundationProject.WorkshopKit.Reference": "3.0.0.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "8.0.10",
           "runtimepack.Microsoft.WindowsDesktop.App.Runtime.win-x64": "8.0.10"
         },
@@ -1155,34 +1155,34 @@
       },
       "System.Memory/4.5.5": {},
       "System.Threading.Tasks.Extensions/4.5.4": {},
-      "BfmeFoundationProject.BfmeKit/2.0.0": {
+      "BfmeFoundationProject.BfmeKit/3.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3",
           "System.Drawing.Common": "8.0.10"
         },
         "runtime": {
           "BfmeFoundationProject.BfmeKit.dll": {
-            "assemblyVersion": "2.0.0",
+            "assemblyVersion": "3.0.0",
             "fileVersion": ""
           }
         }
       },
-      "BfmeFoundationProject.DirectXRuntime/2.0.0": {
+      "BfmeFoundationProject.DirectXRuntime/3.0.0": {
         "runtime": {
           "BfmeFoundationProject.DirectXRuntime.dll": {
-            "assemblyVersion": "2.0.0",
+            "assemblyVersion": "3.0.0",
             "fileVersion": ""
           }
         }
       },
-      "BfmeFoundationProject.HttpInstruments/2.0.0": {
+      "BfmeFoundationProject.HttpInstruments/3.0.0": {
         "dependencies": {
           "Microsoft.AspNet.WebApi.Client": "6.0.0",
           "Microsoft.Extensions.Http": "9.0.0"
         },
         "runtime": {
           "BfmeFoundationProject.HttpInstruments.dll": {
-            "assemblyVersion": "2.0.0",
+            "assemblyVersion": "3.0.0",
             "fileVersion": ""
           }
         }
@@ -1190,7 +1190,7 @@
       "BfmeFoundationProject.Shared/1.0.0": {
         "dependencies": {
           "AWSSDK.S3": "3.7.403.1",
-          "BfmeFoundationProject.HttpInstruments": "2.0.0",
+          "BfmeFoundationProject.HttpInstruments": "3.0.0",
           "Newtonsoft.Json": "13.0.3",
           "System.Drawing.Common": "8.0.10"
         },
@@ -1214,42 +1214,42 @@
           }
         }
       },
-      "BfmeFoundationProject.WorkshopKit/2.5.0": {
+      "BfmeFoundationProject.WorkshopKit/3.0.0": {
         "dependencies": {
           "AWSSDK.S3": "3.7.403.1",
-          "BfmeFoundationProject.BfmeKit": "2.0.0",
-          "BfmeFoundationProject.DirectXRuntime": "2.0.0",
-          "BfmeFoundationProject.HttpInstruments": "2.0.0",
+          "BfmeFoundationProject.BfmeKit": "3.0.0",
+          "BfmeFoundationProject.DirectXRuntime": "3.0.0",
+          "BfmeFoundationProject.HttpInstruments": "3.0.0",
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "BfmeFoundationProject.WorkshopKit.dll": {
-            "assemblyVersion": "2.5.0",
+            "assemblyVersion": "3.0.0",
             "fileVersion": ""
           }
         }
       },
-      "BfmeFoundationProject.BfmeKit.Reference/2.0.0.0": {
+      "BfmeFoundationProject.BfmeKit.Reference/3.0.0.0": {
         "runtime": {
           "BfmeFoundationProject.BfmeKit.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.0"
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
           }
         }
       },
-      "BfmeFoundationProject.DirectXRuntime.Reference/2.0.0.0": {
+      "BfmeFoundationProject.DirectXRuntime.Reference/3.0.0.0": {
         "runtime": {
           "BfmeFoundationProject.DirectXRuntime.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.0"
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
           }
         }
       },
-      "BfmeFoundationProject.HttpInstruments.Reference/2.0.0.0": {
+      "BfmeFoundationProject.HttpInstruments.Reference/3.0.0.0": {
         "runtime": {
           "BfmeFoundationProject.HttpInstruments.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.0.0"
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
           }
         }
       },
@@ -1269,11 +1269,11 @@
           }
         }
       },
-      "BfmeFoundationProject.WorkshopKit.Reference/2.5.0.0": {
+      "BfmeFoundationProject.WorkshopKit.Reference/3.0.0.0": {
         "runtime": {
           "BfmeFoundationProject.WorkshopKit.dll": {
-            "assemblyVersion": "2.5.0.0",
-            "fileVersion": "2.5.0.0"
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
           }
         }
       }
@@ -1470,17 +1470,17 @@
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
-    "BfmeFoundationProject.BfmeKit/2.0.0": {
+    "BfmeFoundationProject.BfmeKit/3.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "BfmeFoundationProject.DirectXRuntime/2.0.0": {
+    "BfmeFoundationProject.DirectXRuntime/3.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "BfmeFoundationProject.HttpInstruments/2.0.0": {
+    "BfmeFoundationProject.HttpInstruments/3.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1495,22 +1495,22 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BfmeFoundationProject.WorkshopKit/2.5.0": {
+    "BfmeFoundationProject.WorkshopKit/3.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "BfmeFoundationProject.BfmeKit.Reference/2.0.0.0": {
+    "BfmeFoundationProject.BfmeKit.Reference/3.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "BfmeFoundationProject.DirectXRuntime.Reference/2.0.0.0": {
+    "BfmeFoundationProject.DirectXRuntime.Reference/3.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "BfmeFoundationProject.HttpInstruments.Reference/2.0.0.0": {
+    "BfmeFoundationProject.HttpInstruments.Reference/3.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
@@ -1525,7 +1525,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BfmeFoundationProject.WorkshopKit.Reference/2.5.0.0": {
+    "BfmeFoundationProject.WorkshopKit.Reference/3.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
