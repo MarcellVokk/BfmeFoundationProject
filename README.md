@@ -1,9 +1,10 @@
 # Welcome to the Bfme Foundation Project
+## A Game Preservation Project
 Welcome to the official github repository of the Bfme Foundation Project!
-This project was created with one goal: to help finaly unite and bring together the BFME community, with high quality tools and libraries, as well as brand new platforms for multiplayer as well as modding.
+This project was created with one goal: to help finaly unite and bring together the BFME gaming community, with high quality tools and libraries, as well as brand new platforms for multiplayer as well as modding.
 
 ## Members
-**The project is a growing collaboration between multiple BFME communities and modding teams.**
+**The project is a growing collaboration between multiple BFME gaming communities and modding teams.**
 
 Curent members are:
 - Online Battle Arena Team
@@ -15,8 +16,8 @@ Curent members are:
 - Ennorath Team (ROTWK)
 
 ## Developers
-- Marcell (Lead developer)
-- Beterwel (Lead organizer, founder & owner of Online Arena)
+- Marcell (Lead Software Developer)
+- Beterwel (Founder & Owner of Online Arena)
 - Bull (Moderator, code review, bug hunting, testing)
 
 ## Projects
