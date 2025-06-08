@@ -1,9 +1,0 @@
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_RegistryKit\bin\Release\net8.0\BfmeFoundationProject.RegistryKit.deps.json
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_RegistryKit\bin\Release\net8.0\BfmeFoundationProject.RegistryKit.dll
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_RegistryKit\obj\Release\net8.0\BfmeFoundationProject_RegistryKit.GeneratedMSBuildEditorConfig.editorconfig
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_RegistryKit\obj\Release\net8.0\BfmeFoundationProject_RegistryKit.AssemblyInfoInputs.cache
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_RegistryKit\obj\Release\net8.0\BfmeFoundationProject_RegistryKit.AssemblyInfo.cs
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_RegistryKit\obj\Release\net8.0\BfmeFoundationProject_RegistryKit.csproj.CoreCompileInputs.cache
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_RegistryKit\obj\Release\net8.0\BfmeFoundationProject.RegistryKit.dll
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_RegistryKit\obj\Release\net8.0\refint\BfmeFoundationProject.RegistryKit.dll
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_RegistryKit\obj\Release\net8.0\ref\BfmeFoundationProject.RegistryKit.dll

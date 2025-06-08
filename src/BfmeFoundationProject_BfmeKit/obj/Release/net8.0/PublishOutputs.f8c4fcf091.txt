@@ -1,2 +1,0 @@
-F:\repos\BfmeFoundationProject\bin\BfmeFoundationProject_RegistryKit\BfmeFoundationProject.RegistryKit.dll
-F:\repos\BfmeFoundationProject\bin\BfmeFoundationProject_RegistryKit\BfmeFoundationProject.RegistryKit.deps.json
