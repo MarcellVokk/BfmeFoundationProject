@@ -16,8 +16,8 @@ doc/
 sgn/
 ssh/
 
-[Bb]in/
-[Oo]bj/
+**/bin/
+**/obj/
 
 src/BfmeFoundationProject_BfmeClient/
 src/BfmeFoundationProject_BfmeInterface/
