@@ -7,7 +7,7 @@
     <authors>Bfme Foundation Team</authors>
     <icon>instrumentsicon.png</icon>
     <description>A dependency package that implements a stable and well tested custom http file downloader.</description>
-    <repository type="git" commit="1e88aeeef02089f2e3e0cd76a96a3bc7d3d7c65a" />
+    <repository type="git" commit="7ae86ee387388a29ffb7e68af29bf133d6122405" />
     <dependencies>
       <group targetFramework="net8.0">
         <dependency id="Microsoft.AspNet.WebApi.Client" version="6.0.0" exclude="Build,Analyzers" />

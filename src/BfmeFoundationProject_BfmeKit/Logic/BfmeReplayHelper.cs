@@ -12,7 +12,7 @@ namespace BfmeFoundationProject.BfmeKit.Logic
     public static class BfmeReplayHelper
     {
         [SupportedOSPlatform("windows")]
-        public static string GetLastReplayFileName(object game)
+        public static string GetReplayFilePath(object game)
         {
             if (Convert.ToInt32(game) > 0)
             {
@@ -59,7 +59,7 @@ namespace BfmeFoundationProject.BfmeKit.Logic
                             else if (line.ToLower().StartsWith("end"))
                             {
                                 if (blockId.ToLower() == "gui:lastreplay")
-                                    return $"{blockContent.Trim('"')}.BfME2Replay";
+                                    return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), BfmeRegistryManager.GetKeyValue(game, BfmeRegistryKey.UserDataLeafName), "Replays", $"{blockContent.Trim('"')}.BfME2Replay");
 
                                 blockId = "";
                                 blockContent = "";
@@ -72,11 +72,11 @@ namespace BfmeFoundationProject.BfmeKit.Logic
                     }
                 }
 
-                return "Last Replay.BfME2Replay";
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), BfmeRegistryManager.GetKeyValue(game, BfmeRegistryKey.UserDataLeafName), "Replays", "Last Replay.BfME2Replay");
             }
             else
             {
-                return "00000000.rep";
+                return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), BfmeRegistryManager.GetKeyValue(game, BfmeRegistryKey.UserDataLeafName), "Replays", "00000000.rep");
             }
         }
     }

@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("This package allows you to access the BFME Workshop, and also provides realy powe" +
     "rful tools for patch switching, modding and more!")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("3.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.0.0+1e88aeeef02089f2e3e0cd76a96a3bc7d3d7c65a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("3.0.0+7ae86ee387388a29ffb7e68af29bf133d6122405")]
 [assembly: System.Reflection.AssemblyProductAttribute("BfmeFoundationProject.WorkshopKit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BfmeFoundationProject.WorkshopKit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("3.0.0")]
