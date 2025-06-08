@@ -1,6 +1,0 @@
-F:\repos\BfmeFoundationProject\bin\BfmeFoundationProject_BfmeKit\BfmeFoundationProject.BfmeKit.dll
-F:\repos\BfmeFoundationProject\bin\BfmeFoundationProject_BfmeKit\BfmeFoundationProject.BfmeKit.deps.json
-F:\repos\BfmeFoundationProject\bin\BfmeFoundationProject_BfmeKit\Microsoft.Win32.SystemEvents.dll
-F:\repos\BfmeFoundationProject\bin\BfmeFoundationProject_BfmeKit\Newtonsoft.Json.dll
-F:\repos\BfmeFoundationProject\bin\BfmeFoundationProject_BfmeKit\System.Drawing.Common.dll
-F:\repos\BfmeFoundationProject\bin\BfmeFoundationProject_BfmeKit\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll

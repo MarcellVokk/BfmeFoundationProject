@@ -1,2 +1,0 @@
-F:\Visual Studio\repos\BfmeFoundationProject\bin\BfmeFoundationProject_DirectXRuntime\BfmeFoundationProject.DirectXRuntime.dll
-F:\Visual Studio\repos\BfmeFoundationProject\bin\BfmeFoundationProject_DirectXRuntime\BfmeFoundationProject.DirectXRuntime.deps.json

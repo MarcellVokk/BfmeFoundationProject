@@ -1,2 +1,0 @@
-F:\Visual Studio\repos\BFMECompetetiveArena\bin\BFMECompetetiveArena_OnlineKit\BfmeOnlineKit.dll
-F:\Visual Studio\repos\BFMECompetetiveArena\bin\BFMECompetetiveArena_OnlineKit\BfmeOnlineKit.deps.json

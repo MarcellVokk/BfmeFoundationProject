@@ -1,2 +1,0 @@
-F:\Visual Studio\repos\BfmeFoundationProject\bin\BfmeFoundationProject_OnlineKit\BfmeFoundationProject.OnlineKit.dll
-F:\Visual Studio\repos\BfmeFoundationProject\bin\BfmeFoundationProject_OnlineKit\BfmeFoundationProject.OnlineKit.deps.json

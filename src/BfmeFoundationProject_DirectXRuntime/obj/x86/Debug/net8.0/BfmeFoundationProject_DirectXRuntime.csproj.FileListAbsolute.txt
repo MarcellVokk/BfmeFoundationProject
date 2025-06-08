@@ -1,9 +1,0 @@
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_DirectXRuntime\bin\x86\Debug\net8.0\BfmeFoundationProject.DirectXRuntime.deps.json
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_DirectXRuntime\bin\x86\Debug\net8.0\BfmeFoundationProject.DirectXRuntime.dll
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_DirectXRuntime\obj\x86\Debug\net8.0\BfmeFoundationProject_DirectXRuntime.GeneratedMSBuildEditorConfig.editorconfig
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_DirectXRuntime\obj\x86\Debug\net8.0\BfmeFoundationProject_DirectXRuntime.AssemblyInfoInputs.cache
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_DirectXRuntime\obj\x86\Debug\net8.0\BfmeFoundationProject_DirectXRuntime.AssemblyInfo.cs
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_DirectXRuntime\obj\x86\Debug\net8.0\BfmeFoundationProject_DirectXRuntime.csproj.CoreCompileInputs.cache
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_DirectXRuntime\obj\x86\Debug\net8.0\BfmeFoundationProject.DirectXRuntime.dll
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_DirectXRuntime\obj\x86\Debug\net8.0\refint\BfmeFoundationProject.DirectXRuntime.dll
-F:\repos\BfmeFoundationProject\src\BfmeFoundationProject_DirectXRuntime\obj\x86\Debug\net8.0\ref\BfmeFoundationProject.DirectXRuntime.dll
