@@ -28,6 +28,7 @@ src/BfmeFoundationProject_RelayServer/
 src/BfmeFoundationProject_Shared/
 src/BfmeFoundationProject_SharedUi/
 src/BfmeFoundationProject_UnifiedServer/
+src/BfmeFoundationProject_WorkshopStudio/
 
 BfmeFoundationProject_BfmeInterface.sln
 BfmeFoundationProject_MissionControl.sln
@@ -35,3 +36,4 @@ BfmeFoundationProject_OnlineArena.sln
 BfmeFoundationProject_OnlinePortal.sln
 BfmeFoundationProject_RelayServer.sln
 BfmeFoundationProject_UnifiedServer.sln
+BfmeFoundationProject_WorkshopStudio.sln
