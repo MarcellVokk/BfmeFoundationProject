@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows;
+using BfmeFoundationProject.AllInOneLauncher.Core.Utils;
 using BfmeFoundationProject.AllInOneLauncher.Elements.Disk;
 using BfmeFoundationProject.AllInOneLauncher.Elements.Generic;
 using BfmeFoundationProject.AllInOneLauncher.Elements.Native;
@@ -11,19 +12,18 @@ namespace BfmeFoundationProject.AllInOneLauncher.Popups;
 
 public partial class InstallGamePopup : PopupBody
 {
-    private static readonly Dictionary<string, DriveInfo> Drives = DriveInfo.GetDrives().ToDictionary(x => x.RootDirectory.FullName);
+    private static readonly List<DriveInfo> _drives = DriveUtils.GetValidDrives();
     private string _defaultPath = string.Empty;
 
     public InstallGamePopup()
     {
         InitializeComponent();
-        // Initialize the select-folder button with the first available drive as default
         try
         {
-            var firstReady = Drives.Values.FirstOrDefault(d => d.IsReady);
+            var firstReady = _drives.FirstOrDefault();
             if (firstReady != null)
             {
-                _defaultPath = firstReady.RootDirectory.FullName;
+                _defaultPath = DriveUtils.GetDriveRootName(firstReady);
                 SelectFolderError.Visibility = Visibility.Collapsed;
                 SelectFolderButton.Visibility = Visibility.Visible;
                 SetSelectedPath(_defaultPath);
@@ -42,7 +42,7 @@ public partial class InstallGamePopup : PopupBody
         try
         {
             _selectedPath = Path.GetFullPath(path); // validate path
-            var drive = GetReadyDriveForPath(_selectedPath);
+            var drive = DriveUtils.GetDriveForPath(_drives, _selectedPath);
             if(drive == null) {
                 _selectedPath = _defaultPath;
             }
@@ -53,7 +53,7 @@ public partial class InstallGamePopup : PopupBody
 
         try
         {
-            var drive = GetReadyDriveForPath(_selectedPath);
+            var drive = DriveUtils.GetDriveForPath(_drives, _selectedPath);
             if(drive != null) {
                 _selectedFreeText = $"{Math.Floor(drive.AvailableFreeSpace / Math.Pow(1024, 3)):N0} GB {App.Current.FindResource("GenericFree")}";
             }
@@ -65,18 +65,6 @@ public partial class InstallGamePopup : PopupBody
         ButtonAccept.IsEnabled = !string.IsNullOrWhiteSpace(_selectedPath);
     }
 
-    private DriveInfo? GetReadyDriveForPath(string path)
-    {
-        var driveRoot = Path.GetPathRoot(path);
-        if (driveRoot != null && Drives.TryGetValue(driveRoot, out var drive) && drive.IsReady)
-        {
-            return drive;
-        }
-        else
-        {
-            return null;
-        }
-    }
 
     private void OnSelectFolderClicked(object sender, RoutedEventArgs e)
     {
