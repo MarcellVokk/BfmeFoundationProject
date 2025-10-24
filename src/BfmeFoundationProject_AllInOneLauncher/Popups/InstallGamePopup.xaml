@@ -62,14 +62,18 @@
                         </elements:DropdownPicker.Options>
                     </elements:DropdownPicker>
                     <TextBlock Grid.Row="4" FontSize="14" FontWeight="SemiBold" Text="{DynamicResource InstallGamePopupLocation}" Foreground="white"/>
-                    <generic:SmoothScrollViewer Grid.Row="6">
-                        <StackPanel x:Name="locations"/>
-                    </generic:SmoothScrollViewer>
+                    <Button  x:Name="SelectFolderButton" Grid.Row="6" Click="OnSelectFolderClicked" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="64" Padding="10" Background="#1E2A3A" BorderBrush="#2B3A4A" Visibility="Collapsed">
+                        <StackPanel>
+                            <TextBlock x:Name="SelectedPathText" Text="" Foreground="White" FontSize="14" TextTrimming="CharacterEllipsis"/>
+                            <TextBlock x:Name="SelectedFreeText" Text="" Foreground="White" FontSize="12" Opacity="0.8"/>
+                        </StackPanel>
+                    </Button>
+                    <TextBlock x:Name="SelectFolderError" Grid.Row="6" FontSize="14" FontWeight="SemiBold" Text="{DynamicResource InstallGamePopupNoDrive}" Foreground="red" Visibility="Visible" />
                 </Grid>
             </Grid>
         </Grid>
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Grid.Column="0" Grid.Row="2" x:Name="ButtonAccept" Style="{StaticResource HiglightButton}" VerticalAlignment="Center" Click="OnInstallClicked" Width="150" Margin="0,0,10,0" Content="{DynamicResource GenericInstall}"/>
+            <Button Grid.Column="0" Grid.Row="2" x:Name="ButtonAccept" Style="{StaticResource HiglightButton}" VerticalAlignment="Center" Click="OnInstallClicked" Width="150" Margin="0,0,10,0" Content="{DynamicResource GenericInstall}" IsEnabled="false" />
             <Button Grid.Column="1" Grid.Row="2" x:Name="ButtonCancel" Content="{DynamicResource GenericCancel}" VerticalAlignment="Center" Click="OnCancelClicked" Width="150"/>
         </StackPanel>
     </Grid>

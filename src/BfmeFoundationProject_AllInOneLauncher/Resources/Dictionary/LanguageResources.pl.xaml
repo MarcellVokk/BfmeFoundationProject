@@ -107,6 +107,8 @@
     <system:String x:Key="InstallGamePopupTitle">INSTALUJ GRĘ</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Język</system:String>
     <system:String x:Key="InstallGamePopupLocation">Lokalizacja</system:String>
+    <system:String x:Key="InstallGamePopupSelectFolder">Wybierz folder instalacyjny</system:String>
+    <system:String x:Key="InstallGamePopupNoDrive">Brak dostępnych dysków</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">DODAJ DO BIBLIOTEKI</system:String>

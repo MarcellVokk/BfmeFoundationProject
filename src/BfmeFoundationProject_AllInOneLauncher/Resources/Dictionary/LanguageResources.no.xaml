@@ -107,6 +107,8 @@
     <system:String x:Key="InstallGamePopupTitle">INSTALLER SPILL</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Språk</system:String>
     <system:String x:Key="InstallGamePopupLocation">Beliggenhet</system:String>
+    <system:String x:Key="InstallGamePopupSelectFolder">Velg installasjonsmappe</system:String>
+    <system:String x:Key="InstallGamePopupNoDrive">Ingen stasjoner tilgjengelig</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">LEGG TIL I BIBLIOTEKET</system:String>

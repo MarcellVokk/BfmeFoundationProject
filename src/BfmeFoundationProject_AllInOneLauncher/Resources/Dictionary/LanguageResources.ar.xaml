@@ -107,6 +107,8 @@
     <system:String x:Key="InstallGamePopupTitle">تثبيت اللعبة</system:String>
     <system:String x:Key="InstallGamePopupLanguage">اللغة</system:String>
     <system:String x:Key="InstallGamePopupLocation">الموقع</system:String>
+    <system:String x:Key="InstallGamePopupSelectFolder">اختر مجلد التثبيت</system:String>
+    <system:String x:Key="InstallGamePopupNoDrive">لا توجد أقراص متاحة</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">إضافة إلى المكتبة</system:String>

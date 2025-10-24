@@ -15,12 +15,10 @@
     <system:String x:Key="GenericLoading">LADEN</system:String>
     <system:String x:Key="GenericPlay">SPIELEN</system:String>
     <system:String x:Key="GenericAdd">HINZUFÜGEN</system:String>
-    <system:String x:Key="GenericFree">KOSTENLOS</system:String>
+    <system:String x:Key="GenericFree">FREI</system:String>
     <system:String x:Key="GenericConfirm">BESTÄTIGEN</system:String>
     <system:String x:Key="GenericYes">JA</system:String>
     <system:String x:Key="GenericNo">NEIN</system:String>
-
-
 
     <!--=====================  MainWindow  =====================-->
     <system:String x:Key="MainWindowSingleplayerTab">EINZELSPIELER</system:String>
@@ -119,6 +117,8 @@
     <system:String x:Key="InstallGamePopupTitle">SPIEL INSTALLIEREN</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Sprache</system:String>
     <system:String x:Key="InstallGamePopupLocation">Standort</system:String>
+    <system:String x:Key="InstallGamePopupSelectFolder">Installationsordner wählen</system:String>
+    <system:String x:Key="InstallGamePopupNoDrive">Keine Laufwerke verfügbar</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">ZUR BIBLIOTHEK HINZUFÜGEN</system:String>

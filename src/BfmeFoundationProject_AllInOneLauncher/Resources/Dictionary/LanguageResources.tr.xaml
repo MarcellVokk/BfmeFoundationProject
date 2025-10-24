@@ -20,8 +20,6 @@
     <system:String x:Key="GenericYes">EVET</system:String>
     <system:String x:Key="GenericNo">HAYIR</system:String>
 
-
-
     <!--=====================  MainWindow  =====================-->
     <system:String x:Key="MainWindowSingleplayerTab">TEK OYUNCU</system:String>
     <system:String x:Key="MainWindowMultiplayerTab">ÇOK OYUNCULU</system:String>
@@ -121,6 +119,8 @@
     <system:String x:Key="InstallGamePopupTitle">OYUNU YÜKLE</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Dil</system:String>
     <system:String x:Key="InstallGamePopupLocation">Konum</system:String>
+    <system:String x:Key="InstallGamePopupSelectFolder">Yükleme klasörünü seçin</system:String>
+    <system:String x:Key="InstallGamePopupNoDrive">Hiçbir sürücü bulunamadı</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">KÜTÜPHANEYE EKLE</system:String>
