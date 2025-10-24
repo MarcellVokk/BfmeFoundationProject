@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows;
 using BfmeFoundationProject.AllInOneLauncher.Elements.Disk;
 using BfmeFoundationProject.AllInOneLauncher.Elements.Generic;
+using BfmeFoundationProject.AllInOneLauncher.Elements.Native;
 
 namespace BfmeFoundationProject.AllInOneLauncher.Popups;
 
@@ -84,7 +85,7 @@ public partial class InstallGamePopup : PopupBody
             var ownerWindow = Window.GetWindow(this);
             var folderDialogTitle = (string)App.Current.FindResource("InstallGamePopupSelectFolder");
             var _selectedPath = SelectedPathText.Text;
-            var selected = Utils.FolderPicker.ShowDialog(ownerWindow, folderDialogTitle, _selectedPath);
+            var selected = FolderPicker.ShowDialog(ownerWindow, folderDialogTitle, _selectedPath);
             if (!string.IsNullOrWhiteSpace(selected))
                 SetSelectedPath(selected);
         }
