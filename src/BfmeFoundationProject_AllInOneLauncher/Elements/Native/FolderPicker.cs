@@ -19,8 +19,6 @@ internal static class FolderPicker
             const int MAX_PATH = 260;
             const uint BIF_RETURNONLYFSDIRS = 0x0001;
             const uint BIF_NEWDIALOGSTYLE = 0x0040;
-            const uint BIF_EDITBOX = 0x0010;
-            const uint BIF_SHAREABLE = 0x8000;
             const int BFFM_INITIALIZED = 1;
             const int BFFM_SETSELECTIONW = 0x0467; // WM_USER + 103 (Unicode)
 
@@ -47,7 +45,7 @@ internal static class FolderPicker
                     pidlRoot = IntPtr.Zero,
                     pszDisplayName = pszDisplayName,
                     lpszTitle = title,
-                    ulFlags = BIF_RETURNONLYFSDIRS | BIF_NEWDIALOGSTYLE | BIF_EDITBOX | BIF_SHAREABLE,
+                    ulFlags = BIF_RETURNONLYFSDIRS | BIF_NEWDIALOGSTYLE,
                     lpfn = callback,
                     lParam = IntPtr.Zero,
                     iImage = 0
