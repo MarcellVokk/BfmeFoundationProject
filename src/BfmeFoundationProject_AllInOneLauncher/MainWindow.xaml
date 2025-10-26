@@ -25,7 +25,7 @@
                     <TextBlock x:Name="offlineTab" Style="{DynamicResource TextBlockHover}" Text="{DynamicResource MainWindowSingleplayerTab}" FontSize="16" FontWeight="Bold" Margin="0,0,20,0" Background="Transparent" Cursor="Hand" MouseDown="OnOfflineTabClicked"/>
                     <TextBlock x:Name="onlineTab" Style="{DynamicResource TextBlockHover}" Text="{DynamicResource MainWindowMultiplayerTab}" FontSize="16" FontWeight="Bold" Margin="0,0,0,0" Background="Transparent" Cursor="Hand" MouseDown="OnOnlineTabClicked"/>
                     <TextBlock x:Name="guidesTab" Style="{DynamicResource TextBlockHover}" Text="{DynamicResource MainWindowGuidesTab}" FontSize="16" FontWeight="Bold" Margin="20,0,0,0" Background="Transparent" Cursor="Hand" MouseDown="OnGuidesTabClicked"/>
-                    <TextBlock x:Name="aboutTab" Style="{DynamicResource TextBlockHover}" Text="ABOUT" FontSize="16" FontWeight="Bold" Margin="20,0,0,0" Background="Transparent" Cursor="Hand" MouseDown="OnAboutTabClicked"/>
+                    <TextBlock x:Name="aboutTab" Style="{DynamicResource TextBlockHover}" Text="{DynamicResource MainWindowAboutTab}" FontSize="16" FontWeight="Bold" Margin="20,0,0,0" Background="Transparent" Cursor="Hand" MouseDown="OnAboutTabClicked"/>
                 </StackPanel>
                 <StackPanel x:Name="icons" Orientation="Horizontal" HorizontalAlignment="Right">
                     <Image Tag="https://www.youtube.com/@BeyondStandards" Source="pack://application:,,,/Resources/Images/youtube.png" Height="32" Margin="0,0,5,0" Cursor="Hand" MouseDown="OnLinkButtonClicked"/>
