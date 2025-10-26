@@ -18,45 +18,38 @@ public partial class InstallGamePopup : PopupBody
     public InstallGamePopup()
     {
         InitializeComponent();
-        try
-        {
-            if (_drives.Count == 0)
-            {
-                SelectLocationError.Visibility = Visibility.Visible;
-                SelectLocationList.Visibility = Visibility.Collapsed;
-                SelectFolderButton.Visibility = Visibility.Collapsed;
-            }
-            else
-            {
-                locations.Children.Clear();
-                _drives.ForEach(drive =>
-                {
-                    locations.Children.Add(new Selectable()
-                    {
-                        Title = new LibraryDriveHeader()
-                        {
-                            LibraryDriveName = string.Concat(drive.VolumeLabel, " (", drive.Name.Replace(@"\", ""), ")"),
-                            LibraryDriveSize = GetDriveFreeSpaceFormatted(drive),
-                            Mini = true
-                        },
-                        Tag = DriveUtils.GetDriveRootName(drive),
-                        Margin = new Thickness(0, 0, 0, 5),
-                        UseLayoutRounding = true,
-                        SnapsToDevicePixels = true
-                    });
 
+        if (_drives.Count <= 0)
+        {
+            SelectLocationError.Visibility = Visibility.Visible;
+            SelectLocationArea.Visibility = Visibility.Collapsed;
+        }
+        else
+        {
+            locations.Children.Clear();
+            _drives.ForEach(drive =>
+            {
+                locations.Children.Add(new Selectable()
+                {
+                    Title = new LibraryDriveHeader()
+                    {
+                        LibraryDriveName = string.Concat(drive.VolumeLabel, " (", drive.Name.Replace(@"\", ""), ")"),
+                        LibraryDriveSize = GetDriveFreeSpaceFormatted(drive),
+                        Mini = true
+                    },
+                    Tag = DriveUtils.GetDriveRootName(drive),
+                    Margin = new Thickness(0, 0, 0, 5),
+                    UseLayoutRounding = true,
+                    SnapsToDevicePixels = true
                 });
 
-                var firstReady = _drives.FirstOrDefault();
-                if (firstReady != null)
-                {
-                    SetSelectedPath(_defaultPath);
-                }
+            });
+
+            var firstReady = _drives.FirstOrDefault();
+            if (firstReady != null)
+            {
+                SetSelectedPath(_defaultPath);
             }
-        }
-        catch (Exception ex)
-        {
-            PopupVisualizer.ShowPopup(new ErrorPopup(ex), OnPopupClosed: () => Dismiss());
         }
     }
 
@@ -119,7 +112,7 @@ public partial class InstallGamePopup : PopupBody
     private void OnInstallClicked(object sender, RoutedEventArgs e)
     {
         var language = LanguageDropdown.SelectedValue;
-        var path = (SelectLocationAdvancedToggle.IsChecked == true) ?  SelectedPathText.Text : Selectable.GetSelectedTagInContainer(locations)!.ToString()!;
+        var path = (SelectLocationAdvancedToggle.IsChecked == true) ? SelectedPathText.Text : Selectable.GetSelectedTagInContainer(locations)!.ToString()!;
         Submit(language, path);
     }
 
