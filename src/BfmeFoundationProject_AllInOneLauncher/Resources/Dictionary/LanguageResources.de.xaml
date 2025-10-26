@@ -15,7 +15,7 @@
     <system:String x:Key="GenericLoading">LADEN</system:String>
     <system:String x:Key="GenericPlay">SPIELEN</system:String>
     <system:String x:Key="GenericAdd">HINZUFÜGEN</system:String>
-    <system:String x:Key="GenericFree">FREI</system:String>
+    <system:String x:Key="GenericFree">KOSTENLOS</system:String>
     <system:String x:Key="GenericConfirm">BESTÄTIGEN</system:String>
     <system:String x:Key="GenericYes">JA</system:String>
     <system:String x:Key="GenericNo">NEIN</system:String>
