@@ -13,7 +13,7 @@ public class DriveUtils
     {
         return drive.DriveType == DriveType.Fixed && drive.IsReady;
     }
-    
+
     public static List<DriveInfo> GetValidDrives()
     {
         return DriveInfo.GetDrives().Where(d => IsValidDrive(d)).ToList();
@@ -39,7 +39,16 @@ public class DriveUtils
 
     internal static string? GetValidPath(string path)
     {
-        var fullpath = Path.GetFullPath(path);
-        return !fullpath.Contains(":\\Windows") && !fullpath.Contains("\\OneDrive") ? fullpath : null; 
+        string? fullpath;
+        try
+        {
+            fullpath = Path.GetFullPath(path);
+        }
+        catch
+        {
+            fullpath = null;
+        }
+        var noExcludedFolders = fullpath != null && !fullpath.Contains(":\\Windows") && !fullpath.Contains("\\OneDrive");
+        return noExcludedFolders ? fullpath : null;
     }
 }

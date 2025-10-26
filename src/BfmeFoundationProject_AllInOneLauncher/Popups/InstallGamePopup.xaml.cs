@@ -45,17 +45,13 @@ public partial class InstallGamePopup : PopupBody
 
             });
 
-            var firstReady = _drives.FirstOrDefault();
-            if (firstReady != null)
-            {
-                SetSelectedPath(_defaultPath);
-            }
+            SetSelectedPath(_defaultPath);
         }
     }
 
     private void SetSelectedPath(string path)
     {
-        string? _selectedPath;
+        string? _selectedPath = null;
         var _selectedFreeText = string.Empty;
         try
         {
@@ -63,17 +59,10 @@ public partial class InstallGamePopup : PopupBody
             var drive = DriveUtils.GetDriveForPath(_drives, _selectedPath);
             if (drive == null)
             {
-                _selectedPath = _defaultPath;
+                _selectedPath = DriveUtils.GetValidPath(_defaultPath);
+                drive = DriveUtils.GetDriveForPath(_drives, _selectedPath);
             }
-        }
-        catch
-        {
-            _selectedPath = _defaultPath;
-        }
 
-        try
-        {
-            var drive = DriveUtils.GetDriveForPath(_drives, _selectedPath);
             if (drive != null)
             {
                 _selectedFreeText = GetDriveFreeSpaceFormatted(drive);

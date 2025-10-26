@@ -114,7 +114,7 @@
                             </generic:SmoothScrollViewer>
                             <Button x:Name="SelectFolderButton" Click="OnSelectFolderClicked" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Left" Padding="15" Visibility="{Binding IsChecked, ElementName=SelectLocationAdvancedToggle, Converter={StaticResource BooleanToVisibility}}">
                                 <StackPanel>
-                                    <TextBlock x:Name="SelectedPathText" Text="" Foreground="White" FontSize="12" TextTrimming="CharacterEllipsis"/>
+                                    <TextBlock x:Name="SelectedPathText" Text="" Foreground="White" FontSize="12" TextWrapping="Wrap"/>
                                     <TextBlock x:Name="SelectedFreeSpaceText" Text="" Foreground="White" FontSize="11" Opacity="0.8"/>
                                 </StackPanel>
                             </Button>
