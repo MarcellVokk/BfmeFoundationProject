@@ -119,6 +119,7 @@
     <system:String x:Key="InstallGamePopupTitle">INSTALL GAME</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Language</system:String>
     <system:String x:Key="InstallGamePopupLocation">Location</system:String>
+    <system:String x:Key="InstallGamePopupLocationAdvanced">Advanced</system:String>
     <system:String x:Key="InstallGamePopupSelectFolder">Select installation folder</system:String>
     <system:String x:Key="InstallGamePopupNoDrive">No drives available</system:String>
 

@@ -108,6 +108,7 @@
     <system:String x:Key="InstallGamePopupTitle">JÁTÉK TELEPÍTÉSE</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Nyelv</system:String>
     <system:String x:Key="InstallGamePopupLocation">Helyszín</system:String>
+    <system:String x:Key="InstallGamePopupLocationAdvanced">Haladó</system:String>
     <system:String x:Key="InstallGamePopupSelectFolder">Válassza ki a telepítési mappát</system:String>
     <system:String x:Key="InstallGamePopupNoDrive">Nincsenek elérhető meghajtók</system:String>
 

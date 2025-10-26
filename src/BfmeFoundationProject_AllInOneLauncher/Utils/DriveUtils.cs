@@ -19,12 +19,12 @@ public class DriveUtils
         return DriveInfo.GetDrives().Where(d => IsValidDrive(d)).ToList();
     }
 
-    public static DriveInfo? GetDriveForPath(List<DriveInfo> somedrives, string path)
+    public static DriveInfo? GetDriveForPath(List<DriveInfo> somedrives, string? path)
     {
         DriveInfo? drive = null;
 
         var driveRoot = Path.GetPathRoot(path);
-        if (driveRoot != null)
+        if (!string.IsNullOrWhiteSpace(driveRoot))
         {
             drive = somedrives.FirstOrDefault(d => GetDriveRootName(d).Equals(driveRoot, StringComparison.OrdinalIgnoreCase));
         }
@@ -35,5 +35,11 @@ public class DriveUtils
     public static string GetDriveRootName(DriveInfo drive)
     {
         return drive.RootDirectory.FullName;
+    }
+
+    internal static string? GetValidPath(string path)
+    {
+        var fullpath = Path.GetFullPath(path);
+        return !fullpath.Contains(":\\Windows") && !fullpath.Contains("\\OneDrive") ? fullpath : null; 
     }
 }

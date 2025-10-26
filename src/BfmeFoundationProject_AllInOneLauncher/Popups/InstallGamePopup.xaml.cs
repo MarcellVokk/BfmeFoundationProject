@@ -13,20 +13,45 @@ namespace BfmeFoundationProject.AllInOneLauncher.Popups;
 public partial class InstallGamePopup : PopupBody
 {
     private static readonly List<DriveInfo> _drives = DriveUtils.GetValidDrives();
-    private string _defaultPath = string.Empty;
+    private string _defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
 
     public InstallGamePopup()
     {
         InitializeComponent();
         try
         {
-            var firstReady = _drives.FirstOrDefault();
-            if (firstReady != null)
+            if (_drives.Count == 0)
             {
-                _defaultPath = DriveUtils.GetDriveRootName(firstReady);
-                SelectFolderError.Visibility = Visibility.Collapsed;
-                SelectFolderButton.Visibility = Visibility.Visible;
-                SetSelectedPath(_defaultPath);
+                SelectLocationError.Visibility = Visibility.Visible;
+                SelectLocationList.Visibility = Visibility.Collapsed;
+                SelectFolderButton.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                locations.Children.Clear();
+                _drives.ForEach(drive =>
+                {
+                    locations.Children.Add(new Selectable()
+                    {
+                        Title = new LibraryDriveHeader()
+                        {
+                            LibraryDriveName = string.Concat(drive.VolumeLabel, " (", drive.Name.Replace(@"\", ""), ")"),
+                            LibraryDriveSize = GetDriveFreeSpaceFormatted(drive),
+                            Mini = true
+                        },
+                        Tag = DriveUtils.GetDriveRootName(drive),
+                        Margin = new Thickness(0, 0, 0, 5),
+                        UseLayoutRounding = true,
+                        SnapsToDevicePixels = true
+                    });
+
+                });
+
+                var firstReady = _drives.FirstOrDefault();
+                if (firstReady != null)
+                {
+                    SetSelectedPath(_defaultPath);
+                }
             }
         }
         catch (Exception ex)
@@ -37,34 +62,41 @@ public partial class InstallGamePopup : PopupBody
 
     private void SetSelectedPath(string path)
     {
-        string _selectedPath; 
+        string? _selectedPath;
         var _selectedFreeText = string.Empty;
         try
         {
-            _selectedPath = Path.GetFullPath(path); // validate path
+            _selectedPath = DriveUtils.GetValidPath(path);
             var drive = DriveUtils.GetDriveForPath(_drives, _selectedPath);
-            if(drive == null) {
+            if (drive == null)
+            {
                 _selectedPath = _defaultPath;
             }
         }
-        catch { 
+        catch
+        {
             _selectedPath = _defaultPath;
-         }
+        }
 
         try
         {
             var drive = DriveUtils.GetDriveForPath(_drives, _selectedPath);
-            if(drive != null) {
-                _selectedFreeText = $"{Math.Floor(drive.AvailableFreeSpace / Math.Pow(1024, 3)):N0} GB {App.Current.FindResource("GenericFree")}";
+            if (drive != null)
+            {
+                _selectedFreeText = GetDriveFreeSpaceFormatted(drive);
             }
         }
         catch { /* ignore errors here */ }
 
         SelectedPathText.Text = _selectedPath;
-        SelectedFreeText.Text = _selectedFreeText;
+        SelectedFreeSpaceText.Text = _selectedFreeText;
         ButtonAccept.IsEnabled = !string.IsNullOrWhiteSpace(_selectedPath);
     }
 
+    private static string GetDriveFreeSpaceFormatted(DriveInfo drive)
+    {
+        return $"{Math.Floor(drive.AvailableFreeSpace / Math.Pow(1024, 3)):N0} GB {App.Current.FindResource("GenericFree")}";
+    }
 
     private void OnSelectFolderClicked(object sender, RoutedEventArgs e)
     {
@@ -84,7 +116,12 @@ public partial class InstallGamePopup : PopupBody
         }
     }
 
-    private void OnInstallClicked(object sender, RoutedEventArgs e) => Submit(LanguageDropdown.SelectedValue, SelectedPathText.Text);
+    private void OnInstallClicked(object sender, RoutedEventArgs e)
+    {
+        var language = LanguageDropdown.SelectedValue;
+        var path = (SelectLocationAdvancedToggle.IsChecked == true) ?  SelectedPathText.Text : Selectable.GetSelectedTagInContainer(locations)!.ToString()!;
+        Submit(language, path);
+    }
 
     private void OnCancelClicked(object sender, RoutedEventArgs e) => Dismiss();
 }

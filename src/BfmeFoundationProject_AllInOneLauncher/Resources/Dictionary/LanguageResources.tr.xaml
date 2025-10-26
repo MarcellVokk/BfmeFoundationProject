@@ -119,6 +119,7 @@
     <system:String x:Key="InstallGamePopupTitle">OYUNU YÜKLE</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Dil</system:String>
     <system:String x:Key="InstallGamePopupLocation">Konum</system:String>
+    <system:String x:Key="InstallGamePopupLocationAdvanced">Gelişmiş</system:String>
     <system:String x:Key="InstallGamePopupSelectFolder">Yükleme klasörünü seçin</system:String>
     <system:String x:Key="InstallGamePopupNoDrive">Hiçbir sürücü bulunamadı</system:String>
 

@@ -107,6 +107,7 @@
     <system:String x:Key="InstallGamePopupTitle">УСТАНОВКА ИГРЫ</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Язык</system:String>
     <system:String x:Key="InstallGamePopupLocation">Местоположение</system:String>
+    <system:String x:Key="InstallGamePopupLocationAdvanced">Дополнительно</system:String>
     <system:String x:Key="InstallGamePopupSelectFolder">Выберите папку для установки</system:String>
     <system:String x:Key="InstallGamePopupNoDrive">Дисков не найдено</system:String>
 

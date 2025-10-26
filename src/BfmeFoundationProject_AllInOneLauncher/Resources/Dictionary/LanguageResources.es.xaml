@@ -107,6 +107,7 @@
     <system:String x:Key="InstallGamePopupTitle">INSTALAR JUEGO</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Idioma</system:String>
     <system:String x:Key="InstallGamePopupLocation">Ubicación</system:String>
+    <system:String x:Key="InstallGamePopupLocationAdvanced">Avanzado</system:String>
     <system:String x:Key="InstallGamePopupSelectFolder">Seleccionar carpeta de instalación</system:String>
     <system:String x:Key="InstallGamePopupNoDrive">No hay unidades disponibles</system:String>
 
