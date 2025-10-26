@@ -7,7 +7,7 @@ namespace BfmeFoundationProject.AllInOneLauncher.Elements.Converter
 {
     /// <summary>
     /// Converts a boolean to Visibility.
-    /// Supports optional inversion via ConverterParameter="invert" (case-insensitive).
+    /// Supports optional inversion via ConverterParameter="invert" or ConverterParameter="!" (case-insensitive).
     /// Also supports hiding mode via ConverterParameter="hidden" to return Visibility.Hidden instead of Collapsed when false.
     /// You can combine parameters with a comma: "invert,hidden".
     /// </summary>
@@ -17,17 +17,17 @@ namespace BfmeFoundationProject.AllInOneLauncher.Elements.Converter
         {
             bool isTrue = false;
 
-            if (value is bool b)
-                isTrue = b;
+            if (value is bool valueBool)
+                isTrue = valueBool;
             else if (value is bool?)
                 isTrue = (bool?)value ?? false;
 
             bool invert = false;
             bool useHidden = false;
 
-            if (parameter is string s && !string.IsNullOrWhiteSpace(s))
+            if (parameter is string paramString && !string.IsNullOrWhiteSpace(paramString))
             {
-                var parts = s.Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries);
+                var parts = paramString.Split([',', ';'], StringSplitOptions.RemoveEmptyEntries);
                 foreach (var p in parts)
                 {
                     var tp = p.Trim().ToLowerInvariant();
