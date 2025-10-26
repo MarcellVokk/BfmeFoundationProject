@@ -5,15 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Popups"
              xmlns:elements="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements"
-             xmlns:converter="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements.Converter"
              xmlns:system="clr-namespace:System;assembly=netstandard"
              xmlns:generic="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements.Generic"
              mc:Ignorable="d" 
              Width="700" HorizontalAlignment="Center" VerticalAlignment="Center">
-
-    <generic:PopupBody.Resources>
-        <converter:BooleanToVisibilityConverter x:Key="BooleanToVisibility"></converter:BooleanToVisibilityConverter>
-    </generic:PopupBody.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -76,43 +71,16 @@
                             <RowDefinition Height="5"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,6,0,6">
-                            <ToggleButton x:Name="SelectLocationAdvancedToggle" Width="60" Height="28" VerticalAlignment="Center">
-                                <ToggleButton.Style>
-                                    <Style TargetType="ToggleButton">
-                                        <Setter Property="Focusable" Value="False" />
-                                        <Setter Property="Template">
-                                            <Setter.Value>
-                                                <ControlTemplate TargetType="ToggleButton">
-                                                    <Grid Width="60" Height="28">
-                                                        <Border x:Name="Track" CornerRadius="14" Background="#444" />
-                                                        <Ellipse x:Name="Thumb" Width="22" Height="22" Fill="White" Margin="3" HorizontalAlignment="Left">
-                                                            <Ellipse.RenderTransform>
-                                                                <TranslateTransform />
-                                                            </Ellipse.RenderTransform>
-                                                        </Ellipse>
-                                                    </Grid>
-                                                    <ControlTemplate.Triggers>
-                                                        <Trigger Property="IsChecked" Value="True">
-                                                            <Setter TargetName="Track" Property="Background" Value="#4CAF50" />
-                                                            <!-- Move the thumb to the right by adjusting margin instead of using RenderTransform path -->
-                                                            <Setter TargetName="Thumb" Property="Margin" Value="35,0,0,0" />
-                                                        </Trigger>
-                                                    </ControlTemplate.Triggers>
-                                                </ControlTemplate>
-                                            </Setter.Value>
-                                        </Setter>
-                                    </Style>
-                                </ToggleButton.Style>
-                            </ToggleButton>
-                            <TextBlock Text="{DynamicResource InstallGamePopupLocationAdvanced}" Foreground="White" FontSize="14" VerticalAlignment="Center" Margin="8,0,0,0"/>
-                        </StackPanel>
+                        <Grid Grid.Row="0" Margin="15,0,0,0">
+                            <TextBlock Text="{DynamicResource InstallGamePopupLocationAdvanced}" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="14" />
+                            <generic:Toggleable x:Name="SelectLocationAdvancedToggle" HorizontalAlignment="Right" VerticalAlignment="Center" OnToggledChanged="OnAdvancedSettingsSwitched" />
+                        </Grid>
 
                         <StackPanel Grid.Row="2">
-                            <generic:SmoothScrollViewer x:Name="SelectLocationList" Visibility="{Binding IsChecked, ElementName=SelectLocationAdvancedToggle, Converter={StaticResource BooleanToVisibility}, ConverterParameter='invert'}">
+                            <generic:SmoothScrollViewer x:Name="SelectLocationList" Visibility="Visible">
                                 <StackPanel x:Name="locations" />
                             </generic:SmoothScrollViewer>
-                            <Button x:Name="SelectFolderButton" Click="OnSelectFolderClicked" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Left" Padding="15" Visibility="{Binding IsChecked, ElementName=SelectLocationAdvancedToggle, Converter={StaticResource BooleanToVisibility}}">
+                            <Button x:Name="SelectFolderButton" Click="OnSelectFolderClicked" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Left" Padding="15" Visibility="Collapsed">
                                 <StackPanel>
                                     <TextBlock x:Name="SelectedPathText" Text="" Foreground="White" FontSize="12" TextWrapping="Wrap"/>
                                     <TextBlock x:Name="SelectedFreeSpaceText" Text="" Foreground="White" FontSize="11" Opacity="0.8"/>

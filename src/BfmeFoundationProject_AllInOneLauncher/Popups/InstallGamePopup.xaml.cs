@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Windows;
 using BfmeFoundationProject.AllInOneLauncher.Core.Utils;
 using BfmeFoundationProject.AllInOneLauncher.Elements.Disk;
@@ -98,10 +95,17 @@ public partial class InstallGamePopup : PopupBody
         }
     }
 
+    private void OnAdvancedSettingsSwitched(object sender, EventArgs e)
+    {
+        var isActive = SelectLocationAdvancedToggle.IsToggled;
+        SelectLocationList.Visibility = isActive ? Visibility.Collapsed : Visibility.Visible;
+        SelectFolderButton.Visibility = isActive ? Visibility.Visible : Visibility.Collapsed;
+    }
+
     private void OnInstallClicked(object sender, RoutedEventArgs e)
     {
         var language = LanguageDropdown.SelectedValue;
-        var path = (SelectLocationAdvancedToggle.IsChecked == true) ? SelectedPathText.Text : Selectable.GetSelectedTagInContainer(locations)!.ToString()!;
+        var path = (SelectLocationAdvancedToggle.IsToggled == true) ? SelectedPathText.Text : Selectable.GetSelectedTagInContainer(locations)!.ToString()!;
         Submit(language, path);
     }
 
