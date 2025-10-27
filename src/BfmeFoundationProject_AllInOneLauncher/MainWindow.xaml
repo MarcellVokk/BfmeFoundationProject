@@ -44,10 +44,10 @@
                     <Button Style="{StaticResource RoundButton}" Tag="https://github.com/MarcellVokk/BfmeFoundationProject" Margin="0,0,5,0" Click="OnLinkButtonClicked" ToolTip="GitHub">
                         <Image Source="pack://application:,,,/Resources/Images/github.png" Height="32" />
                     </Button>
-                    <Button Style="{StaticResource RoundButton}" Tag="https://www.patreon.com/bfmefoundation" Margin="0,0,5,0" Click="OnLinkButtonClicked" ToolTip="Patreon">
+                    <Button Style="{StaticResource RoundButton}" Tag="https://www.patreon.com/bfmefoundation" Margin="0,0,0,0" Click="OnLinkButtonClicked" ToolTip="Patreon">
                         <Image Source="pack://application:,,,/Resources/Images/patreon.png" Height="32" />
                     </Button>
-                    <Button x:Name="settingsIcon" Background="Transparent" HorizontalAlignment="Right" Click="OnSettingsButtonClicked" VerticalAlignment="Center" ToolTip="{DynamicResource SettingsPageLauncherSectionHeader}">
+                    <Button x:Name="settingsIcon" Background="Transparent" HorizontalAlignment="Right" Margin="32,0,0,0" Click="OnSettingsButtonClicked" VerticalAlignment="Center" ToolTip="{DynamicResource SettingsPageLauncherSectionHeader}">
                         <Button.Style>
                             <Style TargetType="Button" BasedOn="{StaticResource RoundButton}">
                                 <Setter Property="TextElement.Foreground" Value="White"/>
