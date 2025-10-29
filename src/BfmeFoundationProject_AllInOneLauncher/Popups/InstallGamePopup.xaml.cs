@@ -9,24 +9,24 @@ namespace BfmeFoundationProject.AllInOneLauncher.Popups;
 
 public partial class InstallGamePopup : PopupBody
 {
-    private static readonly List<DriveInfo> _drives = DriveUtils.GetValidDrives();
-    private string _defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+    private readonly List<DriveInfo> Drives = DriveUtils.GetValidDrives();
+    private readonly string DefaultPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
 
     public InstallGamePopup()
     {
         InitializeComponent();
 
-        if (_drives.Count <= 0)
+        if (Drives.Count <= 0)
         {
             SelectLocationError.Visibility = Visibility.Visible;
             SelectLocationArea.Visibility = Visibility.Collapsed;
         }
         else
         {
-            locations.Children.Clear();
-            _drives.ForEach(drive =>
+            Locations.Children.Clear();
+            Drives.ForEach(drive =>
             {
-                locations.Children.Add(new Selectable()
+                Locations.Children.Add(new Selectable()
                 {
                     Title = new LibraryDriveHeader()
                     {
@@ -42,34 +42,34 @@ public partial class InstallGamePopup : PopupBody
 
             });
 
-            SetSelectedPath(_defaultPath);
+            SetSelectedPath(DefaultPath);
         }
     }
 
     private void SetSelectedPath(string path)
     {
-        string? _selectedPath = null;
-        var _selectedFreeText = string.Empty;
+        string? selectedPath = null;
+        var selectedFreeText = string.Empty;
         try
         {
-            _selectedPath = DriveUtils.GetValidPath(path);
-            var drive = DriveUtils.GetDriveForPath(_drives, _selectedPath);
+            selectedPath = DriveUtils.GetValidPath(path);
+            var drive = DriveUtils.GetDriveForPath(Drives, selectedPath);
             if (drive == null)
             {
-                _selectedPath = DriveUtils.GetValidPath(_defaultPath);
-                drive = DriveUtils.GetDriveForPath(_drives, _selectedPath);
+                selectedPath = DriveUtils.GetValidPath(DefaultPath);
+                drive = DriveUtils.GetDriveForPath(Drives, selectedPath);
             }
 
             if (drive != null)
             {
-                _selectedFreeText = GetDriveFreeSpaceFormatted(drive);
+                selectedFreeText = GetDriveFreeSpaceFormatted(drive);
             }
         }
         catch { /* ignore errors here */ }
 
-        SelectedPathText.Text = _selectedPath;
-        SelectedFreeSpaceText.Text = _selectedFreeText;
-        ButtonAccept.IsEnabled = !string.IsNullOrWhiteSpace(_selectedPath);
+        SelectedPathText.Text = selectedPath;
+        SelectedFreeSpaceText.Text = selectedFreeText;
+        ButtonAccept.IsEnabled = !string.IsNullOrWhiteSpace(selectedPath);
     }
 
     private static string GetDriveFreeSpaceFormatted(DriveInfo drive)
@@ -83,8 +83,8 @@ public partial class InstallGamePopup : PopupBody
         {
             var ownerWindow = Window.GetWindow(this);
             var folderDialogTitle = (string)App.Current.FindResource("InstallGamePopupSelectFolder");
-            var _selectedPath = SelectedPathText.Text;
-            var selected = FolderPicker.ShowDialog(ownerWindow, folderDialogTitle, _selectedPath);
+            var selectedPath = SelectedPathText.Text;
+            var selected = FolderPicker.ShowDialog(ownerWindow, folderDialogTitle, selectedPath);
             if (!string.IsNullOrWhiteSpace(selected))
                 SetSelectedPath(selected);
         }
@@ -105,7 +105,7 @@ public partial class InstallGamePopup : PopupBody
     private void OnInstallClicked(object sender, RoutedEventArgs e)
     {
         var language = LanguageDropdown.SelectedValue;
-        var path = (SelectLocationAdvancedToggle.IsToggled == true) ? SelectedPathText.Text : Selectable.GetSelectedTagInContainer(locations)!.ToString()!;
+        var path = (SelectLocationAdvancedToggle.IsToggled == true) ? SelectedPathText.Text : Selectable.GetSelectedTagInContainer(Locations)!.ToString()!;
         Submit(language, path);
     }
 

@@ -78,7 +78,7 @@
 
                         <StackPanel Grid.Row="2">
                             <generic:SmoothScrollViewer x:Name="SelectLocationList" Visibility="Visible">
-                                <StackPanel x:Name="locations" />
+                                <StackPanel x:Name="Locations" />
                             </generic:SmoothScrollViewer>
                             <Button x:Name="SelectFolderButton" Click="OnSelectFolderClicked" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Left" Padding="15" Visibility="Collapsed">
                                 <StackPanel>
