@@ -39,15 +39,11 @@ public class DriveUtils
 
     internal static string? GetValidPath(string path)
     {
-        string? fullpath;
-        try
-        {
+        string? fullpath = null;
+        if(Directory.Exists(path)) {
             fullpath = Path.GetFullPath(path);
         }
-        catch
-        {
-            fullpath = null;
-        }
+
         var noExcludedFolders = fullpath != null && !fullpath.Contains(":\\Windows") && !fullpath.Contains("\\OneDrive");
         return noExcludedFolders ? fullpath : null;
     }
