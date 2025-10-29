@@ -14,12 +14,16 @@ internal static class LauncherStateManager
 
     internal static void Init()
     {
-        if (!File.Exists(ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal).FilePath))
+        try
         {
-            Properties.Settings.Default.Upgrade();
-            Properties.Settings.Default.Reload();
-            Properties.Settings.Default.Save();
+            if (!File.Exists(ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal).FilePath))
+            {
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.Reload();
+                Properties.Settings.Default.Save();
+            }
         }
+        catch { }
 
         TypeMap = Assembly.GetExecutingAssembly().GetTypes().DistinctBy(x => x.Name).ToDictionary(x => x.Name, x => x);
 

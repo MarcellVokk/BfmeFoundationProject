@@ -43,6 +43,19 @@ public static class LauncherUpdateManager
                 if (File.Exists(Path.Combine(LauncherAppDirectory, "AllInOneLauncher_new.exe")))
                     File.Delete(Path.Combine(LauncherAppDirectory, "AllInOneLauncher_new.exe"));
 
+                MainWindow.Instance.Dispatcher.Invoke(() =>
+                {
+                    if (!File.Exists(Path.Combine(LauncherUpdateManager.LauncherAppDirectory, "update_2_complete.txt")))
+                    {
+                        Properties.Settings.Default.ArenaUpdateBranch = "main";
+                        Properties.Settings.Default.Save();
+
+                        PopupVisualizer.ShowPopup(new DonatePopup());
+
+                        File.WriteAllText(Path.Combine(LauncherUpdateManager.LauncherAppDirectory, "update_2_complete.txt"), "1");
+                    }
+                });
+
                 return;
             }
             else if (File.Exists(Path.Combine(LauncherAppDirectory, "AllInOneLauncher_new.exe")))

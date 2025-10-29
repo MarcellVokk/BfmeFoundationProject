@@ -1,10 +1,14 @@
 ﻿using Newtonsoft.Json;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 
 namespace BfmeFoundationProject.WorkshopKit.Utils
 {
     internal static class FileUtils
     {
+        [DllImport("Kernel32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+        public static extern bool CreateHardLink(string lpFileName, string lpExistingFileName, IntPtr lpSecurityAttributes);
+
         internal static async Task<string> Hash(string path)
         {
             if (!File.Exists(path))
@@ -75,6 +79,14 @@ namespace BfmeFoundationProject.WorkshopKit.Utils
             }
             catch { }
             return false;
+        }
+
+        internal static void Link(string path, string to)
+        {
+            if (File.Exists(path))
+                File.Delete(path);
+
+            CreateHardLink(path, to, IntPtr.Zero);
         }
     }
 }

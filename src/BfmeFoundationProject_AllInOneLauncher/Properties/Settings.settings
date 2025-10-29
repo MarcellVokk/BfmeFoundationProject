@@ -8,5 +8,8 @@
     <Setting Name="HideToTrayOnClose" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="ArenaUpdateBranch" Type="System.String" Scope="User">
+      <Value Profile="(Default)">main</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -20,6 +20,7 @@
                     <StackPanel HorizontalAlignment="Right" Margin="0,60,20,0" Width="200" x:Name="categoryTabs">
                         <TextBlock Text="{DynamicResource SettingsPageLauncherSectionHeader}" Foreground="#66FFFFFF" FontSize="13" FontWeight="Bold" Margin="0,0,0,8"/>
                         <Button Tag="LauncherGeneral" Style="{DynamicResource SettingsButton}" Content="{DynamicResource SettingsPageLauncherSectionGeneral}" Foreground="#D8FFFFFF" HorizontalContentAlignment="Left" Margin="-10,0,0,2" Click="OnCategoryButtonClicked"/>
+                        <Button Tag="LauncherOnline" Style="{DynamicResource SettingsButton}" Content="{DynamicResource SettingsPageLauncherSectionOnline}" Foreground="#D8FFFFFF" HorizontalContentAlignment="Left" Margin="-10,0,0,2" Click="OnCategoryButtonClicked"/>
                         <generic:Divider/>
 
                         <TextBlock Text="{DynamicResource SettingsPageBFME1SectionHeader}" Foreground="#66FFFFFF" FontSize="13" FontWeight="Bold" Margin="0,0,0,8"/>

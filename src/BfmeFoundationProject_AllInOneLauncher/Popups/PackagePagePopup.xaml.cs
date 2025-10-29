@@ -55,7 +55,7 @@ public partial class PackagePagePopup : PopupBody
             icon_mappack.Visibility = value.Type == 3 ? Visibility.Visible : Visibility.Collapsed;
 
             value.Language = value.Language.Contains("EN") ? value.Language : (value.Language + " EN").TrimStart(' ');
-            string curentGameLanguage = BfmeRegistryManager.GameLanguageToLanguageCode(BfmeRegistryManager.GetKeyValue(value.Game, BfmeFoundationProject.BfmeKit.Data.BfmeRegistryKey.Language));
+            var curentGameLanguage = BfmeRegistryManager.GameLanguageToLanguageCode(BfmeRegistryManager.GetKeyValue(value.Game, BfmeFoundationProject.BfmeKit.Data.BfmeRegistryKey.Language));
             language_code.Text = value.Language.Contains(curentGameLanguage) ? curentGameLanguage : value.Language.Split(' ')[0];
             language_full.Text = value.Language.Split(' ').Length > 1 ? $"+ {value.Language.Split(' ').Length - 1} More" : BfmeRegistryManager.GameLanguageCodeToLanguage(language_code.Text);
 

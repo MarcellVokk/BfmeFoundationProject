@@ -23,13 +23,13 @@
                 if (Convert.ToInt32(game) == 0)
                 {
                     if (group.Key > 0)
-                        result.AddRange(group.OrderBy(x => x.weight).OrderByDescending(x => x.fileName).Select(x => x.fileName));
+                        result.AddRange(group.OrderBy(x => x.weight).ThenByDescending(x => x.fileName).Select(x => x.fileName));
                     else
-                        result.AddRange(group.OrderBy(x => x.weight).OrderBy(x => x.fileName).Select(x => x.fileName));
+                        result.AddRange(group.OrderBy(x => x.weight).ThenBy(x => x.fileName).Select(x => x.fileName));
                 }
                 else
                 {
-                    result.AddRange(group.OrderByDescending(x => x.weight).OrderBy(x => x.fileName).Select(x => x.fileName));
+                    result.AddRange(group.OrderByDescending(x => x.weight).ThenBy(x => x.fileName).Select(x => x.fileName));
                 }
             }
 

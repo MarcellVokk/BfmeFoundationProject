@@ -1,1 +1,1 @@
-﻿dotnet publish -r win-x64 -o "..\..\bin\BfmeFoundationProject_AllInOneLauncher" /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true /p:IncludeAllContentForSelfExtract=true /p:DebugType=None /p:DebugSymbols=false --self-contained true
+﻿dotnet publish -r win-x64 -o "..\..\bin\BfmeFoundationProject_AllInOneLauncher" /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true /p:IncludeAllContentForSelfExtract=true /p:DebugType=embedded /p:DebugSymbols=true --self-contained true

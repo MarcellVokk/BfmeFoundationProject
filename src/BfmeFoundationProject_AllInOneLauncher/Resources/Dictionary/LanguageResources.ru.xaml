@@ -73,7 +73,10 @@
 
     <!--=====================  Settings  =====================-->
     <system:String x:Key="SettingsPageLauncherSectionHeader">Настройки лаунчера</system:String>
+    <system:String x:Key="SettingsPageOnlineSectionHeader">Online Settings</system:String>
     <system:String x:Key="SettingsPageLauncherSectionGeneral">Общие</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionOnline">Online</system:String>
+    
     <system:String x:Key="SettingsPageBFME1SectionHeader">The Battle for Middle-earth™</system:String>
     <system:String x:Key="SettingsPageBFME2SectionHeader">The Battle for Middle-earth™ II</system:String>
     <system:String x:Key="SettingsPageRotWKSectionHeader">Rise of the Witchking™</system:String>
@@ -86,6 +89,9 @@
     <system:String x:Key="SettingsPageLauncherSectionGeneralLibraryHeader">Настройки библиотеки</system:String>
     <system:String x:Key="SettingsPageLauncherSectionGeneralAddLibraryLocation">Добавить местоположение библиотеки</system:String>
     <system:String x:Key="SettingsPageLauncherSectionGeneralDriveDefaultNameText">Локальный диск</system:String>
+
+    <!--=====================  Settings/Launcher Settings/Online  =====================-->
+    <system:String x:Key="SettingsPageLauncherSectionOnlineUpdateBranch">Update branch</system:String>
 
     <!--=====================  Settings/BFME Settings/Video & Resolution  =====================-->
     <system:String x:Key="SettingsPageBFMESectionVideoResolution">Разрешение игры</system:String>

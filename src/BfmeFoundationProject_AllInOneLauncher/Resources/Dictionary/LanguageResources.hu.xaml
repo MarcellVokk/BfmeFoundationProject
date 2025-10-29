@@ -72,8 +72,11 @@
     <system:String x:Key="LibraryTileEmptyDiscoverMore">Többet fedezzen fel a Műhelyben!</system:String>
 
     <!--=====================  Settings  =====================-->
-    <system:String x:Key="SettingsPageLauncherSectionHeader">Indítóbeállítások</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionHeader">Launcher Beállítások</system:String>
+    <system:String x:Key="SettingsPageOnlineSectionHeader">Online Beállítások</system:String>
     <system:String x:Key="SettingsPageLauncherSectionGeneral">Általános</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionOnline">Online</system:String>
+    
     <system:String x:Key="SettingsPageBFME1SectionHeader">A középföldéért™</system:String>
     <system:String x:Key="SettingsPageBFME2SectionHeader">A középföldéért™ II</system:String>
     <system:String x:Key="SettingsPageRotWKSectionHeader">A Gyűrűk Ura: A Király visszatér™</system:String>
@@ -86,6 +89,9 @@
     <system:String x:Key="SettingsPageLauncherSectionGeneralLibraryHeader">Könyvtári beállítások</system:String>
     <system:String x:Key="SettingsPageLauncherSectionGeneralAddLibraryLocation">Könyvtár elhelyezkedésének hozzáadása</system:String>
     <system:String x:Key="SettingsPageLauncherSectionGeneralDriveDefaultNameText">Helyi lemez</system:String>
+
+    <!--=====================  Settings/Launcher Settings/Online  =====================-->
+    <system:String x:Key="SettingsPageLauncherSectionOnlineUpdateBranch">Frissítési forrás</system:String>
 
     <!--=====================  Settings/BFME Settings/Video & Resolution  =====================-->
     <system:String x:Key="SettingsPageBFMESectionVideoResolution">Játék felbontása</system:String>

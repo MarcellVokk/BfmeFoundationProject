@@ -13,6 +13,7 @@ using BfmeFoundationProject.AllInOneLauncher.Popups;
 using BfmeFoundationProject.BfmeKit;
 using BfmeFoundationProject.WorkshopKit.Data;
 using BfmeFoundationProject.WorkshopKit.Logic;
+using Microsoft.Win32;
 
 namespace BfmeFoundationProject.AllInOneLauncher.Pages.Primary;
 

@@ -9,7 +9,7 @@ namespace BfmeFoundationProject.OnlineKit.Helpers
     {
         public static async Task<bool> IsUpdateAvailable(string branch)
         {
-            string latestVersionHash = await HttpMarshal.GetString(url: $"{DeploymentConfig.ArenaServerHost}/api/applications/versionHash?name=online-arena&version={branch}", headers: []);
+            string latestVersionHash = await HttpMarshal.GetString(url: $"{DeploymentConfig.ArenaServerHost}/api/applications/versionHash?name=online-arena&version={(branch == "" ? "~" : branch)}", headers: []);
             string curentVersionHash = await GetCurentVersionHash();
 
             return latestVersionHash != curentVersionHash;

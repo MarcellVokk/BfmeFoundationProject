@@ -11,9 +11,14 @@ public partial class Online : UserControl
     public Online()
     {
         InitializeComponent();
+        arena.UpdateBranch = Properties.Settings.Default.ArenaUpdateBranch;
     }
 
-    public void Unload() => arena.Unload();
+    public void Unload()
+    {
+        arena.Unload();
+        FirstLoad = true;
+    }
 
     private void OnLoaded(object sender, RoutedEventArgs e)
     {

@@ -50,7 +50,6 @@ public partial class WorkshopTile : UserControl
     {
         if (e.ChangedButton == MouseButton.Left)
         {
-            //AddToLibrary();
             PopupVisualizer.ShowPopup(new PackagePagePopup() { WorkshopEntry = WorkshopEntry });
         }
         else if (e.ChangedButton == MouseButton.Right)

@@ -29,6 +29,7 @@ src/BfmeFoundationProject_Shared/
 src/BfmeFoundationProject_SharedUi/
 src/BfmeFoundationProject_UnifiedServer/
 src/BfmeFoundationProject_WorkshopStudio/
+src/Udp_Relay_Backup/
 
 BfmeFoundationProject_BfmeInterface.sln
 BfmeFoundationProject_MissionControl.sln

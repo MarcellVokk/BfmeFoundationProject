@@ -84,7 +84,9 @@
 
     <!--=====================  Settings  =====================-->
     <system:String x:Key="SettingsPageLauncherSectionHeader">Başlatıcı Ayarları</system:String>
+    <system:String x:Key="SettingsPageOnlineSectionHeader">Online Settings</system:String>
     <system:String x:Key="SettingsPageLauncherSectionGeneral">Genel</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionOnline">Online</system:String>
 
     <system:String x:Key="SettingsPageBFME1SectionHeader">The Battle for Middle-earth™</system:String>
     <system:String x:Key="SettingsPageBFME2SectionHeader">The Battle for Middle-earth™ II</system:String>
@@ -98,6 +100,9 @@
     <system:String x:Key="SettingsPageLauncherSectionGeneralLibraryHeader">Kütüphane ayarları</system:String>
     <system:String x:Key="SettingsPageLauncherSectionGeneralAddLibraryLocation">Kütüphane Konumunu Ekle</system:String>
     <system:String x:Key="SettingsPageLauncherSectionGeneralDriveDefaultNameText">Yerel Disk</system:String>
+
+    <!--=====================  Settings/Launcher Settings/Online  =====================-->
+    <system:String x:Key="SettingsPageLauncherSectionOnlineUpdateBranch">Update branch</system:String>
 
     <!--=====================  Settings/BFME Settings/Video & Resolution  =====================-->
     <system:String x:Key="SettingsPageBFMESectionVideoResolution">Oyun çözünürlüğü</system:String>

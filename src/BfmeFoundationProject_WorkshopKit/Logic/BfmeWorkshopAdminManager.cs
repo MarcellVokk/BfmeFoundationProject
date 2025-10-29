@@ -38,5 +38,10 @@ namespace BfmeFoundationProject.WorkshopKit.Logic
         {
             await HttpUtils.Upload(authInfo, source, id: fileName, OnProgressUpdate: OnProgressUpdate);
         }
+
+        public static async Task DeleteFiles(BfmeWorkshopAuthInfo authInfo, string[] fileNames)
+        {
+            await HttpUtils.Delete(authInfo, fileNames);
+        }
     }
 }

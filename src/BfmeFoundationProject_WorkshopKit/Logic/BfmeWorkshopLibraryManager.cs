@@ -25,19 +25,19 @@ namespace BfmeFoundationProject.WorkshopKit.Logic
                     Directory.CreateDirectory(ConfigUtils.LibraryDirectory);
 
                 foreach (var file in Directory.GetFiles(ConfigUtils.LibraryDirectory).OrderBy(x => new FileInfo(x).CreationTime))
-                    try { libraryEntries.Add(FileUtils.ReadJson(file, new BfmeWorkshopEntryPreview())); } catch { }
+                    try { libraryEntries.Add(FileUtils.ReadJson(file, new BfmeWorkshopEntry()).Preview(new BfmeWorkshopEntryMetadata())); } catch { }
 
                 for (int i = 0; i < 3; i++)
                 {
                     if (!libraryEntries.Any(x => x.Guid == $"original-{(i < 2 ? $"BFME{i + 1}" : "RotWK")}"))
                     {
                         AddOrUpdate(await BfmeWorkshopDownloadManager.Download($"original-{(i < 2 ? $"BFME{i + 1}" : "RotWK")}"));
-                        libraryEntries.Add(FileUtils.ReadJson(Path.Combine(ConfigUtils.LibraryDirectory, $"original-{(i < 2 ? $"BFME{i + 1}" : "RotWK")}.json"), new BfmeWorkshopEntryPreview()));
+                        libraryEntries.Add(FileUtils.ReadJson(Path.Combine(ConfigUtils.LibraryDirectory, $"original-{(i < 2 ? $"BFME{i + 1}" : "RotWK")}.json"), new BfmeWorkshopEntry()).Preview(new BfmeWorkshopEntryMetadata()));
                     }
                     if (!libraryEntries.Any(x => x.Guid == $"official-{i}"))
                     {
                         AddOrUpdate(await BfmeWorkshopDownloadManager.Download($"official-{i}"));
-                        libraryEntries.Add(FileUtils.ReadJson(Path.Combine(ConfigUtils.LibraryDirectory, $"official-{i}.json"), new BfmeWorkshopEntryPreview()));
+                        libraryEntries.Add(FileUtils.ReadJson(Path.Combine(ConfigUtils.LibraryDirectory, $"official-{i}.json"), new BfmeWorkshopEntry()).Preview(new BfmeWorkshopEntryMetadata()));
                     }
                 }
 

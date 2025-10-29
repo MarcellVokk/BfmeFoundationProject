@@ -1,4 +1,5 @@
 ﻿using Amazon.S3;
+using Amazon.S3.Model;
 using Amazon.S3.Transfer;
 using BfmeFoundationProject.HttpInstruments;
 using BfmeFoundationProject.WorkshopKit.Data;
@@ -39,9 +40,6 @@ namespace BfmeFoundationProject.WorkshopKit.Utils
 
         internal static async Task Upload(BfmeWorkshopAuthInfo authInfo, string source, string id = "", Action<int>? OnProgressUpdate = null)
         {
-            NameValueCollection requestQueryParameters = System.Web.HttpUtility.ParseQueryString(string.Empty);
-            requestQueryParameters.Add("id", id == "" ? "~" : id);
-
             using var workshop_files = new AmazonS3Client("b27b3b7fd5c041cd488270b978fc83a1", "927174808adede24038b5acdac2ca386bfa8ae02b245d57f46e2a2b76f9e2c92", new AmazonS3Config { ServiceURL = $"https://32d721493580a1de3fa984779848a30d.r2.cloudflarestorage.com" });
             using var transfer_utility = new TransferUtility(workshop_files);
 
@@ -64,6 +62,20 @@ namespace BfmeFoundationProject.WorkshopKit.Utils
             };
 
             await transfer_utility.UploadAsync(request);
+        }
+
+        internal static async Task Delete(BfmeWorkshopAuthInfo authInfo, string[] ids)
+        {
+            using var workshop_files = new AmazonS3Client("b27b3b7fd5c041cd488270b978fc83a1", "927174808adede24038b5acdac2ca386bfa8ae02b245d57f46e2a2b76f9e2c92", new AmazonS3Config { ServiceURL = $"https://32d721493580a1de3fa984779848a30d.r2.cloudflarestorage.com" });
+
+            foreach (var group in ids.Select((x, i) => (x, i)).GroupBy(x => x.i / 1000).Select(x => x.Select(x => x.x)))
+            {
+                var request = new DeleteObjectsRequest();
+                request.BucketName = "workshop-files";
+                foreach (var id in group) request.AddKey(id);
+
+                await workshop_files.DeleteObjectsAsync(request);
+            }
         }
 
         internal static async Task<string> Delete(BfmeWorkshopAuthInfo authInfo, string apiEndpointPath, string id = "")

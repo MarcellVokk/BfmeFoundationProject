@@ -84,7 +84,9 @@
 
     <!--=====================  Settings  =====================-->
     <system:String x:Key="SettingsPageLauncherSectionHeader">Launcher-Einstellungen</system:String>
+    <system:String x:Key="SettingsPageOnlineSectionHeader">Online Settings</system:String>
     <system:String x:Key="SettingsPageLauncherSectionGeneral">Allgemein</system:String>
+    <system:String x:Key="SettingsPageLauncherSectionOnline">Online</system:String>
 
     <system:String x:Key="SettingsPageBFME1SectionHeader">The Battle for Middle-earth™</system:String>
     <system:String x:Key="SettingsPageBFME2SectionHeader">The Battle for Middle-earth™ II</system:String>
@@ -98,6 +100,9 @@
     <system:String x:Key="SettingsPageLauncherSectionGeneralLibraryHeader">Bibliothekseinstellungen</system:String>
     <system:String x:Key="SettingsPageLauncherSectionGeneralAddLibraryLocation">Bibliotheksstandort hinzufügen</system:String>
     <system:String x:Key="SettingsPageLauncherSectionGeneralDriveDefaultNameText">Lokaler Datenträger</system:String>
+
+    <!--=====================  Settings/Launcher Settings/Online  =====================-->
+    <system:String x:Key="SettingsPageLauncherSectionOnlineUpdateBranch">Update branch</system:String>
 
     <!--=====================  Settings/BFME Settings/Video & Resolution  =====================-->
     <system:String x:Key="SettingsPageBFMESectionVideoResolution">Spielauflösung</system:String>

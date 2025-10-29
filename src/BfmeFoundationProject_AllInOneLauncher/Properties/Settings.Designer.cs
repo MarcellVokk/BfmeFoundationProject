@@ -46,5 +46,17 @@ namespace BfmeFoundationProject.AllInOneLauncher.Properties {
                 this["HideToTrayOnClose"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("main")]
+        public string ArenaUpdateBranch {
+            get {
+                return ((string)(this["ArenaUpdateBranch"]));
+            }
+            set {
+                this["ArenaUpdateBranch"] = value;
+            }
+        }
     }
 }

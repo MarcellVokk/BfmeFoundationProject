@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using BfmeFoundationProject.AllInOneLauncher.Core;
 using BfmeFoundationProject.AllInOneLauncher.Elements.Generic;
 using BfmeFoundationProject.AllInOneLauncher.Elements.Menues;
+using BfmeFoundationProject.AllInOneLauncher.Popups;
 using BfmeFoundationProject.BfmeKit;
 using BfmeFoundationProject.BfmeKit.Data;
 using BfmeFoundationProject.WorkshopKit.Data;
@@ -200,6 +201,7 @@ public partial class LibraryTile : UserControl
                         new ContextMenuSeparatorItem(),
                         new ContextMenuSubmenuItem("Sync old version", submenu: WorkshopEntry.Metadata.Versions != null ? WorkshopEntry.Metadata.Versions.Where(x => x != WorkshopEntry.Version).Reverse<string>().Select(x => new ContextMenuButtonItem(x, true, clicked: async () => await BfmeSyncManager.SyncPackage($"{WorkshopEntry.Guid}:{x}")) as ContextMenuItem).ToList() : [], WorkshopEntry.Metadata.Versions != null && WorkshopEntry.Metadata.Versions.Count > 1),
                         new ContextMenuSeparatorItem(),
+                        new ContextMenuButtonItem("Open workshop page", true, clicked: () => PopupVisualizer.ShowPopup(new PackagePagePopup() { WorkshopEntry = WorkshopEntry })),
                         new ContextMenuButtonItem("Open keybinds folder", true, clicked: () =>
                         {
                             if (!Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME Workshop", "Keybinds", $"{WorkshopEntry.GameName()}-{WorkshopEntry.Name}")))
@@ -226,6 +228,8 @@ public partial class LibraryTile : UserControl
                         new ContextMenuButtonItem(isActiveIcon.Opacity == 0d ? $"Enable \"{WorkshopEntry.Name}\"" : "Disable", true, clicked: isActiveIcon.Opacity == 0d ? async () => await BfmeSyncManager.EnableEnhancement(WorkshopEntry.Guid) : async () => await BfmeSyncManager.DisableEnhancement(WorkshopEntry.Guid)),
                         new ContextMenuSeparatorItem(),
                         new ContextMenuSubmenuItem("Sync old version", submenu: WorkshopEntry.Metadata.Versions != null ? WorkshopEntry.Metadata.Versions.Where(x => x != WorkshopEntry.Version).Reverse<string>().Select(x => new ContextMenuButtonItem(x, true, clicked: async () => await BfmeSyncManager.EnableEnhancement($"{WorkshopEntry.Guid}:{x}")) as ContextMenuItem).ToList() : [], WorkshopEntry.Metadata.Versions != null && WorkshopEntry.Metadata.Versions.Count > 1),
+                        new ContextMenuSeparatorItem(),
+                        new ContextMenuButtonItem("Open workshop page", true, clicked: () => PopupVisualizer.ShowPopup(new PackagePagePopup() { WorkshopEntry = WorkshopEntry })),
                         new ContextMenuSeparatorItem(),
                         new ContextMenuButtonItem("Copy package GUID", true, clicked: () => Clipboard.SetDataObject(WorkshopEntry.Guid)),
                         new ContextMenuSeparatorItem(),
@@ -283,6 +287,7 @@ public partial class LibraryTile : UserControl
         {
             var latest = await BfmeWorkshopQueryManager.Get(WorkshopEntry.Guid);
             _workshopEntry.Metadata = latest.Metadata;
+            Debug.WriteLine(latest.Size);
             if (WorkshopEntry.Version != latest.Version)
             {
                 Dispatcher.Invoke(() => WorkshopEntry = latest);

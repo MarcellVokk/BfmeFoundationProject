@@ -17,6 +17,9 @@
 		<OutputType>WinExe</OutputType>
 		<ApplicationIcon>allinonelaunchericon.ico</ApplicationIcon>
 		<ApplicationManifest>app.manifest</ApplicationManifest>
+
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>embedded</DebugType>
 	</PropertyGroup>
 
 	<Target Name="GenerateBuildInfo" BeforeTargets="BeforeBuild">
@@ -73,6 +76,8 @@ public static class BuildInfo
 		<None Remove="Resources\Images\harddrive.png" />
 		<None Remove="Resources\Images\MainIcon.png" />
 		<None Remove="Resources\Images\patch222.png" />
+		<None Remove="Resources\Images\patreon_horizontal.png" />
+		<None Remove="Resources\Images\paypal_horizontal.png" />
 		<None Remove="Resources\Images\red_hearth.png" />
 		<None Remove="Resources\Images\RotWK.png" />
 		<None Remove="Resources\Images\en_RotWK_title.png" />
@@ -115,6 +120,8 @@ public static class BuildInfo
 		<Resource Include="Resources\Images\moddb.png" />
 		<Resource Include="Resources\Images\patch222.png" />
 		<Resource Include="Resources\Images\patreon.png" />
+		<Resource Include="Resources\Images\patreon_horizontal.png" />
+		<Resource Include="Resources\Images\paypal_horizontal.png" />
 		<Resource Include="Resources\Images\red_hearth.png">
 		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</Resource>
@@ -152,6 +159,9 @@ public static class BuildInfo
 		</Compile>
 		<Compile Update="Pages\Subpages\Settings\Bfme\SettingsBfmeGeneral.xaml.cs">
 			<SubType>Code</SubType>
+		</Compile>
+		<Compile Update="Popups\DonatePopup.xaml.cs">
+		  <SubType>Code</SubType>
 		</Compile>
 		<Compile Update="Popups\YesNoPopup.xaml.cs">
 		  <SubType>Code</SubType>
