@@ -80,7 +80,7 @@
                             <generic:SmoothScrollViewer x:Name="SelectLocationList" Visibility="Visible">
                                 <StackPanel x:Name="Locations" />
                             </generic:SmoothScrollViewer>
-                            <Button x:Name="SelectFolderButton" Click="OnSelectFolderClicked" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Left" Padding="15" Visibility="Collapsed">
+                            <Button x:Name="SelectFolderButton" Style="{StaticResource HiglightButton}" Click="OnSelectFolderClicked" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Left" Visibility="Collapsed">
                                 <StackPanel>
                                     <TextBlock x:Name="SelectedPathText" Text="" Foreground="White" FontSize="12" TextWrapping="Wrap"/>
                                     <TextBlock x:Name="SelectedFreeSpaceText" Text="" Foreground="White" FontSize="11" Opacity="0.8"/>
