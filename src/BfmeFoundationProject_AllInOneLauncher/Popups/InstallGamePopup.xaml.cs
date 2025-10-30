@@ -23,10 +23,10 @@ public partial class InstallGamePopup : PopupBody
         }
         else
         {
-            Locations.Children.Clear();
+            SelectLocationSelectableList.Children.Clear();
             Drives.ForEach(drive =>
             {
-                Locations.Children.Add(new Selectable()
+                SelectLocationSelectableList.Children.Add(new Selectable()
                 {
                     Title = new LibraryDriveHeader()
                     {
@@ -98,14 +98,14 @@ public partial class InstallGamePopup : PopupBody
     private void OnAdvancedSettingsSwitched(object sender, EventArgs e)
     {
         var isActive = SelectLocationAdvancedToggle.IsToggled;
-        SelectLocationList.Visibility = isActive ? Visibility.Collapsed : Visibility.Visible;
-        SelectFolderButton.Visibility = isActive ? Visibility.Visible : Visibility.Collapsed;
+        SelectLocationSelectableList.Visibility = isActive ? Visibility.Hidden : Visibility.Visible;
+        SelectLocationAdvancedArea.Visibility = isActive ? Visibility.Visible : Visibility.Hidden;
     }
 
     private void OnInstallClicked(object sender, RoutedEventArgs e)
     {
         var language = LanguageDropdown.SelectedValue;
-        var path = (SelectLocationAdvancedToggle.IsToggled == true) ? SelectedPathText.Text : Selectable.GetSelectedTagInContainer(Locations)!.ToString()!;
+        var path = (SelectLocationAdvancedToggle.IsToggled == true) ? SelectedPathText.Text : Selectable.GetSelectedTagInContainer(SelectLocationSelectableList)!.ToString()!;
         Submit(language, path);
     }
 
