@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using BfmeFoundationProject.AllInOneLauncher.Core;
@@ -17,6 +17,7 @@ public partial class SettingsLauncherGeneral : UserControl
     {
         LanguageDropdown.Selected = Properties.Settings.Default.LauncherLanguage;
         CloseToTrayToggle.IsToggled = Properties.Settings.Default.HideToTrayOnClose;
+        CreateDesktopShortcutToggle.IsToggled = Properties.Settings.Default.CreateDesktopShortcut;
     }
 
     private void OnLanguageOptionSelected(object sender, EventArgs e)
@@ -27,6 +28,12 @@ public partial class SettingsLauncherGeneral : UserControl
     private void OnCloseToTraySwitched(object sender, EventArgs e)
     {
         Properties.Settings.Default.HideToTrayOnClose = CloseToTrayToggle.IsToggled;
+        Properties.Settings.Default.Save();
+    }
+
+    private void OnCreateDesktopShortcutSwitched(object sender, EventArgs e)
+    {
+        Properties.Settings.Default.CreateDesktopShortcut = CreateDesktopShortcutToggle.IsToggled;
         Properties.Settings.Default.Save();
     }
 }

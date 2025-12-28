@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Windows;
 using System.Threading;
@@ -101,6 +101,9 @@ namespace BfmeFoundationProject.AllInOneLauncher
 
         private void EnsureShortcut()
         {
+            if (!BfmeFoundationProject.AllInOneLauncher.Properties.Settings.Default.CreateDesktopShortcut)
+                return;
+
             using var shortcut = new WindowsShortcut
             {
                 Path = Path.Combine(LauncherUpdateManager.LauncherAppDirectory, "AllInOneLauncher.exe"),

@@ -36,5 +36,10 @@
             <generic:Toggleable x:Name="CloseToTrayToggle" HorizontalAlignment="Right" VerticalAlignment="Center" OnToggledChanged="OnCloseToTraySwitched"/>
         </Grid>
         <generic:Divider/>
+        <Grid>
+            <TextBlock Text="{DynamicResource SettingsPageLauncherSectionGeneralCreateDesktopIcon}" FontSize="17" FontWeight="Medium" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="white"/>
+            <generic:Toggleable x:Name="CreateDesktopShortcutToggle" HorizontalAlignment="Right" VerticalAlignment="Center" OnToggledChanged="OnCreateDesktopShortcutSwitched"/>
+        </Grid>
+        <generic:Divider/>
     </StackPanel>
 </UserControl>
