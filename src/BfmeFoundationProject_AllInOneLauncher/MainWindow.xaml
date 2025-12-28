@@ -8,6 +8,7 @@
         xmlns:generic="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements.Generic"
         mc:Ignorable="d"
         Title="All in One Bfme Launcher" FontSize="14" WindowStartupLocation="CenterScreen" SizeChanged="OnSizeChanged" WindowStyle="ThreeDBorderWindow" Visibility="Visible" SnapsToDevicePixels="True" Loaded="OnLoad" Closing="LauncherMainWindow_Closing" RenderOptions.BitmapScalingMode="HighQuality">
+
     <Grid x:Name="windowGrid">
         <Grid.Background>
             <ImageBrush ImageSource="pack://application:,,,/Resources/Images/BGMap.png"/>
@@ -25,20 +26,30 @@
                     <TextBlock x:Name="offlineTab" Style="{DynamicResource TextBlockHover}" Text="{DynamicResource MainWindowSingleplayerTab}" FontSize="16" FontWeight="Bold" Margin="0,0,20,0" Background="Transparent" Cursor="Hand" MouseDown="OnOfflineTabClicked"/>
                     <TextBlock x:Name="onlineTab" Style="{DynamicResource TextBlockHover}" Text="{DynamicResource MainWindowMultiplayerTab}" FontSize="16" FontWeight="Bold" Margin="0,0,0,0" Background="Transparent" Cursor="Hand" MouseDown="OnOnlineTabClicked"/>
                     <TextBlock x:Name="guidesTab" Style="{DynamicResource TextBlockHover}" Text="{DynamicResource MainWindowGuidesTab}" FontSize="16" FontWeight="Bold" Margin="20,0,0,0" Background="Transparent" Cursor="Hand" MouseDown="OnGuidesTabClicked"/>
-                    <TextBlock x:Name="aboutTab" Style="{DynamicResource TextBlockHover}" Text="ABOUT" FontSize="16" FontWeight="Bold" Margin="20,0,0,0" Background="Transparent" Cursor="Hand" MouseDown="OnAboutTabClicked"/>
+                    <TextBlock x:Name="aboutTab" Style="{DynamicResource TextBlockHover}" Text="{DynamicResource MainWindowAboutTab}" FontSize="16" FontWeight="Bold" Margin="20,0,0,0" Background="Transparent" Cursor="Hand" MouseDown="OnAboutTabClicked"/>
                 </StackPanel>
                 <StackPanel x:Name="icons" Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Image Tag="https://www.youtube.com/@BeyondStandards" Source="pack://application:,,,/Resources/Images/youtube.png" Height="32" Margin="0,0,5,0" Cursor="Hand" MouseDown="OnLinkButtonClicked"/>
-                    <Image Tag="https://www.twitch.tv/beyondstandards" Source="pack://application:,,,/Resources/Images/twitch.png" Height="32" Margin="0,0,5,0" Cursor="Hand" MouseDown="OnLinkButtonClicked"/>
-                    <Image Tag="https://discord.com/invite/Q5Yyy3XCuu" Source="pack://application:,,,/Resources/Images/discord.png" Height="32" Margin="0,0,5,0" Cursor="Hand" MouseDown="OnLinkButtonClicked"/>
-                    <Image Tag="https://www.moddb.com/mods/battle-for-middle-earth-patch-222" Source="pack://application:,,,/Resources/Images/moddb.png" Height="32" Margin="0,0,5,0" Cursor="Hand" MouseDown="OnLinkButtonClicked"/>
-                    <Image Tag="https://github.com/MarcellVokk/aio-launcher" Source="pack://application:,,,/Resources/Images/github.png" Height="32" Margin="0,0,5,0" Cursor="Hand" MouseDown="OnLinkButtonClicked"/>
-                    <Image Tag="https://www.patreon.com/bfmefoundation" Source="pack://application:,,,/Resources/Images/patreon.png" Height="32" Margin="0,0,5,0" Cursor="Hand" MouseDown="OnLinkButtonClicked"/>
-                    <Grid x:Name="settingsIcon" Background="Transparent" Cursor="Hand" HorizontalAlignment="Right" MouseDown="OnSettingsButtonClicked">
-                        <TextBlock x:Name="color" Visibility="Collapsed"/>
-                        <Path Fill="{Binding ElementName=color, Path=Foreground}" Stretch="Uniform" Width="32" Data="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                        <Grid.Style>
-                            <Style TargetType="Grid">
+                    <Button Style="{StaticResource RoundButton}" Tag="https://www.youtube.com/@BeyondStandards" Margin="0,0,5,0" Click="OnLinkButtonClicked" ToolTip="YouTube">
+                        <Image Source="pack://application:,,,/Resources/Images/youtube.png" Height="32" />
+                    </Button>
+                    <Button Style="{StaticResource RoundButton}" Tag="https://www.twitch.tv/beyondstandards" Margin="0,0,5,0" Click="OnLinkButtonClicked" ToolTip="Twitch">
+                        <Image Source="pack://application:,,,/Resources/Images/twitch.png" Height="32" />
+                    </Button>
+                    <Button Style="{StaticResource RoundButton}" Tag="https://discord.com/invite/Q5Yyy3XCuu" Margin="0,0,5,0" Click="OnLinkButtonClicked" ToolTip="Discord">
+                        <Image Source="pack://application:,,,/Resources/Images/discord.png" Height="32" />
+                    </Button>
+                    <Button Style="{StaticResource RoundButton}" Tag="https://www.moddb.com/mods/battle-for-middle-earth-patch-222" Margin="0,0,5,0" Click="OnLinkButtonClicked" ToolTip="ModDB">
+                        <Image Source="pack://application:,,,/Resources/Images/moddb.png" Height="32" />
+                    </Button>
+                    <Button Style="{StaticResource RoundButton}" Tag="https://github.com/MarcellVokk/BfmeFoundationProject" Margin="0,0,5,0" Click="OnLinkButtonClicked" ToolTip="GitHub">
+                        <Image Source="pack://application:,,,/Resources/Images/github.png" Height="32" />
+                    </Button>
+                    <Button Style="{StaticResource RoundButton}" Tag="https://www.patreon.com/bfmefoundation" Margin="0,0,0,0" Click="OnLinkButtonClicked" ToolTip="Patreon">
+                        <Image Source="pack://application:,,,/Resources/Images/patreon.png" Height="32" />
+                    </Button>
+                    <Button x:Name="settingsIcon" Background="Transparent" HorizontalAlignment="Right" Margin="32,0,0,0" Click="OnSettingsButtonClicked" VerticalAlignment="Center" ToolTip="{DynamicResource SettingsPageLauncherSectionHeader}">
+                        <Button.Style>
+                            <Style TargetType="Button" BasedOn="{StaticResource RoundButton}">
                                 <Setter Property="TextElement.Foreground" Value="White"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
@@ -46,8 +57,9 @@
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
-                        </Grid.Style>
-                    </Grid>
+                        </Button.Style>
+                        <Path Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" Height="32" Width="32" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" Data="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                    </Button>
                 </StackPanel>
             </Grid>
             <Border Grid.Row="2" x:Name="content"/>

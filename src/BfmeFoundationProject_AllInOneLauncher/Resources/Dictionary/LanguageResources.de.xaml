@@ -15,7 +15,7 @@
     <system:String x:Key="GenericLoading">LADEN</system:String>
     <system:String x:Key="GenericPlay">SPIELEN</system:String>
     <system:String x:Key="GenericAdd">HINZUFÜGEN</system:String>
-    <system:String x:Key="GenericFree">KOSTENLOS</system:String>
+    <system:String x:Key="GenericFree">FREI</system:String>
     <system:String x:Key="GenericConfirm">BESTÄTIGEN</system:String>
     <system:String x:Key="GenericYes">JA</system:String>
     <system:String x:Key="GenericNo">NEIN</system:String>
@@ -24,9 +24,9 @@
 
     <!--=====================  MainWindow  =====================-->
     <system:String x:Key="MainWindowSingleplayerTab">EINZELSPIELER</system:String>
-    <system:String x:Key="MainWindowMultiplayerTab">Mehrspieler</system:String>
-    <system:String x:Key="MainWindowGuidesTab">FÜHRER</system:String>
-    <system:String x:Key="MainWindowAboutTab">ABOUT</system:String>
+    <system:String x:Key="MainWindowMultiplayerTab">MEHRSPIELER</system:String>
+    <system:String x:Key="MainWindowGuidesTab">ANLEITUNGEN</system:String>
+    <system:String x:Key="MainWindowAboutTab">ÜBER</system:String>
 
 
 
