@@ -113,6 +113,9 @@
     <system:String x:Key="InstallGamePopupTitle">GAME INSTALLEREN</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Taal</system:String>
     <system:String x:Key="InstallGamePopupLocation">Locatie</system:String>
+    <system:String x:Key="InstallGamePopupLocationAdvanced">Geavanceerd</system:String>
+    <system:String x:Key="InstallGamePopupSelectFolder">Selecteer installatiemap</system:String>
+    <system:String x:Key="InstallGamePopupNoDrive">Geen stations beschikbaar</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">TOEVOEGEN AAN BIBLIOTHEEK</system:String>

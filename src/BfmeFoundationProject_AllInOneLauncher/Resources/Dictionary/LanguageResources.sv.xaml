@@ -113,6 +113,9 @@
     <system:String x:Key="InstallGamePopupTitle">INSTALLERA SPEL</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Språk</system:String>
     <system:String x:Key="InstallGamePopupLocation">Plats</system:String>
+    <system:String x:Key="InstallGamePopupLocationAdvanced">Avancerat</system:String>
+    <system:String x:Key="InstallGamePopupSelectFolder">Välj installationsmapp</system:String>
+    <system:String x:Key="InstallGamePopupNoDrive">Inga enheter tillgängliga</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">LÄGG TILL I BIBLIOTEKET</system:String>

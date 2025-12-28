@@ -20,8 +20,6 @@
     <system:String x:Key="GenericYes">YES</system:String>
     <system:String x:Key="GenericNo">NO</system:String>
 
-
-
     <!--=====================  MainWindow  =====================-->
     <system:String x:Key="MainWindowSingleplayerTab">SINGLEPLAYER</system:String>
     <system:String x:Key="MainWindowMultiplayerTab">MULTIPLAYER</system:String>
@@ -126,6 +124,9 @@
     <system:String x:Key="InstallGamePopupTitle">INSTALL GAME</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Language</system:String>
     <system:String x:Key="InstallGamePopupLocation">Location</system:String>
+    <system:String x:Key="InstallGamePopupLocationAdvanced">Advanced</system:String>
+    <system:String x:Key="InstallGamePopupSelectFolder">Select installation folder</system:String>
+    <system:String x:Key="InstallGamePopupNoDrive">No drives available</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">ADD TO LIBRARY</system:String>

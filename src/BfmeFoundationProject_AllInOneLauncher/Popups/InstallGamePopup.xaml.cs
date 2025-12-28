@@ -1,48 +1,113 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Windows;
+using BfmeFoundationProject.AllInOneLauncher.Core.Utils;
 using BfmeFoundationProject.AllInOneLauncher.Elements.Disk;
 using BfmeFoundationProject.AllInOneLauncher.Elements.Generic;
+using BfmeFoundationProject.AllInOneLauncher.Elements.Native;
 
 namespace BfmeFoundationProject.AllInOneLauncher.Popups;
 
 public partial class InstallGamePopup : PopupBody
 {
-    private static readonly Dictionary<string, DriveInfo> Drives = DriveInfo.GetDrives().ToDictionary(x => x.RootDirectory.FullName);
+    private readonly List<DriveInfo> Drives = DriveUtils.GetValidDrives();
+    private readonly string DefaultPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
 
     public InstallGamePopup()
     {
         InitializeComponent();
 
-        locations.Children.Clear();
-        foreach (var drive in Drives.Values)
+        if (Drives.Count <= 0)
         {
-            if (!drive.IsReady)
-                continue;
-
-            try
+            SelectLocationError.Visibility = Visibility.Visible;
+            SelectLocationArea.Visibility = Visibility.Collapsed;
+        }
+        else
+        {
+            SelectLocationSelectableList.Children.Clear();
+            Drives.ForEach(drive =>
             {
-                locations.Children.Add(new Selectable()
+                SelectLocationSelectableList.Children.Add(new Selectable()
                 {
                     Title = new LibraryDriveHeader()
                     {
                         LibraryDriveName = string.Concat(drive.VolumeLabel, " (", drive.Name.Replace(@"\", ""), ")"),
-                        LibraryDriveSize = $"{Math.Floor(drive.AvailableFreeSpace / Math.Pow(1024, 3)):N0} GB {App.Current.FindResource("GenericFree")}",
+                        LibraryDriveSize = GetDriveFreeSpaceFormatted(drive),
                         Mini = true
                     },
-                    Tag = drive.RootDirectory.FullName,
+                    Tag = DriveUtils.GetDriveRootName(drive),
                     Margin = new Thickness(0, 0, 0, 5),
                     UseLayoutRounding = true,
                     SnapsToDevicePixels = true
                 });
-            }
-            catch { }
+
+            });
+
+            SetSelectedPath(DefaultPath);
         }
     }
 
-    private void OnInstallClicked(object sender, RoutedEventArgs e) => Submit(LanguageDropdown.SelectedValue, Selectable.GetSelectedTagInContainer(locations)!.ToString()!);
+    private void SetSelectedPath(string path)
+    {
+        string? selectedPath = null;
+        var selectedFreeText = string.Empty;
+        try
+        {
+            selectedPath = DriveUtils.GetValidPath(path);
+            var drive = DriveUtils.GetDriveForPath(Drives, selectedPath);
+            if (drive == null)
+            {
+                selectedPath = DriveUtils.GetValidPath(DefaultPath);
+                drive = DriveUtils.GetDriveForPath(Drives, selectedPath);
+            }
+
+            if (drive != null)
+            {
+                selectedFreeText = GetDriveFreeSpaceFormatted(drive);
+            }
+        }
+        catch { /* ignore errors here */ }
+
+        SelectedPathText.Text = selectedPath;
+        SelectedFreeSpaceText.Text = selectedFreeText;
+        ButtonAccept.IsEnabled = !string.IsNullOrWhiteSpace(selectedPath);
+    }
+
+    private static string GetDriveFreeSpaceFormatted(DriveInfo drive)
+    {
+        return $"{Math.Floor(drive.AvailableFreeSpace / Math.Pow(1024, 3)):N0} GB {App.Current.FindResource("GenericFree")}";
+    }
+
+    private void OnSelectFolderClicked(object sender, RoutedEventArgs e)
+    {
+        try
+        {
+            var ownerWindow = Window.GetWindow(this);
+            var folderDialogTitle = (string)App.Current.FindResource("InstallGamePopupSelectFolder");
+            var selectedPath = SelectedPathText.Text;
+            var selected = FolderPicker.ShowDialog(ownerWindow, folderDialogTitle, selectedPath);
+            if (!string.IsNullOrWhiteSpace(selected))
+                SetSelectedPath(selected);
+        }
+        catch (Exception ex)
+        {
+            PopupVisualizer.ShowPopup(new ErrorPopup(ex));
+            Dismiss();
+        }
+    }
+
+    private void OnAdvancedSettingsSwitched(object sender, EventArgs e)
+    {
+        var isActive = SelectLocationAdvancedToggle.IsToggled;
+        SelectLocationSelectableList.Visibility = isActive ? Visibility.Hidden : Visibility.Visible;
+        SelectLocationAdvancedArea.Visibility = isActive ? Visibility.Visible : Visibility.Hidden;
+    }
+
+    private void OnInstallClicked(object sender, RoutedEventArgs e)
+    {
+        var language = LanguageDropdown.SelectedValue;
+        var path = (SelectLocationAdvancedToggle.IsToggled == true) ? SelectedPathText.Text : Selectable.GetSelectedTagInContainer(SelectLocationSelectableList)!.ToString()!;
+        Submit(language, path);
+    }
 
     private void OnCancelClicked(object sender, RoutedEventArgs e) => Dismiss();
 }

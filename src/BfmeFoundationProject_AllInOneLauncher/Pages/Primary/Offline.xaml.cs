@@ -113,8 +113,15 @@ public partial class Offline : UserControl
 
     private void OnInstallGameClicked(object sender, EventArgs e)
     {
-        PopupVisualizer.ShowPopup(new InstallGamePopup(),
-            OnPopupSubmited: async (submittedData) => await BfmeSyncManager.InstallGame((BfmeGame)gameTabs.SelectedIndex, submittedData[0], submittedData[1]));
+        try 
+        {
+            PopupVisualizer.ShowPopup(new InstallGamePopup(),
+                OnPopupSubmited: async (submittedData) => await BfmeSyncManager.InstallGame((BfmeGame)gameTabs.SelectedIndex, submittedData[0], submittedData[1]));
+        }
+        catch (Exception ex)
+        {
+            PopupVisualizer.ShowPopup(new ErrorPopup(ex));
+        }
     }
 
     private async void TabChanged(object sender, EventArgs e)
