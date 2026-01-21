@@ -25,7 +25,7 @@
     <!--=====================  MainWindow  =====================-->
     <system:String x:Key="MainWindowSingleplayerTab">EINZELSPIELER</system:String>
     <system:String x:Key="MainWindowMultiplayerTab">MEHRSPIELER</system:String>
-    <system:String x:Key="MainWindowGuidesTab">ANLEITUNGEN</system:String>
+    <system:String x:Key="MainWindowGuidesTab">LEITFÄDEN</system:String>
     <system:String x:Key="MainWindowAboutTab">ÜBER</system:String>
 
 
