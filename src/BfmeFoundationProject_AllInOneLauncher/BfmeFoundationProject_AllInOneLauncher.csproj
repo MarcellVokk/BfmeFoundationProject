@@ -20,9 +20,10 @@
 
 		<DebugSymbols>true</DebugSymbols>
 		<DebugType>embedded</DebugType>
+		<GeneratedBuildInfoFile>obj\GeneratedBuildInfo.cs</GeneratedBuildInfoFile>
 	</PropertyGroup>
 
-	<Target Name="GenerateBuildInfo" BeforeTargets="BeforeBuild">
+	<Target Name="GenerateBuildInfo" BeforeTargets="CoreCompile">
 		<PropertyGroup>
 			<BuildTimestamp>$([System.DateTime]::Now.ToString("MMdd-HHmm"))</BuildTimestamp>
 			<Contents>
@@ -34,7 +35,7 @@ public static class BuildInfo
 				]]>
 			</Contents>
 		</PropertyGroup>
-		<WriteLinesToFile File="GeneratedBuildInfo.cs" Lines="$(Contents)" Overwrite="true" Encoding="UTF-8" />
+		<WriteLinesToFile File="$(GeneratedBuildInfoFile)" Lines="$(Contents)" Overwrite="true" Encoding="UTF-8" />
 	</Target>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -151,6 +152,7 @@ public static class BuildInfo
 	</ItemGroup>
 
 	<ItemGroup>
+		<Compile Include="$(GeneratedBuildInfoFile)" />
 		<Compile Update="Elements\Workshop\WorkshopTile.xaml.cs">
 		  <SubType>Code</SubType>
 		</Compile>
