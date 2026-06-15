@@ -1,48 +1,82 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.IO;
-using System.Linq;
 using System.Windows;
-using BfmeFoundationProject.AllInOneLauncher.Elements.Disk;
+using BfmeFoundationProject.AllInOneLauncher.Core.Utils;
 using BfmeFoundationProject.AllInOneLauncher.Elements.Generic;
+using Microsoft.Win32;
 
 namespace BfmeFoundationProject.AllInOneLauncher.Popups;
 
 public partial class InstallGamePopup : PopupBody
 {
-    private static readonly Dictionary<string, DriveInfo> Drives = DriveInfo.GetDrives().ToDictionary(x => x.RootDirectory.FullName);
+    private string selectedLocation = "";
 
     public InstallGamePopup()
     {
         InitializeComponent();
 
-        locations.Children.Clear();
-        foreach (var drive in Drives.Values)
-        {
-            if (!drive.IsReady)
-                continue;
+        SetSelectedLocation(InstallLocationUtils.GetDefaultDriveRoot());
+    }
 
-            try
-            {
-                locations.Children.Add(new Selectable()
-                {
-                    Title = new LibraryDriveHeader()
-                    {
-                        LibraryDriveName = string.Concat(drive.VolumeLabel, " (", drive.Name.Replace(@"\", ""), ")"),
-                        LibraryDriveSize = $"{Math.Floor(drive.AvailableFreeSpace / Math.Pow(1024, 3)):N0} GB {App.Current.FindResource("GenericFree")}",
-                        Mini = true
-                    },
-                    Tag = drive.RootDirectory.FullName,
-                    Margin = new Thickness(0, 0, 0, 5),
-                    UseLayoutRounding = true,
-                    SnapsToDevicePixels = true
-                });
-            }
-            catch { }
+    private void OnBrowseLocationClicked(object sender, RoutedEventArgs e)
+    {
+        OpenFolderDialog dialog = new()
+        {
+            Multiselect = false
+        };
+
+        if (Directory.Exists(selectedLocation))
+            dialog.InitialDirectory = selectedLocation;
+        else if (InstallLocationUtils.TryGetDrive(selectedLocation, out DriveInfo? drive) && drive != null)
+            dialog.InitialDirectory = drive.RootDirectory.FullName;
+
+        if (dialog.ShowDialog() == true)
+            SetSelectedLocation(dialog.FolderName);
+    }
+
+    private void OnInstallClicked(object sender, RoutedEventArgs e)
+    {
+        if (InstallLocationUtils.IsValidLocation(selectedLocation))
+            Submit(LanguageDropdown.SelectedValue, selectedLocation);
+    }
+
+    private void OnCancelClicked(object sender, RoutedEventArgs e) => Dismiss();
+
+    private void SetSelectedLocation(string location)
+    {
+        selectedLocation = InstallLocationUtils.NormalizeLocation(location);
+
+        SelectedLocationText.Text = selectedLocation;
+        SelectedLocationText.ToolTip = selectedLocation;
+
+        ButtonAccept.IsEnabled = InstallLocationUtils.IsValidLocation(selectedLocation);
+        UpdateDriveSpace();
+        UpdateWarning();
+    }
+
+    private void UpdateDriveSpace()
+    {
+        SelectedLocationDriveFreeSpace.Text = "";
+
+        if (!InstallLocationUtils.TryGetDrive(selectedLocation, out DriveInfo? drive) || drive == null)
+            return;
+
+        try
+        {
+            if (drive.IsReady)
+                SelectedLocationDriveFreeSpace.Text = $"{Math.Floor(drive.AvailableFreeSpace / Math.Pow(1024, 3)):N0} GB {App.Current.FindResource("GenericFree")}";
+        }
+        catch
+        {
+            SelectedLocationDriveFreeSpace.Text = "";
         }
     }
 
-    private void OnInstallClicked(object sender, RoutedEventArgs e) => Submit(LanguageDropdown.SelectedValue, Selectable.GetSelectedTagInContainer(locations)!.ToString()!);
+    private void UpdateWarning()
+    {
+        bool showWarning = InstallLocationUtils.IsInProgramFilesFolder(selectedLocation);
 
-    private void OnCancelClicked(object sender, RoutedEventArgs e) => Dismiss();
+        LocationWarningText.Text = showWarning ? App.Current.FindResource("InstallGamePopupProgramFilesWarning")?.ToString() ?? "" : "";
+        LocationWarning.Visibility = showWarning ? Visibility.Visible : Visibility.Collapsed;
+    }
 }

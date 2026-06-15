@@ -15,6 +15,7 @@
     <system:String x:Key="GenericLoading">LADEN</system:String>
     <system:String x:Key="GenericPlay">SPIELEN</system:String>
     <system:String x:Key="GenericAdd">HINZUFÜGEN</system:String>
+    <system:String x:Key="GenericBrowse">DURCHSUCHEN</system:String>
     <system:String x:Key="GenericFree">FREI</system:String>
     <system:String x:Key="GenericConfirm">BESTÄTIGEN</system:String>
     <system:String x:Key="GenericYes">JA</system:String>
@@ -124,6 +125,7 @@
     <system:String x:Key="InstallGamePopupTitle">SPIEL INSTALLIEREN</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Sprache</system:String>
     <system:String x:Key="InstallGamePopupLocation">Standort</system:String>
+    <system:String x:Key="InstallGamePopupProgramFilesWarning">Es wird empfohlen, außerhalb der Programme-Ordner zu installieren, um mögliche Berechtigungsprobleme zu vermeiden.</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">ZUR BIBLIOTHEK HINZUFÜGEN</system:String>

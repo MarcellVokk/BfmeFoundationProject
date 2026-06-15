@@ -13,6 +13,7 @@
     <system:String x:Key="GenericLoading">تحميل</system:String>
     <system:String x:Key="GenericPlay">تشغيل</system:String>
     <system:String x:Key="GenericAdd">إضافة</system:String>
+    <system:String x:Key="GenericBrowse">استعراض</system:String>
     <system:String x:Key="GenericFree">مجاني</system:String>
     <system:String x:Key="GenericConfirm">تأكيد</system:String>
     <system:String x:Key="GenericYes">نعم</system:String>
@@ -113,6 +114,7 @@
     <system:String x:Key="InstallGamePopupTitle">تثبيت اللعبة</system:String>
     <system:String x:Key="InstallGamePopupLanguage">اللغة</system:String>
     <system:String x:Key="InstallGamePopupLocation">الموقع</system:String>
+    <system:String x:Key="InstallGamePopupProgramFilesWarning">من المستحسن التثبيت خارج مجلدات ملفات البرامج لتجنب مشكلات الأذونات المحتملة.</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">إضافة إلى المكتبة</system:String>

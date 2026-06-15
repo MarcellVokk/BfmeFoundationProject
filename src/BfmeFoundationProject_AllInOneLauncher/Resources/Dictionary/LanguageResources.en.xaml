@@ -15,6 +15,7 @@
     <system:String x:Key="GenericLoading">LOADING</system:String>
     <system:String x:Key="GenericPlay">PLAY</system:String>
     <system:String x:Key="GenericAdd">ADD</system:String>
+    <system:String x:Key="GenericBrowse">BROWSE</system:String>
     <system:String x:Key="GenericFree">FREE</system:String>
     <system:String x:Key="GenericConfirm">CONFIRM</system:String>
     <system:String x:Key="GenericYes">YES</system:String>
@@ -126,6 +127,7 @@
     <system:String x:Key="InstallGamePopupTitle">INSTALL GAME</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Language</system:String>
     <system:String x:Key="InstallGamePopupLocation">Location</system:String>
+    <system:String x:Key="InstallGamePopupProgramFilesWarning">It is recommended to install outside Program Files folders to avoid potential permission issues.</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">ADD TO LIBRARY</system:String>

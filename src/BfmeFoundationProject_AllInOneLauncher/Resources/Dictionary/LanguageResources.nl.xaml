@@ -13,6 +13,7 @@
     <system:String x:Key="GenericLoading">LADEN</system:String>
     <system:String x:Key="GenericPlay">SPELEN</system:String>
     <system:String x:Key="GenericAdd">TOEVOEGEN</system:String>
+    <system:String x:Key="GenericBrowse">BLADEREN</system:String>
     <system:String x:Key="GenericFree">GRATIS</system:String>
     <system:String x:Key="GenericConfirm">BEVESTIGEN</system:String>
     <system:String x:Key="GenericYes">JA</system:String>
@@ -113,6 +114,7 @@
     <system:String x:Key="InstallGamePopupTitle">GAME INSTALLEREN</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Taal</system:String>
     <system:String x:Key="InstallGamePopupLocation">Locatie</system:String>
+    <system:String x:Key="InstallGamePopupProgramFilesWarning">Het wordt aanbevolen buiten de programmamappen te installeren om mogelijke machtigingsproblemen te voorkomen.</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">TOEVOEGEN AAN BIBLIOTHEEK</system:String>

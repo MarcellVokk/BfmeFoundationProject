@@ -13,6 +13,7 @@
     <system:String x:Key="GenericLoading">LADDAR</system:String>
     <system:String x:Key="GenericPlay">SPELA</system:String>
     <system:String x:Key="GenericAdd">LÄGG TILL</system:String>
+    <system:String x:Key="GenericBrowse">BLÄDDRA</system:String>
     <system:String x:Key="GenericFree">FRI</system:String>
     <system:String x:Key="GenericConfirm">BEKRÄFTA</system:String>
     <system:String x:Key="GenericYes">JA</system:String>
@@ -113,6 +114,7 @@
     <system:String x:Key="InstallGamePopupTitle">INSTALLERA SPEL</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Språk</system:String>
     <system:String x:Key="InstallGamePopupLocation">Plats</system:String>
+    <system:String x:Key="InstallGamePopupProgramFilesWarning">Det rekommenderas att installera utanför programmapparna för att undvika möjliga behörighetsproblem.</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">LÄGG TILL I BIBLIOTEKET</system:String>

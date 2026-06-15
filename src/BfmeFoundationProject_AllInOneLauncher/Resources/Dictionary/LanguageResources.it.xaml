@@ -13,6 +13,7 @@
     <system:String x:Key="GenericLoading">CARICAMENTO</system:String>
     <system:String x:Key="GenericPlay">GIOCA</system:String>
     <system:String x:Key="GenericAdd">AGGIUNGI</system:String>
+    <system:String x:Key="GenericBrowse">SFOGLIA</system:String>
     <system:String x:Key="GenericFree">GRATIS</system:String>
     <system:String x:Key="GenericConfirm">CONFERMA</system:String>
     <system:String x:Key="GenericYes">SÌ</system:String>
@@ -113,6 +114,7 @@
     <system:String x:Key="InstallGamePopupTitle">INSTALLA GIOCO</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Lingua</system:String>
     <system:String x:Key="InstallGamePopupLocation">Posizione</system:String>
+    <system:String x:Key="InstallGamePopupProgramFilesWarning">Si consiglia di installare fuori dalle cartelle dei programmi per evitare potenziali problemi di autorizzazioni.</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">AGGIUNGI ALLA BIBLIOTECA</system:String>

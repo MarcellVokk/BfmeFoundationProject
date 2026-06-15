@@ -13,6 +13,7 @@
     <system:String x:Key="GenericLoading">LASTER</system:String>
     <system:String x:Key="GenericPlay">SPILL</system:String>
     <system:String x:Key="GenericAdd">LEGG TIL</system:String>
+    <system:String x:Key="GenericBrowse">BLA GJENNOM</system:String>
     <system:String x:Key="GenericFree">GRATIS</system:String>
     <system:String x:Key="GenericConfirm">BEKREFT</system:String>
     <system:String x:Key="GenericYes">JA</system:String>
@@ -113,6 +114,7 @@
     <system:String x:Key="InstallGamePopupTitle">INSTALLER SPILL</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Språk</system:String>
     <system:String x:Key="InstallGamePopupLocation">Beliggenhet</system:String>
+    <system:String x:Key="InstallGamePopupProgramFilesWarning">Det anbefales å installere utenfor programmappene for å unngå mulige tillatelsesproblemer.</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">LEGG TIL I BIBLIOTEKET</system:String>

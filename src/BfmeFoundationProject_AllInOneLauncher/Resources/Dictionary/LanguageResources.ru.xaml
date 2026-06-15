@@ -13,6 +13,7 @@
     <system:String x:Key="GenericLoading">ЗАГРУЗКА</system:String>
     <system:String x:Key="GenericPlay">ИГРАТЬ</system:String>
     <system:String x:Key="GenericAdd">ДОБАВИТЬ</system:String>
+    <system:String x:Key="GenericBrowse">ОБЗОР</system:String>
     <system:String x:Key="GenericFree">БЕСПЛАТНО</system:String>
     <system:String x:Key="GenericConfirm">ПОДТВЕРДИТЬ</system:String>
     <system:String x:Key="GenericYes">ДА</system:String>
@@ -113,6 +114,7 @@
     <system:String x:Key="InstallGamePopupTitle">УСТАНОВКА ИГРЫ</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Язык</system:String>
     <system:String x:Key="InstallGamePopupLocation">Местоположение</system:String>
+    <system:String x:Key="InstallGamePopupProgramFilesWarning">Рекомендуется устанавливать вне папок программ, чтобы избежать возможных проблем с разрешениями.</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">ДОБАВИТЬ В БИБЛИОТЕКУ</system:String>

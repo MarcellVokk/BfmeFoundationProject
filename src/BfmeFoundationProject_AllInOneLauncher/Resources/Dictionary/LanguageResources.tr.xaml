@@ -15,6 +15,7 @@
     <system:String x:Key="GenericLoading">YÜKLENİYOR</system:String>
     <system:String x:Key="GenericPlay">OYNA</system:String>
     <system:String x:Key="GenericAdd">EKLE</system:String>
+    <system:String x:Key="GenericBrowse">GÖZ AT</system:String>
     <system:String x:Key="GenericFree">ÜCRETSİZ</system:String>
     <system:String x:Key="GenericConfirm">ONAYLA</system:String>
     <system:String x:Key="GenericYes">EVET</system:String>
@@ -126,6 +127,7 @@
     <system:String x:Key="InstallGamePopupTitle">OYUNU YÜKLE</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Dil</system:String>
     <system:String x:Key="InstallGamePopupLocation">Konum</system:String>
+    <system:String x:Key="InstallGamePopupProgramFilesWarning">Olası izin sorunlarını önlemek için program dosyaları klasörlerinin dışına kurulum yapılması önerilir.</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">KÜTÜPHANEYE EKLE</system:String>

@@ -13,6 +13,7 @@
     <system:String x:Key="GenericLoading">BETÖLTÉS</system:String>
     <system:String x:Key="GenericPlay">JÁTSZANI</system:String>
     <system:String x:Key="GenericAdd">HOZZÁADÁS</system:String>
+    <system:String x:Key="GenericBrowse">TALLÓZÁS</system:String>
     <system:String x:Key="GenericFree">SZABAD</system:String>
     <system:String x:Key="GenericConfirm">IGEN</system:String>
     <system:String x:Key="GenericYes">IGEN</system:String>
@@ -113,6 +114,7 @@
     <system:String x:Key="InstallGamePopupTitle">JÁTÉK TELEPÍTÉSE</system:String>
     <system:String x:Key="InstallGamePopupLanguage">Nyelv</system:String>
     <system:String x:Key="InstallGamePopupLocation">Helyszín</system:String>
+    <system:String x:Key="InstallGamePopupProgramFilesWarning">Javasolt a programfájlok mappáin kívül telepíteni az esetleges engedélyproblémák elkerülése érdekében.</system:String>
 
     <!--=====================  PackagePagePopup  =====================-->
     <system:String x:Key="PackagePagePopupAddToLibrary">KÖNYVTÁRBAN HOZZÁADÁS</system:String>

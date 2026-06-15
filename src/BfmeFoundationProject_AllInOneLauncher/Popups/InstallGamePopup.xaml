@@ -8,7 +8,7 @@
              xmlns:system="clr-namespace:System;assembly=netstandard"
              xmlns:generic="clr-namespace:BfmeFoundationProject.AllInOneLauncher.Elements.Generic"
              mc:Ignorable="d" 
-             Width="700" HorizontalAlignment="Center" VerticalAlignment="Center">
+             Width="840" HorizontalAlignment="Center" VerticalAlignment="Center">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -62,9 +62,34 @@
                         </elements:DropdownPicker.Options>
                     </elements:DropdownPicker>
                     <TextBlock Grid.Row="4" FontSize="14" FontWeight="SemiBold" Text="{DynamicResource InstallGamePopupLocation}" Foreground="white"/>
-                    <generic:SmoothScrollViewer Grid.Row="6">
-                        <StackPanel x:Name="locations"/>
-                    </generic:SmoothScrollViewer>
+                    <StackPanel Grid.Row="6">
+                        <Border x:Name="LocationPicker" Background="#028BDB" CornerRadius="4" Height="58">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="1"/>
+                                    <ColumnDefinition Width="82"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0" Margin="12,0,10,0" VerticalAlignment="Center">
+                                    <TextBlock x:Name="SelectedLocationText" Foreground="White" FontSize="13" FontWeight="Bold" TextTrimming="CharacterEllipsis" ToolTip="{Binding Text, RelativeSource={RelativeSource Self}}"/>
+                                    <TextBlock x:Name="SelectedLocationDriveFreeSpace" Foreground="White" FontSize="11" FontWeight="Bold" Margin="0,2,0,0"/>
+                                </StackPanel>
+                                <Rectangle Grid.Column="1" Fill="White" Opacity="0.2" Width="1" Margin="0,10,0,10"/>
+                                <Button Grid.Column="2" Style="{StaticResource FlatButton}" HorizontalContentAlignment="Center" Padding="0" FontWeight="Bold" Background="Transparent" Click="OnBrowseLocationClicked" Content="{DynamicResource GenericBrowse}"/>
+                            </Grid>
+                        </Border>
+                        <Border x:Name="LocationWarning" Visibility="Collapsed" BorderBrush="#D69835" BorderThickness="1" Background="#24D69835" CornerRadius="4" Margin="0,8,0,0" Padding="10,8">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="8"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="!" Foreground="#FFB842" FontSize="14" FontWeight="Bold" VerticalAlignment="Top"/>
+                                <TextBlock Grid.Column="2" x:Name="LocationWarningText" Foreground="#E6FFFFFF" FontSize="13" FontWeight="Medium" TextWrapping="Wrap"/>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
                 </Grid>
             </Grid>
         </Grid>
