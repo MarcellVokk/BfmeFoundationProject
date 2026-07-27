@@ -12,7 +12,9 @@ namespace BfmeFoundationProject.AllInOneLauncher.Core;
 
 public static class LauncherUpdateManager
 {
-    public static string LauncherAppDirectory => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME All In One Launcher");
+    public static string LauncherAppDirectory => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "BFME All In One Launcher");
+
+    public static string LauncherUserDataDirectory => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BFME All In One Launcher");
 
     public static async void CheckForUpdates()
     {
@@ -24,6 +26,9 @@ public static class LauncherUpdateManager
         {
             if (!Directory.Exists(LauncherAppDirectory))
                 Directory.CreateDirectory(LauncherAppDirectory);
+
+            if (!Directory.Exists(LauncherUserDataDirectory))
+                Directory.CreateDirectory(LauncherUserDataDirectory);
 
             string curentVersionHash = "";
             string latestVersionHash = "";
@@ -45,14 +50,14 @@ public static class LauncherUpdateManager
 
                 MainWindow.Instance.Dispatcher.Invoke(() =>
                 {
-                    if (!File.Exists(Path.Combine(LauncherUpdateManager.LauncherAppDirectory, "update_2_complete.txt")))
+                    if (!File.Exists(Path.Combine(LauncherUpdateManager.LauncherUserDataDirectory, "update_2_complete.txt")))
                     {
                         Properties.Settings.Default.ArenaUpdateBranch = "main";
                         Properties.Settings.Default.Save();
 
                         PopupVisualizer.ShowPopup(new DonatePopup());
 
-                        File.WriteAllText(Path.Combine(LauncherUpdateManager.LauncherAppDirectory, "update_2_complete.txt"), "1");
+                        File.WriteAllText(Path.Combine(LauncherUpdateManager.LauncherUserDataDirectory, "update_2_complete.txt"), "1");
                     }
                 });
 
