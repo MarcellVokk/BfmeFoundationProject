@@ -9,14 +9,14 @@ The application reads its proxy settings from a JSON file named **`proxy-configu
 
 ```json
 {
-  "proxyType": "None",
-  "url": "",
-  "bypasses": [],
-  "bypassLocal": true,
-  "useAuthorization": false,
-  "username": "",
-  "password": "",
-  "domain": null
+  "ProxyType": "None",
+  "Url": "",
+  "Bypasses": [],
+  "BypassLocal": true,
+  "UseAuthorization": false,
+  "Username": "",
+  "Password": "",
+  "Domain": null
 }
 ```
 
@@ -25,14 +25,14 @@ The application reads its proxy settings from a JSON file named **`proxy-configu
 
 | Property           | Type          | Default      | Description                                                                                                            |
 | ------------------ | ------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| `proxyType`        | string        | `"None"`     | Proxy protocol to use. See the table below for accepted values.                                                        |
-| `url`              | string        | `""` (empty) | Address of the proxy server, including the port. **Required** for every `proxyType` except `None` and `System`.        |
-| `bypasses`         | string\[\]    | `[]` (empty) | List of addresses the proxy should **not** be used for. Supports wildcards, e.g. `"*.example.com"` or `"192.168.1.*"`. |
-| `bypassLocal`      | bool          | `true`       | When `true`, local (intranet/LAN) addresses bypass the proxy and are accessed directly.                                |
-| `useAuthorization` | bool          | `false`      | When `true`, the app authenticates on the proxy using the credentials below.                                           |
-| `username`         | string        | `""` (empty) | Proxy username. Used only when `useAuthorization` is `true`.                                                           |
-| `password`         | string        | `""` (empty) | Proxy password. Used only when `useAuthorization` is `true`. Stored in plain text — restrict access to the file.       |
-| `domain`           | string | null | `null`       | Optional domain (mainly for NTLM/Windows credentials). Can be omitted entirely.                                        |
+| `ProxyType`        | string        | `"None"`     | Proxy protocol to use. See the table below for accepted values.                                                        |
+| `Url`              | string        | `""` (empty) | Address of the proxy server, including the port. **Required** for every `proxyType` except `None` and `System`.        |
+| `Bypasses`         | string\[\]    | `[]` (empty) | List of addresses the proxy should **not** be used for. Supports wildcards, e.g. `"*.example.com"` or `"192.168.1.*"`. |
+| `BypassLocal`      | bool          | `true`       | When `true`, local (intranet/LAN) addresses bypass the proxy and are accessed directly.                                |
+| `UseAuthorization` | bool          | `false`      | When `true`, the app authenticates on the proxy using the credentials below.                                           |
+| `Username`         | string        | `""` (empty) | Proxy username. Used only when `useAuthorization` is `true`.                                                           |
+| `Password`         | string        | `""` (empty) | Proxy password. Used only when `useAuthorization` is `true`. Stored in plain text — restrict access to the file.       |
+| `Domain`           | string | null | `null`       | Optional domain (mainly for NTLM/Windows credentials). Can be omitted entirely.                                        |
 
 
 ## Proxy types
@@ -58,7 +58,7 @@ The value of `proxyType` is a **case-sensitive string** matching one of the enum
 
 ```json
 {
-  "proxyType": "None"
+  "ProxyType": "None"
 }
 ```
 
@@ -66,8 +66,8 @@ The value of `proxyType` is a **case-sensitive string** matching one of the enum
 
 ```json
 {
-  "proxyType": "System",
-  "bypassLocal": true
+  "ProxyType": "System",
+  "BypassLocal": true
 }
 ```
 
@@ -75,14 +75,14 @@ The value of `proxyType` is a **case-sensitive string** matching one of the enum
 
 ```json
 {
-  "proxyType": "Http",
-  "url": "http://proxy.example.com:8080",
-  "bypasses": ["*.internal.example.com", "192.168.1.*"],
-  "bypassLocal": true,
-  "useAuthorization": true,
-  "username": "proxyuser",
-  "password": "secret",
-  "domain": null
+  "ProxyType": "Http",
+  "Url": "http://proxy.example.com:8080",
+  "Bypasses": ["*.internal.example.com", "192.168.1.*"],
+  "BypassLocal": true,
+  "UseAuthorization": true,
+  "Username": "proxyuser",
+  "Password": "secret",
+  "Domain": null
 }
 ```
 
@@ -90,17 +90,17 @@ The value of `proxyType` is a **case-sensitive string** matching one of the enum
 
 ```json
 {
-  "proxyType": "Socks5Domain",
-  "url": "socks5://10.0.0.1:1080",
-  "useAuthorization": true,
-  "username": "proxyuser",
-  "password": "secret"
+  "ProxyType": "Socks5Domain",
+  "Url": "socks5://10.0.0.1:1080",
+  "UseAuthorization": true,
+  "Username": "proxyuser",
+  "Password": "secret"
 }
 ```
 
 ## Notes
 
 - The file must be named exactly `proxy-configuration.json` and located in the application directory.
-- Omitted fields fall back to their defaults shown above; the minimal valid file is `{ "proxyType": "None" }`.
-- Unknown or unsupported values of `proxyType` will cause the configuration to fail to load — use only the listed names.
+- Omitted fields fall back to their defaults shown above; the minimal valid file is `{ "ProxyType": "None" }`.
+- Unknown or unsupported values of `ProxyType` will cause the configuration to fail to load — use only the listed names.
 - Proxy credentials are stored in plain text. Make sure the file has the most restrictive access permissions possible for your environment.
