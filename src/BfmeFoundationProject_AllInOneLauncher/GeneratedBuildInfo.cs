@@ -1,4 +1,4 @@
 ﻿public static class BuildInfo
 {
-	public static readonly string BuildIdentifier = "1228-1440";
+	public static readonly string BuildIdentifier = "1024-2029";
 }
