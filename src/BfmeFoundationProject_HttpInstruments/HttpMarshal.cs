@@ -1,5 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using BfmeFoundationProject.HttpInstruments.Proxy;
+using Newtonsoft.Json;
 using System.IO.Compression;
+using System.Net;
 using System.Net.Http.Handlers;
 using System.Text;
 
@@ -7,12 +9,31 @@ namespace BfmeFoundationProject.HttpInstruments
 {
     public class HttpMarshal
     {
-        private static SocketsHttpHandler SocketsHandler = new SocketsHttpHandler()
+        private static IWebProxy? Proxy = null;
+        private static SocketsHttpHandler SocketsHandler = GetSocketsHandler();
+
+        private static SocketsHttpHandler GetSocketsHandler()
         {
-            PooledConnectionLifetime = TimeSpan.FromMinutes(5),
-            PooledConnectionIdleTimeout = TimeSpan.FromMinutes(1),
-            MaxConnectionsPerServer = 10
-        };
+            return new SocketsHttpHandler()
+            {
+                PooledConnectionLifetime = TimeSpan.FromMinutes(5),
+                PooledConnectionIdleTimeout = TimeSpan.FromMinutes(1),
+                MaxConnectionsPerServer = 10,
+                UseProxy = Proxy is not null,
+                Proxy = Proxy
+            };
+        }
+
+        public static void SetProxy(ProxyFactory factory)
+        {
+            Proxy = factory.CreateProxy();
+            ReinitiateSocketsHandler();
+        }
+
+        public static void ReinitiateSocketsHandler()
+        {
+            SocketsHandler = GetSocketsHandler();
+        }
 
         public static async Task<string> GetString(string url, Dictionary<string, string> headers)
         {

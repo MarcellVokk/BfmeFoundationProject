@@ -1,0 +1,10 @@
+{
+  "ProxyType": "None",
+  "Url": "http://my-proxy.net:8080",
+  "Bypasses": [ "my-proxy.net" ],
+  "BypassLocal": true,
+  "UseAuthorization": true,
+  "Username": "",
+  "Password": "",
+  "Domain": null
+}

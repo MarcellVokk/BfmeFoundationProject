@@ -1,15 +1,14 @@
-using System;
-using System.Linq;
-using System.Windows;
-using System.Threading;
-using System.IO.Pipes;
-using System.IO;
-using System.Threading.Tasks;
-using System.Configuration;
-using WindowsShortcutFactory;
-using Microsoft.Win32;
-using System.Diagnostics;
 using BfmeFoundationProject.AllInOneLauncher.Core;
+using BfmeFoundationProject.HttpInstruments;
+using BfmeFoundationProject.HttpInstruments.Proxy;
+using Microsoft.Win32;
+using System.Configuration;
+using System.Diagnostics;
+using System.IO;
+using System.IO.Pipes;
+using System.Text.Json;
+using System.Windows;
+using WindowsShortcutFactory;
 
 namespace BfmeFoundationProject.AllInOneLauncher
 {
@@ -119,6 +118,23 @@ namespace BfmeFoundationProject.AllInOneLauncher
 
         private void EnsureAppConfig()
         {
+            try
+            {
+                if (File.Exists(ProxyConfiguration.ProxyConfigFileName))
+                {
+                    var confJson = File.ReadAllText(ProxyConfiguration.ProxyConfigFileName);
+
+                    var proxyConf = JsonSerializer.Deserialize<ProxyConfiguration>(confJson);
+
+                    HttpMarshal.SetProxy(new ProxyFactory(proxyConf));
+                }
+            }
+            catch (BfmeProxyException ex)
+            {
+                MessageBox.Show(ex.Message, "Proxy settings errors");
+                ExitImmediately();
+            }
+            catch (Exception) { }
             try
             {
                 if (!Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonStartMenu), "Programs", "All In One Launcher")))
